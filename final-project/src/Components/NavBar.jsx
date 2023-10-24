@@ -9,7 +9,7 @@ import Nav from 'react-bootstrap/Nav';
 
 function NavScrollExample() {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary" fixed='top' bg="dark" data-bs-theme="dark">
+    <Navbar expand="md" className="bg-body-tertiary py-0" fixed='top' bg="dark" data-bs-theme="dark">
       <Container fluid>
         <Navbar.Brand><Link to={'/'} id='ok'>Xerxes Ltd.</Link></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -22,7 +22,7 @@ function NavScrollExample() {
             <Nav.Link><Link to={'/PP'} className='Link'>Our Products</Link></Nav.Link>
             <Nav.Link><Link to={'/CP'} className='Link'>Contact Us</Link></Nav.Link>
           </Nav>
-          <Form className="d-flex">
+          <Form className="d-flex mar toi">
             <Form.Control
               type="search"
               placeholder="Search for our products"
