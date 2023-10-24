@@ -16,57 +16,63 @@ function Homepage() {
 
   return (
     <>
-      <div className='container hamas'>
-        <div className='p-5 brdr'>
-          <Carousel>
-            <Carousel.Item>
-              <img style={{ maxHeight: "100vh" }}
-                className="d-block w-100 pp2"
-                src={img1}
-                alt="First slide"
-              />
-              <Carousel.Caption className='caption'>
-                <h3>First Slider Image Title</h3>
-                <p>First Slide decription.</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img style={{ maxHeight: "100vh" }}
-                className="d-block w-100 pp2"
-                src={img2}
-                alt="First slide"
-              />
-              <Carousel.Caption className='caption'>
-                <h3>Second slide Image </h3>
-                <p>Second slide description</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img style={{ maxHeight: "100vh" }}
-                className="d-block w-100 pp2"
-                src={img3}
-                alt="First slide"
-              />
-              <Carousel.Caption className='caption'>
-                <h3>Third Slide Image</h3>
-                <p>Third Slide Description.</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-            <Carousel.Item>
-              <img style={{ maxHeight: "100vh" }}
-                className="d-block w-100 pp2"
-                src={img4}
-                alt="First slide"
-              />
-              <Carousel.Caption className='caption'>
-                <h3>Third Slide Image</h3>
-                <p>Third Slide Description.</p>
-              </Carousel.Caption>
-            </Carousel.Item>
-          </Carousel>
+      <div className='row'>
+        <div className='col-md-8'>
+          <div className='container hamas'>
+            <div className='p-5 brdr'>
+              <Carousel>
+                <Carousel.Item>
+                  <img style={{ maxHeight: "100vh" }}
+                    className="d-block w-100 pp2"
+                    src={img1}
+                    alt="First slide"
+                  />
+                  <Carousel.Caption className='caption'>
+                    <h3>First Slider Image Title</h3>
+                    <p>First Slide decription.</p>
+                  </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img style={{ maxHeight: "100vh" }}
+                    className="d-block w-100 pp2"
+                    src={img2}
+                    alt="First slide"
+                  />
+                  <Carousel.Caption className='caption'>
+                    <h3>Second slide Image </h3>
+                    <p>Second slide description</p>
+                  </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img style={{ maxHeight: "100vh" }}
+                    className="d-block w-100 pp2"
+                    src={img3}
+                    alt="First slide"
+                  />
+                  <Carousel.Caption className='caption'>
+                    <h3>Third Slide Image</h3>
+                    <p>Third Slide Description.</p>
+                  </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                  <img style={{ maxHeight: "100vh" }}
+                    className="d-block w-100 pp2"
+                    src={img4}
+                    alt="First slide"
+                  />
+                  <Carousel.Caption className='caption'>
+                    <h3>Third Slide Image</h3>
+                    <p>Third Slide Description.</p>
+                  </Carousel.Caption>
+                </Carousel.Item>
+              </Carousel>
+            </div>
+          </div>
+        </div>
+        <div className='col-md-4'>
+          
         </div>
       </div>
-
       <div className="container">
         <div className="row">
           <div className="col-lg-4 col-md-6 col-sm-12 pp">
