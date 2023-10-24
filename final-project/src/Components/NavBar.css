@@ -1,0 +1,22 @@
+#ok{
+    color: rgb(129, 35, 183); 
+    font-family: fantasy; 
+    padding: 1%;
+}
+.sad{
+    background-color: rgba(0, 0, 0, 0.521);
+    display: block;
+    margin-left: 10px;
+    margin-right: auto;
+    text-align: center;
+    text-decoration: none;
+    width: 80px;
+    height: 25px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+    border: none;
+    box-shadow: 0px 0px 1px 0px;
+}
+.pos{
+    position: fixed;
+}
