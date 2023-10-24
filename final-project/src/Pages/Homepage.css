@@ -15,12 +15,16 @@
   transform: scale(80%);
 }
 
-card {
-  margin: 10%;
+.card{
   border-radius: 20px;
+  height: 675px;
 }
 
 .pp {
   margin-top: 20px;
   margin-bottom: 20px;
 }
+/* .image{
+  background-size: contain;
+  overflow: hidden;
+} */
