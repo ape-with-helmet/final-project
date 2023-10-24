@@ -6,19 +6,23 @@
   padding: 5px;
 }
 
-#b1 {
-  width: 600px;
+.b1 {
+  width: 100%;
   margin-bottom: 8px;
 }
 
-#b2 {
-  width: 600px;
+.b2 {
+  width: 100%;
 }
 
 .b{
-    font-weight: 500;
+    font-weight: 700;
 }
-#photo{
-  position: normal;
-
+#tax{
+  font-weight: 100;
+  font-size: 11px;
+}
+#price{
+  font-weight: 700;
+  font-size: 23px;
 }

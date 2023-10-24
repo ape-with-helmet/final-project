@@ -3,6 +3,7 @@ import NavBar from './Components/NavBar'
 import Homepage from './Pages/Homepage'
 import ProductPage from './Pages/ProductPage'
 import SearchResult from './Pages/SearchResult'
+import Footer from './Components/Footer'
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 
 const App = () => {
@@ -16,6 +17,7 @@ const App = () => {
         <Route element={<ProductPage/>} path='/PP'/>
         <Route element={<SearchResult/>} path='/SR'/>
       </Routes>
+      <Footer/>
       </BrowserRouter>
     </>
   )
