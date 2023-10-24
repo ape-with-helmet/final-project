@@ -1,0 +1,33 @@
+#sb {
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .sidebar {
+    height: 100%;
+    width: 300px;
+    background-color: #333333;
+    color: aliceblue;
+    text-align: left;
+  }
+  
+  .delivery{
+      margin-top: 10px;
+  }
+  
+  #nav-dropdown-dark-example {
+    color: aliceblue;
+  }
+  
+  
+  .mp{
+      width: 100px;
+      padding: 5px;
+      margin-left: 4px;
+  }
+  
+  .button{
+      margin-top: 4px;
+      margin-left: 4px;
+      width: 200px;
+  }

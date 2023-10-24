@@ -1,71 +1,98 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import "./Sidebar.css"
+import NavDropdown from 'react-bootstrap/NavDropdown';
+import Form from 'react-bootstrap/Form';
 import "bootstrap/dist/css/bootstrap.min.css"
 
-function SideBar() {
-  return (
-    <>
-        <div className="flex-shrink-0 p-3" style="width: 280px;">
-    <Link to="/" className="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
-      <span className="fs-5 fw-semibold">Collapsible</span>
-    </Link>
-    <ul className="list-unstyled ps-0">
-      <li className="mb-1">
-        <button className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
-          Home
-        </button>
-        <div className="collapse show" id="home-collapse">
-          <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-            <li><Link to="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</Link></li>
-            <li><Link to="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Updates</Link></li>
-            <li><Link to="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Reports</Link></li>
-          </ul>
+function SearchResult() {
+    return (
+        <div id="sb">
+            <div className="sidebar">
+            ‎ ‎ ‎ 
+                <div className="delivery">
+                    <h6>Delivery Day</h6>
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Get It in 2 Days
+                    </label>
+                    <br />
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Get It by Tomorrow
+                    </label>
+                </div>
+
+                <hr />
+
+                <NavDropdown
+                    id="nav-dropdown-dark-example"
+                    title="Customer Review"
+                    menuVariant="dark"
+                >
+                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.2">
+                        Another action
+                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                </NavDropdown>
+
+                <hr />
+
+                <div className="brand">
+                    <h6>Brand</h6>
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">
+                        ABC
+                    </label>
+                    <br />
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">
+                        DEF
+                    </label>
+                    <br />
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">
+                        GHI
+                    </label>
+                    <br />
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">
+                        XYZ
+                    </label>
+                </div>
+
+                <hr />
+
+                <div className="price">
+                    <h6>Price</h6>
+                    <input className="mp" type="number" placeholder="Min" />
+                    <input type="number" className="mp" placeholder="Max" />
+                    <br />
+                    <input type='submit' className='button' value='Go' />
+                </div>
+
+                <hr />
+
+                <div className="discount">
+                    <h6>Deals & Discounts</h6>
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">
+                        All Discounts
+                    </label>
+                    <br />
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Today's Deals
+                    </label>
+                    <br />
+
+                    <hr />
+
+                </div>
+            </div>
         </div>
-      </li>
-      <li className="mb-1">
-        <button className="btn btn-toggle d-inline-flex align-items-center rounded border-0" data-bs-toggle="collapse" data-bs-target="#dashboard-collapse" aria-expanded="true">
-          Dashboard
-        </button>
-        <div className="collapse show" id="dashboard-collapse" style="">
-          <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-            <li><Link to="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Overview</Link></li>
-            <li><Link to="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Weekly</Link></li>
-            <li><Link to="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Monthly</Link></li>
-            <li><Link to="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Annually</Link></li>
-          </ul>
-        </div>
-      </li>
-      <li className="mb-1">
-        <button className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#orders-collapse" aria-expanded="false">
-          Orders
-        </button>
-        <div className="collapse" id="orders-collapse">
-          <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-            <li><Link to="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">New</Link></li>
-            <li><Link to="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Processed</Link></li>
-            <li><Link to="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Shipped</Link></li>
-            <li><Link to="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Returned</Link></li>
-          </ul>
-        </div>
-      </li>
-      <li className="border-top my-3"></li>
-      <li className="mb-1">
-        <button className="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#account-collapse" aria-expanded="false">
-          Account
-        </button>
-        <div className="collapse" id="account-collapse">
-          <ul className="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-            <li><Link to="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">New...</Link></li>
-            <li><Link to="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Profile</Link></li>
-            <li><Link to="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Settings</Link></li>
-            <li><Link to="#" className="link-body-emphasis d-inline-flex text-decoration-none rounded">Sign out</Link></li>
-          </ul>
-        </div>
-      </li>
-    </ul>
-  </div>
-    </>
-  )
+    )
 }
 
-export default SideBar
+export default SearchResult
