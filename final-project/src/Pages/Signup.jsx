@@ -13,16 +13,13 @@ function Signup() {
                         <form>
                             <h1 className="h3 mb-3 fw-normal">Enter the details to sign up</h1>
                             <div className="form-floating tt">
-                                <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
-                                <label for="floatingTextarea">Name</label>
+                                <input type="email" className="form-control" placeholder="name@example.com" id="floatingInput" data-temp-mail-org="0"></input>
                             </div>
                             <div className="form-floating tt">
-                                <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com" data-temp-mail-org="0" />
-                                <label for="floatingInput">Email address</label>
+                                <input type="password" className="form-control" id="floatingPassword" placeholder="Password"  />
                             </div>
                             <div className="form-floating tt">
-                                <input type="password" className="form-control" id="floatingPassword" placeholder="Password" />
-                                <label for="floatingPassword">Password</label>
+                                <input type="password" className="form-control" id="floatingPassword" placeholder="Re enter Password" />
                             </div>
 
                             <div className="form-check text-start my-3 ">
@@ -37,7 +34,7 @@ function Signup() {
                                     Agreeing to Terms and Conditions*
                                 </label>
                             </div>
-                            <button className="btn btn-primary w-100 py-2" type="submit">Sign up</button>
+                            <a href='./'><button className="btn btn-primary w-100 py-2" type="submit">Sign up</button></a>
                         </form>
                     </div>
                 </div>

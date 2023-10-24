@@ -9,30 +9,9 @@ import CardSubtitle from 'react-bootstrap/CardSubtitle'
 import './Homepage.css'
 import { Link } from 'react-router-dom';
 
-// function handover(num) {
-//   if (num==1) {
-//     var nme=1;
-//   }
-//   if (num==2) {
-//       var nme=2;
-//   }
-//   if (num==3) {
-//       var nme=3;
-//   }
-//   if (num==4) {
-//     var nme=4;
-//   }
-//   if (num==5) {
-//       var nme=5;
-//   }
-//   if (num==6) {
-//       var nme=6;
-//   }
-
-// }
 function Homepage() {
-  const handleClickScroll = () => {
-    const element = document.getElementById('section-1');
+  const handleClickScroll = (ele) => {
+    const element = document.getElementById(ele);
     if (element) {
       // 👇 Will scroll smoothly to the top of the next section
       element.scrollIntoView({behavior: 'smooth'});
@@ -41,7 +20,7 @@ function Homepage() {
 
   return (
     <>
-      <div className='row'>
+      <div className='row' id='row'>
         <div className='col-xl-4 col-lg-6 col-12'>
           <div className='container hamas'>
             <div className='brdr'>
@@ -116,7 +95,7 @@ function Homepage() {
             <div className="card-body">
               <div className="card-title h5">Xerxes Ltd.</div>
               <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga rerum ratione reprehenderit commodi vitae, et molestiae placeat quasi deleniti natus vel modi quod similique. Magni non, suscipit voluptates fugit vitae amet nesciunt ex corporis fugiat expedita eligendi inventore totam ab, optio saepe! Tempora praesentium nam fugit ducimus vel, quam amet blanditiis ullam quos, eius hic quibusdam voluptatibus sequi cumque itaque porro corrupti nisi sunt, in reiciendis. Dignissimos asperiores perferendis tenetur!</p>
-              <button type="button" className="btn btn-secondary btn-lg" onClick={handleClickScroll}>View Products</button>
+              <button type="button" className="btn btn-secondary btn-lg" onClick={() => handleClickScroll('section-1')}>View Products</button>
               <Link to={'/about'} className='idk'><Button variant="secondary">About us</Button></Link>
             </div>
           </div>
@@ -143,9 +122,9 @@ function Homepage() {
                 >
                   SKU: CRA12950
                 </CardSubtitle>
-                <Button>
+                <a href='./P1'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
                   Know More
-                </Button>
+                </Button></a>
               </CardBody>
             </Card>
           </div>
@@ -167,9 +146,9 @@ function Homepage() {
                 >
                   SKU: SAD12872
                 </CardSubtitle><br/>
-                <Button>
+                <a href='./P2'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
                   Know More
-                </Button>
+                </Button></a>
               </CardBody>
             </Card>
           </div>
@@ -191,9 +170,9 @@ function Homepage() {
                 >
                   SKU: ENG12868
                 </CardSubtitle><br/>
-                <Button>
+                <a href='/P3'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
                   Know More
-                </Button>
+                </Button></a>
               </CardBody>
             </Card>
           </div>
@@ -216,9 +195,9 @@ function Homepage() {
                   SKU: JKT10865
                 </CardSubtitle>
                 <br/>
-                <Button>
+                <a href='/P4'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
                   Know More
-                </Button>
+                </Button></a>
               </CardBody>
             </Card>
 
@@ -242,9 +221,9 @@ function Homepage() {
                   SKU: BAG10934
                 </CardSubtitle>
                 <br/><br/>
-                <Button>
+                <a href='/P5'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
                   Know More
-                </Button>
+                </Button></a>
               </CardBody>
             </Card>
 
@@ -268,9 +247,9 @@ function Homepage() {
                   SKU: CLO10939
                 </CardSubtitle>
                 <br/>
-                <Button>
+                <a href='/P6'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
                   Know More
-                </Button>
+                </Button></a>
               </CardBody>
             </Card>
 
