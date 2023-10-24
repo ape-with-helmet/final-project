@@ -8,6 +8,9 @@ import img3 from '../resources/Product_page/3.webp'
 import img4 from '../resources/Product_page/4.webp'
 import img5 from '../resources/Product_page/5.webp'
 import img6 from '../resources/Product_page/6.webp'
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+
 
 
 const ProductPage = () => {
@@ -82,7 +85,21 @@ const ProductPage = () => {
                             </div>
 
                             <hr />
-
+                            <Tabs
+                                defaultActiveKey="profile"
+                                id="uncontrolled-tab-example"
+                                className="mb-3"
+                                >
+                                <Tab eventKey="home" title="Home">
+                                    Tab content for Home
+                                </Tab>
+                                <Tab eventKey="profile" title="Profile">
+                                    Tab content for Profile
+                                </Tab>
+                                <Tab eventKey="contact" title="Contact" disabled>
+                                    Tab content for Contact
+                                </Tab>
+                                </Tabs>
                             <h5>Product Details</h5>
                             <p className='b'>Absolute Black GraphenPads Disc Brake Pads: A New Era of Braking Confidence</p>
                             <p>
