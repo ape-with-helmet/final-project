@@ -1,0 +1,16 @@
+.caption{
+    background-color: rgba(0, 0, 0, 0.378);
+    border: none;
+    border-radius: 100px;
+    box-shadow: 1px 1px 10px 1px black;
+}
+.pp2{
+    height: 600px;
+}
+.brdr{
+    border: none;
+    box-shadow:  0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+}
+.hamas{
+    transform: scale(80%);
+}
