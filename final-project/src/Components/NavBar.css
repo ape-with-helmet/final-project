@@ -3,19 +3,10 @@
     font-family: monospace;
     text-decoration: none;
 }
-.Link{
+.kink{
     text-decoration: none;
     color: white;
 }
-.mar{
-    margin-top: auto;
-    margin-bottom: auto;
-}
-.toi{
-    margin-top: 1%;
-    margin-bottom: auto;
-}
 .floater{
-    margin-top: auto;
-    margin-bottom: auto;
+    --bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;
 }
