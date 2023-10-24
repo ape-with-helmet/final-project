@@ -1,10 +1,9 @@
 import React from 'react'
 import "./Sidebar.css"
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import Form from 'react-bootstrap/Form';
 import "bootstrap/dist/css/bootstrap.min.css"
 
-function SearchResult() {
+function Sidebar() {
     return (
         <div id="sb">
             <div className="sidebar">
@@ -92,4 +91,4 @@ function SearchResult() {
     )
 }
 
-export default SearchResult
+export default Sidebar
