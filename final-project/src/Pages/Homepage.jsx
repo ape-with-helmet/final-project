@@ -10,8 +10,8 @@ import './Homepage.css'
 import { Link } from 'react-router-dom';
 
 function Homepage() {
-  const handleClickScroll = (ele) => {
-    const element = document.getElementById(ele);
+  const handleClickScroll = () => {
+    const element = document.getElementById('section-1');
     if (element) {
       // 👇 Will scroll smoothly to the top of the next section
       element.scrollIntoView({behavior: 'smooth'});
