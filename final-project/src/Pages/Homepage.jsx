@@ -94,8 +94,13 @@ function Homepage() {
             <h5 className="card-header">About Us</h5>
             <div className="card-body">
               <div className="card-title h5">Xerxes Ltd.</div>
+<<<<<<< HEAD
               <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga rerum ratione reprehenderit commodi vitae, et molestiae placeat quasi deleniti natus vel modi quod similique. Magni non, suscipit voluptates fugit vitae amet nesciunt ex corporis fugiat expedita eligendi inventore totam ab, optio saepe! Tempora praesentium nam fugit ducimus vel, quam amet blanditiis ullam quos, eius hic quibusdam voluptatibus sequi cumque itaque porro corrupti nisi sunt, in reiciendis. Dignissimos asperiores perferendis tenetur!</p>
               <button type="button" className="btn btn-secondary btn-lg" onClick={() => handleClickScroll('section-1')}>View Products</button>
+=======
+              <p className="card-text">At Xerxes India, our mission is clear: To empower Motorcyclists by providing them with the right tools and accessories they need to ride with confidence, safety, and enjoyment. We believe that every Motorcyclist, from the casual rider to the competitive racer, deserves the best gear to support their passion.</p>
+              <button type="button" className="btn btn-secondary btn-lg" onClick={handleClickScroll}>View Products</button>
+>>>>>>> b31b50469dd90b020150f52155817702ae5b3a27
               <Link to={'/about'} className='idk'><Button variant="secondary">About us</Button></Link>
             </div>
           </div>
