@@ -38,7 +38,7 @@ function Signup() {
                                 </label>
                             </div>
                             <button className="btn btn-primary w-100 py-2" type="submit">Sign up</button>
-                            <p className="mt-5 mb-3 text-body-secondary">© 2017–2023</p>
+                            <p className="mt-5 mb-3 text-body-secondary">© 2023</p>
                         </form>
                     </div>
                 </div>
