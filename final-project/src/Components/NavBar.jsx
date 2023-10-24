@@ -20,6 +20,7 @@ function NavScrollExample() {
             navbarScroll
           >
             <Nav.Link><Link to={'/PP'} className='Link'>Our Products</Link></Nav.Link>
+            <Nav.Link><Link to={'/CP'} className='Link'>Contact Us</Link></Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control

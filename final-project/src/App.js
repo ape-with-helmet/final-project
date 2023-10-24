@@ -1,6 +1,7 @@
 import React from 'react'
 import NavBar from './Components/NavBar'
 import Homepage from './Pages/Homepage'
+import ContactPage from './Pages/ContactPage'
 import ProductPage from './Pages/ProductPage'
 import SearchResult from './Pages/SearchResult'
 import Footer from './Components/Footer'
@@ -11,11 +12,12 @@ const App = () => {
     <>
       <BrowserRouter>
       <NavBar/>
-      <br/>
+      <br/><br/>
       <Routes>
         <Route element={<Homepage/>} path='/'/>
         <Route element={<ProductPage/>} path='/PP'/>
         <Route element={<SearchResult/>} path='/SR'/>
+        <Route element={<ContactPage/>} path='/CP'/>
       </Routes>
       <Footer/>
       </BrowserRouter>

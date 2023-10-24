@@ -205,14 +205,7 @@ const ProductPage = () => {
                                         </Table>
                                     </div> 
                                 </Tab>
-                                {/* <Tab eventKey="howto" title="How to install">
-                                    
-                                </Tab> */}
                             </Tabs>
-                            
-
-
-
                         </div>
                     </div>
                 </div>

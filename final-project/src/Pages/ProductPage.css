@@ -26,3 +26,29 @@
   font-weight: 700;
   font-size: 23px;
 }
+.yahoo{
+  text-decoration: none;
+}
+.myClass ul > li > a {
+  background-color: white;
+  color: red;
+}
+
+/* InActive tab */
+.myClass ul > li > a:hover {
+  background-color: pink;
+}
+
+/* Active tab */
+.myClass ul > li.active > a,
+.myClass ul > li.active > a:hover,
+.myClass ul > li.active > a:focus {
+  background-color: red;
+  color: white;
+}
+
+/* Disabled tab */
+.myClass ul > li.disabled > a {
+  background-color: lightgray;
+  color: darkgray;
+}
