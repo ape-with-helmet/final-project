@@ -1,13 +1,13 @@
 import React from 'react';
 import './ProductPage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Carousel } from 'react-bootstrap';
-//import img1 from '../resources/Product_page/1.webp'
-import img2 from '../resources/Product_page/2.webp'
-import img3 from '../resources/Product_page/3.webp'
-import img4 from '../resources/Product_page/4.webp'
-import img5 from '../resources/Product_page/5.webp'
-import img6 from '../resources/Product_page/6.webp'
+// import { Carousel } from 'react-bootstrap';
+// import img1 from '../resources/Product_page/1.webp'
+// import img2 from '../resources/Product_page/2.webp'
+// import img3 from '../resources/Product_page/3.webp'
+// import img4 from '../resources/Product_page/4.webp'
+// import img5 from '../resources/Product_page/5.webp'
+// import img6 from '../resources/Product_page/6.webp'
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Table from 'react-bootstrap/Table'
@@ -21,52 +21,7 @@ const ProductPage = () => {
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6 col-sm-12" id='photo'>
-                            <div className='p-5'>
-                                <Carousel>
-                                    {/* <Carousel.Item>
-                                        <img style={{ maxHeight: "100vh" }}
-                                            className="d-block w-100 pp"
-                                            src={img1}
-                                            alt="First slide"
-                                        />
-                                    </Carousel.Item> */}
-                                    <Carousel.Item>
-                                        <img
-                                            className="d-block w-100 pp"
-                                            src={img2}
-                                            alt="Second slide"
-                                        />
-                                    </Carousel.Item>
-                                    <Carousel.Item>
-                                        <img
-                                            className="d-block w-100 pp"
-                                            src={img3}
-                                            alt="Third slide"
-                                        />
-                                    </Carousel.Item>
-                                    <Carousel.Item>
-                                        <img
-                                            className="d-block w-100 pp"
-                                            src={img4}
-                                            alt="Fourth slide"
-                                        />
-                                    </Carousel.Item>
-                                    <Carousel.Item>
-                                        <img
-                                            className="d-block w-100 pp"
-                                            src={img5}
-                                            alt="Five slide"
-                                        />
-                                    </Carousel.Item>
-                                    <Carousel.Item>
-                                        <img
-                                            className="d-block w-100 pp"
-                                            src={img6}
-                                            alt="Sixth slide"
-                                        />
-                                    </Carousel.Item>
-                                </Carousel>
-                            </div>
+                        <img src="https://www.thebikeaffair.com/cdn/shop/files/Absolute-Black-GraphenPads-Disc-Brake-Pads-Dura-Ace-No-34-The-Bike-Affair-7.png?v=1697999495&width=1080" class="img-fluid" alt="Image Not Loaded"/>
                         </div>
 
 

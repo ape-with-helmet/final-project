@@ -29,7 +29,7 @@ function NavScrollExample() {
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="outline-light">Search</Button>
+            <Link to={'/SR'} className='Link'><Button variant="outline-light">Search</Button></Link>
           </Form>
         </Navbar.Collapse>
       </Container>
