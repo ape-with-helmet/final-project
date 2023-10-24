@@ -5,6 +5,8 @@ import ContactPage from './Pages/ContactPage'
 import ProductPage from './Pages/ProductPage'
 import SearchResult from './Pages/SearchResult'
 import Footer from './Components/Footer'
+import Login from './Pages/Login'
+import Signup from './Pages/Signup'
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 
 const App = () => {
@@ -18,6 +20,8 @@ const App = () => {
         <Route element={<ProductPage/>} path='/PP'/>
         <Route element={<SearchResult/>} path='/SR'/>
         <Route element={<ContactPage/>} path='/CP'/>
+        <Route element={<Login/>} path='/login'/>
+        <Route element={<Signup/>} path='/signup'/>
       </Routes>
       <Footer/>
       </BrowserRouter>
