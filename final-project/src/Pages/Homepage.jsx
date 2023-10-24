@@ -4,15 +4,13 @@ import img1 from '../resources/b1.png'
 import img2 from '../resources/b2.png'
 import img3 from '../resources/b3.png'
 import img4 from '../resources/Product_page/2.webp'
-import './Homepage.css'
-
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import CardImg from 'react-bootstrap/CardImg'
 import CardBody from 'react-bootstrap/CardBody'
 import CardTitle from 'react-bootstrap/CardTitle'
 import CardSubtitle from 'react-bootstrap/CardSubtitle'
-
+import './Homepage.css'
 
 function Homepage() {
 
@@ -72,12 +70,12 @@ function Homepage() {
       <div className="container">
         <div className="row">
           <div className="col-lg-4 col-md-6 col-sm-12 pp">
-            <Card>
+            <Card className='Card'>
               <CardImg
                 alt="Card image cap"
                 src="https://bandidospitstop.com/cdn/shop/files/6_233d4f18-8819-470c-ad18-358b61a4703d.webp?v=1697791784&width=1125"
                 top
-                width="100%"
+                width="100%" className='image'
               />
               <CardBody>
                 <CardTitle tag="h5">
@@ -101,7 +99,7 @@ function Homepage() {
                 alt="Card image cap"
                 src="https://bandidospitstop.com/cdn/shop/files/7_78f9a05e-9faf-4bf6-9f0b-973ddafa2dbc.webp?v=1697715985&width=1125"
                 top
-                width="100%"
+                width="100%" className='image'
               />
               <CardBody>
                 <CardTitle tag="h5">
@@ -112,7 +110,7 @@ function Homepage() {
                   tag="h6"
                 >
                   SKU: SAD12872
-                </CardSubtitle>
+                </CardSubtitle><br/>
                 <Button>
                   Know More
                 </Button>
@@ -125,7 +123,7 @@ function Homepage() {
                 alt="Card image cap"
                 src="https://bandidospitstop.com/cdn/shop/files/5_32f23a5e-241a-4a8a-972f-b7bd0c82a4f0.jpg?v=1697716480&width=1125"
                 top
-                width="100%"
+                width="100%" className='image'
               />
               <CardBody>
                 <CardTitle tag="h5">
@@ -136,7 +134,7 @@ function Homepage() {
                   tag="h6"
                 >
                   SKU: ENG12868
-                </CardSubtitle>
+                </CardSubtitle><br/>
                 <Button>
                   Know More
                 </Button>
@@ -149,7 +147,7 @@ function Homepage() {
                 alt="Card image cap"
                 src="https://bandidospitstop.com/cdn/shop/files/JKT10865MOTOWOLFARMOURJACKETBLACK1031BM.webp?v=1697801445&width=1125"
                 top
-                width="100%"
+                width="100%" className='image'
               />
               <CardBody>
                 <CardTitle tag="h5">
@@ -161,6 +159,7 @@ function Homepage() {
                 >
                   SKU: JKT10865
                 </CardSubtitle>
+                <br/>
                 <Button>
                   Know More
                 </Button>
@@ -174,11 +173,11 @@ function Homepage() {
                 alt="Card image cap"
                 src="https://bandidospitstop.com/cdn/shop/files/BAG10934MOTOWOLFBUMBERBAGBLACK0715.webp?v=1697797261&width=1125"
                 top
-                width="100%"
+                width="100%" className='image'
               />
               <CardBody>
                 <CardTitle tag="h5">
-                  MOTOWOLF BUMBER BAG 0715
+                  MOTOWOLF BUMPER BAG 0715
                 </CardTitle>
                 <CardSubtitle
                   className="mb-2 text-muted"
@@ -186,6 +185,7 @@ function Homepage() {
                 >
                   SKU: BAG10934
                 </CardSubtitle>
+                <br/><br/>
                 <Button>
                   Know More
                 </Button>
@@ -199,7 +199,7 @@ function Homepage() {
                 alt="Card image cap"
                 src="https://bandidospitstop.com/cdn/shop/files/CLO10939MOTOWOLFHEADCOVERBLACK1919M.webp?v=1697801259&width=1125"
                 top
-                width="100%"
+                width="100%" className='image'
               />
               <CardBody>
                 <CardTitle tag="h5">
@@ -211,6 +211,7 @@ function Homepage() {
                 >
                   SKU: CLO10939
                 </CardSubtitle>
+                <br/>
                 <Button>
                   Know More
                 </Button>
@@ -220,10 +221,6 @@ function Homepage() {
           </div>
         </div>
       </div>
-
-
-
-
     </>
   );
 }
