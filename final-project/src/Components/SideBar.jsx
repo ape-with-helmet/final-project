@@ -7,7 +7,6 @@ function SideBar() {
     <>
         <div className="flex-shrink-0 p-3" style="width: 280px;">
     <Link to="/" className="d-flex align-items-center pb-3 mb-3 link-body-emphasis text-decoration-none border-bottom">
-      <svg className="bi pe-none me-2" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
       <span className="fs-5 fw-semibold">Collapsible</span>
     </Link>
     <ul className="list-unstyled ps-0">
