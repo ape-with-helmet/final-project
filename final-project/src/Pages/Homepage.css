@@ -1,30 +1,39 @@
 .caption {
-  background-color: rgba(0, 0, 0, 0.378);
+  background-color: rgba(0, 0, 0, 0.603);
   border: none;
-  border-radius: 100px;
+  width: auto;
+  color: white;
+  border-radius: 10px;
   box-shadow: 1px 1px 10px 1px black;
-}
-.pp2 {
-  height: 600px;
 }
 .brdr {
   border: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 .hamas {
   transform: scale(80%);
 }
+.card-aauu{
+  margin: 10%;
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.5);
 
-.card{
-  border-radius: 20px;
-  height: 675px;
+}
+.tet{
+  color: white;
 }
 
+.card{
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.93);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+.image{
+  border: none;
+}
 .pp {
   margin-top: 20px;
   margin-bottom: 20px;
 }
-/* .image{
-  background-size: contain;
-  overflow: hidden;
-} */
