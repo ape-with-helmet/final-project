@@ -3,7 +3,7 @@
 }
 
 .pp{
-    height: 450px;
+    /* height: 450px; */
 
 }
 
@@ -22,4 +22,8 @@
 
 .b{
     font-weight: 500;
+}
+#photo{
+  position: normal;
+
 }

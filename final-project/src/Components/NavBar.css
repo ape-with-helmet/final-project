@@ -1,7 +1,7 @@
 #ok{
-    color: rgb(129, 35, 183); 
-    font-family: fantasy; 
-    padding: 1%;
+    color: rgb(179, 48, 255); 
+    font-family: monospace;
+    text-decoration: none;
 }
 .sad{
     background-color: rgba(0, 0, 0, 0.521);
@@ -19,4 +19,8 @@
 }
 .pos{
     position: fixed;
+}
+.Link{
+    text-decoration: none;
+    color: white;
 }

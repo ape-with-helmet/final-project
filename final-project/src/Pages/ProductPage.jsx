@@ -2,7 +2,7 @@ import React from 'react';
 import './ProductPage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Carousel } from 'react-bootstrap';
-import img1 from '../resources/Product_page/1.webp'
+//import img1 from '../resources/Product_page/1.webp'
 import img2 from '../resources/Product_page/2.webp'
 import img3 from '../resources/Product_page/3.webp'
 import img4 from '../resources/Product_page/4.webp'
@@ -16,16 +16,16 @@ const ProductPage = () => {
             <body>
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-6 pp" id='photo'>
+                        <div className="col-md-6 col-sm-12" id='photo'>
                             <div className='p-5'>
                                 <Carousel>
-                                    <Carousel.Item>
+                                    {/* <Carousel.Item>
                                         <img style={{ maxHeight: "100vh" }}
                                             className="d-block w-100 pp"
                                             src={img1}
                                             alt="First slide"
                                         />
-                                    </Carousel.Item>
+                                    </Carousel.Item> */}
                                     <Carousel.Item>
                                         <img
                                             className="d-block w-100 pp"
@@ -64,7 +64,9 @@ const ProductPage = () => {
                                 </Carousel>
                             </div>
                         </div>
-                        <div className="col-md-6" id='text'>
+
+
+                        <div className="col-md-6 col-sm-12" id='text'>
                             <h1>Absolute Black GraphenPads Disc Brake Pads Dura-Ace (No.34)</h1>
                             <p>DISCPAD34 Std</p>
                             <br />

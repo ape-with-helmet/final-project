@@ -10,6 +10,7 @@ const App = () => {
     <>
       <BrowserRouter>
       <NavBar/>
+      <br/>
       <Routes>
         <Route element={<Homepage/>} path='/'/>
         <Route element={<ProductPage/>} path='/PP'/>

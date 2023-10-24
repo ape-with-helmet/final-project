@@ -14,7 +14,7 @@ function Homepage() {
         <div className='p-5 brdr'>  
             <Carousel>  
                 <Carousel.Item>  
-                    <img style={{Height:"100px"}}  
+                    <img style={{maxHeight:"100vh"}}  
                         className="d-block w-100 pp2"  
                         src={img1}  
                         alt="First slide"  
