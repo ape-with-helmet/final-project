@@ -14,3 +14,9 @@
 .hamas{
     transform: scale(80%);
 }
+
+card{
+    padding: 10%;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px black;
+}
