@@ -8,14 +8,32 @@ import CardTitle from 'react-bootstrap/CardTitle'
 import CardSubtitle from 'react-bootstrap/CardSubtitle'
 import './Homepage.css'
 
+function handover(num) {
+  if (num==1) {
+    var nme=1;
+  }
+  if (num==2) {
+      var nme=2;
+  }
+  if (num==3) {
+      var nme=3;
+  }
+  if (num==4) {
+    var nme=4;
+  }
+  if (num==5) {
+      var nme=5;
+  }
+  if (num==6) {
+      var nme=6;
+  }
+
+}
+function poep() {
+  document.getElementById("poppy").scrollIntoView();
+}
 function Homepage() {
-  const handleClickScroll = () => {
-    const element = document.getElementById('section-1');
-    if (element) {
-      // 👇 Will scroll smoothly to the top of the next section
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  
   return (
     <>
       <div className='row'>
@@ -93,12 +111,12 @@ function Homepage() {
             <div className="card-body">
               <div className="card-title h5">Xerxes Ltd.</div>
               <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga rerum ratione reprehenderit commodi vitae, et molestiae placeat quasi deleniti natus vel modi quod similique. Magni non, suscipit voluptates fugit vitae amet nesciunt ex corporis fugiat expedita eligendi inventore totam ab, optio saepe! Tempora praesentium nam fugit ducimus vel, quam amet blanditiis ullam quos, eius hic quibusdam voluptatibus sequi cumque itaque porro corrupti nisi sunt, in reiciendis. Dignissimos asperiores perferendis tenetur!</p>
-              <button type="button" className="btn btn-dark" onClick={handleClickScroll}>View Products</button>
+              <button type="button" className="btn btn-dark" onClick={poep()}>View Products</button>
             </div>
           </div>
         </div>
       </div>
-      <br id='section-1'/>
+      <br id='poppy'/>
       <div className="container">
         <div className="row">
           <div className="col-lg-4 col-md-6 col-sm-12 pp">
