@@ -1,0 +1,25 @@
+.row{
+    margin-top: 50px;
+}
+
+.pp{
+    height: 450px;
+
+}
+
+.btnc {
+  padding: 5px;
+}
+
+#b1 {
+  width: 600px;
+  margin-bottom: 8px;
+}
+
+#b2 {
+  width: 600px;
+}
+
+.b{
+    font-weight: 500;
+}
