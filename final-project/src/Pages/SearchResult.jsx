@@ -1,10 +1,13 @@
 import React from 'react'
 import './SearchResult.css'
+import Sidebar from '../Components/SideBar'
 
 function SearchResult() {
-  return (
-    <div>SearchResult</div>
-  )
+    return (
+        <>
+            <Sidebar />
+        </>
+    )
 }
 
 export default SearchResult
