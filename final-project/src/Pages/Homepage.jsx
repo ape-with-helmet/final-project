@@ -7,6 +7,7 @@ import CardBody from 'react-bootstrap/CardBody'
 import CardTitle from 'react-bootstrap/CardTitle'
 import CardSubtitle from 'react-bootstrap/CardSubtitle'
 import './Homepage.css'
+import { Link } from 'react-router-dom';
 
 // function handover(num) {
 //   if (num==1) {
@@ -116,6 +117,7 @@ function Homepage() {
               <div className="card-title h5">Xerxes Ltd.</div>
               <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga rerum ratione reprehenderit commodi vitae, et molestiae placeat quasi deleniti natus vel modi quod similique. Magni non, suscipit voluptates fugit vitae amet nesciunt ex corporis fugiat expedita eligendi inventore totam ab, optio saepe! Tempora praesentium nam fugit ducimus vel, quam amet blanditiis ullam quos, eius hic quibusdam voluptatibus sequi cumque itaque porro corrupti nisi sunt, in reiciendis. Dignissimos asperiores perferendis tenetur!</p>
               <button type="button" className="btn btn-secondary btn-lg" onClick={handleClickScroll}>View Products</button>
+              <Link to={'/about'} className='idk'><Button variant="secondary">About us</Button></Link>
             </div>
           </div>
         </div>

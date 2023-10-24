@@ -7,6 +7,7 @@ import SearchResult from './Pages/SearchResult'
 import Footer from './Components/Footer'
 import Login from './Pages/Login'
 import Signup from './Pages/Signup'
+import Aboutus from './Pages/Aboutus'
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 
 const App = () => {
@@ -22,6 +23,7 @@ const App = () => {
         <Route element={<ContactPage/>} path='/CP'/>
         <Route element={<Login/>} path='/login'/>
         <Route element={<Signup/>} path='/signup'/>
+        <Route element={<Aboutus/>} path='/about'/>
       </Routes>
       <Footer/>
       </BrowserRouter>
