@@ -6,14 +6,12 @@ import img3 from '../resources/b3.png'
 import img4 from '../resources/Product_page/2.webp'
 import './Homepage.css'
 
-import CardGroup from 'react-bootstrap/CardGroup'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 import CardImg from 'react-bootstrap/CardImg'
 import CardBody from 'react-bootstrap/CardBody'
 import CardTitle from 'react-bootstrap/CardTitle'
 import CardSubtitle from 'react-bootstrap/CardSubtitle'
-import CardText from 'react-bootstrap/CardText'
 
 
 function Homepage() {
@@ -73,7 +71,7 @@ function Homepage() {
 
       <div className="container">
         <div className="row">
-          <div className="col-lg-4 col-md-6 col-sm-12">
+          <div className="col-lg-4 col-md-6 col-sm-12 pp">
             <Card>
               <CardImg
                 alt="Card image cap"
@@ -83,24 +81,21 @@ function Homepage() {
               />
               <CardBody>
                 <CardTitle tag="h5">
-                  Card title
+                  LCB TRIUMPH SPEED 400 THANOS CRASH GUARD WITH SLIDER
                 </CardTitle>
                 <CardSubtitle
                   className="mb-2 text-muted"
                   tag="h6"
                 >
-                  Card subtitle
+                  SKU: CRA12950
                 </CardSubtitle>
-                <CardText>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, fugiat?
-                </CardText>
                 <Button>
-                  Button
+                  Know More
                 </Button>
               </CardBody>
             </Card>
           </div>
-          <div className="col-lg-4 col-md-6 col-sm-12">
+          <div className="col-lg-4 col-md-6 col-sm-12 pp">
             <Card>
               <CardImg
                 alt="Card image cap"
@@ -110,24 +105,21 @@ function Homepage() {
               />
               <CardBody>
                 <CardTitle tag="h5">
-                  Card title
+                  LCB TRIUMPH SPEED 400 AVIATOR SADDLE STAY
                 </CardTitle>
                 <CardSubtitle
                   className="mb-2 text-muted"
                   tag="h6"
                 >
-                  Card subtitle
+                  SKU: SAD12872
                 </CardSubtitle>
-                <CardText>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, recusandae.
-                </CardText>
                 <Button>
-                  Button
+                  Know More
                 </Button>
               </CardBody>
             </Card>
           </div>
-          <div className="col-lg-4 col-md-6 col-sm-12">
+          <div className="col-lg-4 col-md-6 col-sm-12 pp">
             <Card>
               <CardImg
                 alt="Card image cap"
@@ -137,25 +129,100 @@ function Homepage() {
               />
               <CardBody>
                 <CardTitle tag="h5">
-                  Card title
+                  LCB TRIUMPH SPEED 400 VOYAGER BASHPLATE
                 </CardTitle>
                 <CardSubtitle
                   className="mb-2 text-muted"
                   tag="h6"
                 >
-                  Card subtitle
+                  SKU: ENG12868
                 </CardSubtitle>
-                <CardText>
-                  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum, iste.
-                </CardText>
                 <Button>
-                  Button
+                  Know More
                 </Button>
               </CardBody>
             </Card>
           </div>
+          <div className="col-lg-4 col-md-6 col-sm-12 pp">
+            <Card>
+              <CardImg
+                alt="Card image cap"
+                src="https://bandidospitstop.com/cdn/shop/files/JKT10865MOTOWOLFARMOURJACKETBLACK1031BM.webp?v=1697801445&width=1125"
+                top
+                width="100%"
+              />
+              <CardBody>
+                <CardTitle tag="h5">
+                  MOTOWOLF ARMOUR JACKET 1031B
+                </CardTitle>
+                <CardSubtitle
+                  className="mb-2 text-muted"
+                  tag="h6"
+                >
+                  SKU: JKT10865
+                </CardSubtitle>
+                <Button>
+                  Know More
+                </Button>
+              </CardBody>
+            </Card>
+
+          </div>
+          <div className="col-lg-4 col-md-6 col-sm-12 pp">
+            <Card>
+              <CardImg
+                alt="Card image cap"
+                src="https://bandidospitstop.com/cdn/shop/files/BAG10934MOTOWOLFBUMBERBAGBLACK0715.webp?v=1697797261&width=1125"
+                top
+                width="100%"
+              />
+              <CardBody>
+                <CardTitle tag="h5">
+                  MOTOWOLF BUMBER BAG 0715
+                </CardTitle>
+                <CardSubtitle
+                  className="mb-2 text-muted"
+                  tag="h6"
+                >
+                  SKU: BAG10934
+                </CardSubtitle>
+                <Button>
+                  Know More
+                </Button>
+              </CardBody>
+            </Card>
+
+          </div>
+          <div className="col-lg-4 col-md-6 col-sm-12 pp">
+            <Card>
+              <CardImg
+                alt="Card image cap"
+                src="https://bandidospitstop.com/cdn/shop/files/CLO10939MOTOWOLFHEADCOVERBLACK1919M.webp?v=1697801259&width=1125"
+                top
+                width="100%"
+              />
+              <CardBody>
+                <CardTitle tag="h5">
+                  MOTOWOLF HEAD COVER BLACK 1919
+                </CardTitle>
+                <CardSubtitle
+                  className="mb-2 text-muted"
+                  tag="h6"
+                >
+                  SKU: CLO10939
+                </CardSubtitle>
+                <Button>
+                  Know More
+                </Button>
+              </CardBody>
+            </Card>
+
+          </div>
         </div>
       </div>
+
+
+
 
     </>
   );
