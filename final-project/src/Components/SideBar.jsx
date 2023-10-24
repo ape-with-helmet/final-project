@@ -8,7 +8,6 @@ function SearchResult() {
     return (
         <div id="sb">
             <div className="sidebar">
-            ‎ ‎ ‎ 
                 <div className="delivery">
                     <h6>Delivery Day</h6>
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
