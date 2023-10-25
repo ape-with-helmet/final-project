@@ -19,11 +19,11 @@ const ProductPage = () => {
 
 
                         <div className="col-lg-6 col-sm-12" id='text'>
-                            <h1>Absolute Black GraphenPads Disc Brake Pads Dura-Ace (No.34)</h1>
-                            <p>DISCPAD34 Std</p>
+                            <h1>MOTOWOLF BUMPER BAG 0715</h1>
+                            <p>SKU: BAG10934</p>
                             <br />
                             <p id='price'>
-                                ₹5,490.00 <br />
+                                ₹749 <br />
                                 <span id='tax'>Tax included. Shipping calculated at checkout.</span>
                             </p>
                             <br />
