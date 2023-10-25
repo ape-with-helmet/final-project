@@ -1,7 +1,11 @@
 import React from 'react'
 import './ContactPage.css'
 
+function al(){
+	alert('Thank you for the feedback');
+}
 const ContactPage = () => {
+	
   return (
     <div>
        	<section class="ftco-section">
@@ -41,7 +45,7 @@ const ContactPage = () => {
 											</div>
 											<div class="col-md-12">
 												<div class="form-group">
-													<input type="submit" value="Send Message" class="btn btn-primary" />
+													<button type='button' class="btn btn-primary"onClick={al}>Send Message</button>
 													<div class="submitting"></div>
 												</div>
 											</div>
