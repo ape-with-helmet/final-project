@@ -29,7 +29,7 @@ function NavScrollExample() {
               className="me-2"
               aria-label="Search"
             /></Nav.Link>
-            <Nav.Link><Link to={'/PP'} className='Link'><Button variant="outline-light">Search</Button></Link></Nav.Link>
+            <Nav.Link><Link to={'/'} className='Link'><Button variant="outline-light">Search</Button></Link></Nav.Link>
           </Form>
           <Nav.Link><Link to={'/signup'} className='Link'><Button variant="outline-light">Sign Up</Button></Link></Nav.Link>
           <Nav.Link><Link to={'/login'} className='Link'><Button variant="light">Login</Button></Link></Nav.Link>

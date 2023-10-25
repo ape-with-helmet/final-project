@@ -33,10 +33,17 @@
   border: 1px solid rgba(0, 0, 0, 0.93);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.5);
 }
+.card:hover{
+  transform: scale(1.01);
+}
 .image{
   border: none;
 }
 .pp {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+Button:hover{
+  transform: scale(1.05);
+  opacity: 0.7;
 }

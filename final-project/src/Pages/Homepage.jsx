@@ -9,27 +9,6 @@ import CardSubtitle from 'react-bootstrap/CardSubtitle'
 import './Homepage.css'
 import { Link } from 'react-router-dom';
 
-// function handover(num) {
-//   if (num==1) {
-//     var nme=1;
-//   }
-//   if (num==2) {
-//       var nme=2;
-//   }
-//   if (num==3) {
-//       var nme=3;
-//   }
-//   if (num==4) {
-//     var nme=4;
-//   }
-//   if (num==5) {
-//       var nme=5;
-//   }
-//   if (num==6) {
-//       var nme=6;
-//   }
-
-// }
 function Homepage() {
   const handleClickScroll = () => {
     const element = document.getElementById('section-1');
@@ -41,7 +20,7 @@ function Homepage() {
 
   return (
     <>
-      <div className='row'>
+      <div className='row' id='row'>
         <div className='col-xl-4 col-lg-6 col-12'>
           <div className='container hamas'>
             <div className='brdr'>
@@ -143,9 +122,9 @@ function Homepage() {
                 >
                   SKU: CRA12950
                 </CardSubtitle>
-                <Button>
+                <a href='./P1'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
                   Know More
-                </Button>
+                </Button></a>
               </CardBody>
             </Card>
           </div>
@@ -167,9 +146,9 @@ function Homepage() {
                 >
                   SKU: SAD12872
                 </CardSubtitle><br/>
-                <Button>
+                <a href='./P2'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
                   Know More
-                </Button>
+                </Button></a>
               </CardBody>
             </Card>
           </div>
@@ -191,9 +170,9 @@ function Homepage() {
                 >
                   SKU: ENG12868
                 </CardSubtitle><br/>
-                <Button>
+                <a href='/P3'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
                   Know More
-                </Button>
+                </Button></a>
               </CardBody>
             </Card>
           </div>
@@ -216,9 +195,9 @@ function Homepage() {
                   SKU: JKT10865
                 </CardSubtitle>
                 <br/>
-                <Button>
+                <a href='/P4'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
                   Know More
-                </Button>
+                </Button></a>
               </CardBody>
             </Card>
 
@@ -242,9 +221,9 @@ function Homepage() {
                   SKU: BAG10934
                 </CardSubtitle>
                 <br/><br/>
-                <Button>
+                <a href='/P5'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
                   Know More
-                </Button>
+                </Button></a>
               </CardBody>
             </Card>
 
@@ -268,9 +247,9 @@ function Homepage() {
                   SKU: CLO10939
                 </CardSubtitle>
                 <br/>
-                <Button>
+                <a href='/P6'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
                   Know More
-                </Button>
+                </Button></a>
               </CardBody>
             </Card>
 
