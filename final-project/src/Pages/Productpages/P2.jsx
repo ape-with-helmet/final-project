@@ -19,11 +19,10 @@ const ProductPage = () => {
 
 
                         <div className="col-lg-6 col-sm-12" id='text'>
-                            <h1>Absolute Black GraphenPads Disc Brake Pads Dura-Ace (No.34)</h1>
-                            <p>DISCPAD34 Std</p>
-                            <br />
+                            <h1>LCB TRIUMPH SPEED 400 AVIATOR SADDLE STAY</h1>
+                            <p>SKU: SAD12872</p>
                             <p id='price'>
-                                ₹5,490.00 <br />
+                                ₹10,499 <br />
                                 <span id='tax'>Tax included. Shipping calculated at checkout.</span>
                             </p>
                             <br />

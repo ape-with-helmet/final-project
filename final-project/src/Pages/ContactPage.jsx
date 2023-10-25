@@ -66,7 +66,7 @@ const ContactPage = () => {
 				        			<span class="fa fa-phone"></span>
 				        		</div>
 				        		<div class="text pl-3">
-					            <p><span>Phone:</span> +91 9999933333</p>
+					            <p><span>Phone:</span> +91	</p>
 					          </div>
 				          </div>
 				        	<div class="dbox w-100 d-flex align-items-center">
