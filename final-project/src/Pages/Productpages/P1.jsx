@@ -23,9 +23,9 @@ const ProductPage = () => {
                             </p>
                             <br />
                             <div className="btnc">
-                                <button type="button" class="btn btn-outline-secondary b1">Add to Cart</button>
+                                <a href='/cart'><button type="button" class="btn btn-outline-secondary b1">Add to Cart</button></a>
                                 <br />
-                                <button type="button" class="btn btn-secondary b1 b2">Buy it Now</button>
+                                <a href='/Pay'><button type="button" class="btn btn-secondary b1 b2">Buy it Now</button></a>
                             </div>
 
                             <hr />

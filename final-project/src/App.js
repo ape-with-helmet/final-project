@@ -13,6 +13,10 @@ import P2 from './Pages/Productpages/P2'
 import P3 from './Pages/Productpages/P3'
 import P4 from './Pages/Productpages/P4'
 import P5 from './Pages/Productpages/P5'
+import PaymentForm from './Pages/PaymentForm'
+import PaymentPage from './Pages/PaymentPage'
+import Cart from './Pages/Cart'
+
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 
 const App = () => {
@@ -29,6 +33,9 @@ const App = () => {
         <Route element={<P4/>} path='/P4'/>
         <Route element={<P5/>} path='/P5'/>
         <Route element={<P6/>} path='/P6'/>
+        <Route element={<Cart/>} path='/cart'/>
+        <Route element={<PaymentForm/>} path='/PF'/>
+        <Route element={<PaymentPage/>} path='/Pay'/>
         <Route element={<SearchResult/>} path='/SR'/>
         <Route element={<ContactPage/>} path='/CP'/>
         <Route element={<Login/>} path='/login'/>

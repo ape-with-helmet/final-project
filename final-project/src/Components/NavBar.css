@@ -8,8 +8,17 @@
     color: white;
 }
 .floater{
-    --bs-btn-padding-y: .25rem; --bs-btn-padding-x: .5rem; --bs-btn-font-size: .75rem;
+    margin-top: 20%;
+    padding-bottom: 0px;
+}
+.float{
+    margin-top: 2%;
 }
 .but{
     background-color: azure;
+}
+.keys{
+    margin-top: 1%;
+    margin-left: 1%;
+    padding-bottom: 0px;
 }

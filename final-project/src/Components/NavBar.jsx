@@ -22,17 +22,17 @@ function NavScrollExample() {
             <Nav.Link><Link to={'/about'} className='Link'>About Us</Link></Nav.Link>
             <Nav.Link><Link to={'/CP'} className='Link'>Contact Us</Link></Nav.Link>
           </Nav>
-          <Form className="d-flex mar toi"><Nav.Link>
+          <Form className="d-flex mar toi">
             <Form.Control
               type="search"
               placeholder="Search for our products"
-              className="me-2"
+              className="me-5 float"
               aria-label="Search"
-            /></Nav.Link>
-            <Nav.Link><Link to={'/'} className='Link'><Button variant="outline-light">Search</Button></Link></Nav.Link>
+            />
+            <Link to={'/'}><Button variant="outline-light" className='Link floater'>Search</Button></Link>
           </Form>
-          <Nav.Link><Link to={'/signup'} className='Link'><Button variant="outline-light">Sign Up</Button></Link></Nav.Link>
-          <Nav.Link><Link to={'/login'} className='Link'><Button variant="light">Login</Button></Link></Nav.Link>
+          <Link to={'/signup'} className='Link keys'><Button variant="outline-light">Sign Up</Button></Link>
+          <Link to={'/login'} className='Link keys'><Button variant="light">Login</Button></Link>
         </Navbar.Collapse>
       </Container>
     </Navbar>
