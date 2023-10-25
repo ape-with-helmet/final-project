@@ -14,8 +14,8 @@ const ProductPage = () => {
                         <img src="https://bandidospitstop.com/cdn/shop/files/6_233d4f18-8819-470c-ad18-358b61a4703d.webp?v=1697791784&width=1125" class="img-fluid" alt="I"/>
                         </div>
                         <div className="col-lg-6 col-sm-12" id='text'>
-                            <h1>Absolute Black GraphenPads Disc Brake Pads Dura-Ace (No.34)</h1>
-                            <p>DISCPAD34 Std</p>
+                            <h1>LCB TRIUMPH SPEED 400 THANOS CRASH GUARD WITH SLIDER</h1>
+                            <p> SKU: CRA12950</p>
                             <br />
                             <p id='price'>
                                 ₹5,490.00 <br />

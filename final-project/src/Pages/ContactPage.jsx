@@ -62,7 +62,7 @@ const ContactPage = () => {
 				        			<span class="fa fa-map-marker"></span>
 				        		</div>
 				        		<div class="text pl-3">
-					            <p><span>Address:</span> 198 West 21th Street, Suite 721 New York NY 10016</p>
+					            <p><span>Address:</span> Mangalore , Karnataka , India</p>
 					          </div>
 				          </div>
 				        	<div class="dbox w-100 d-flex align-items-center">
@@ -70,7 +70,7 @@ const ContactPage = () => {
 				        			<span class="fa fa-phone"></span>
 				        		</div>
 				        		<div class="text pl-3">
-					            <p><span>Phone:</span> + 1235 2355 98</p>
+					            <p><span>Phone:</span> +91	</p>
 					          </div>
 				          </div>
 				        	<div class="dbox w-100 d-flex align-items-center">

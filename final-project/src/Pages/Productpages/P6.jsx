@@ -19,11 +19,11 @@ const ProductPage = () => {
 
 
                         <div className="col-lg-6 col-sm-12" id='text'>
-                            <h1>Absolute Black GraphenPads Disc Brake Pads Dura-Ace (No.34)</h1>
-                            <p>DISCPAD34 Std</p>
+                            <h1>MOTOWOLF HEAD COVER BLACK 1919</h1>
+                            <p>SKU: CLO10939</p>
                             <br />
                             <p id='price'>
-                                ₹5,490.00 <br />
+                                ₹599.00 <br />
                                 <span id='tax'>Tax included. Shipping calculated at checkout.</span>
                             </p>
                             <br />
