@@ -1,12 +1,8 @@
 const mongoose = require('mongoose')
+mongoose.connect('mongodb+srv://ape:ape1234@cluster0.ah8pdbs.mongodb.net/xerxes')
+.then(()=>{console.log("Database connected")})
+.catch((error)=>{console.log(error)})
 const userSchema = new mongoose.Schema({
-    fname : {
-        type : String,
-        required : true,
-    },
-    lname : {
-        type : String,
-    },
     email : {
         type : String,
         required : true,
@@ -17,10 +13,11 @@ const userSchema = new mongoose.Schema({
         required : true,
     },
     mobile : {
-        type : Number,
+        type : String,
         required : true,
     },
 }, {timestamps : true}
 )
 
-module.exports = mongoose.model('User',userSchema)
+const user= mongoose.model('User',userSchema)
+module.exports=user

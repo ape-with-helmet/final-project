@@ -1,11 +1,34 @@
 const express = require('express')
 const app = express()
 const mongoose = require('mongoose');
-const route = require('./src/routes/routes')
+//const route = require('./src/routes/routes')
 app.use(express.json());
+const cors=require("cors")
+app.use(express.urlencoded({extended:true}))
+app.use(cors())
+const userModel = require('./src/models/userModel')
+
+
 const PORT = 8080
-mongoose.connect('mongodb+srv://ape:ape1234@cluster0.ah8pdbs.mongodb.net/xerxes')
-.then(()=>{console.log("Database connected")})
-.catch((error)=>{console.log(error)})
-app.use('/',route);
-app.listen(PORT, () => console.log('Server is running', {PORT}));
+
+//app.use('/',route);
+
+app.get("/",cors(),(req,res)=>{
+
+})
+
+app.post("/",async (req,res) => {
+    const user=req.body;
+    const {email}=user;
+    const data={
+        email:email
+        // password:password,
+        // mobile:mobile
+    }
+    await userModel.insertMany([data])
+})
+
+
+app.listen(PORT, () => {
+    console.log(`Server is running ${PORT}`)
+});
