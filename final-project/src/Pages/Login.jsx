@@ -9,7 +9,7 @@ function Login() {
                     <div className="row">
                         <div className="col-md-12">
                             <form action='localhost:8080'>
-                                <br /><br /><br /><br /><br /><br />
+                                <br /><br />
                                 <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
                                 <div class="form-floating yaya">
                                     <input type="email" class="form-control yaya" id="floatingInput" placeholder="name@example.com" data-temp-mail-org="0" />
