@@ -15,17 +15,19 @@ function Login() {
                                     <input type="email" class="form-control yaya" id="floatingInput" placeholder="name@example.com" data-temp-mail-org="0" />
                                     
                                 </div>
+                                <br />
                                 <div class="form-floating yaya">
                                     <input type="password" class="form-control yaya" id="floatingPassword" placeholder="Password" />
                                     
                                 </div>
-
+                                <br />
                                 <div class="form-check text-start my-3">
                                     <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault" />
                                     <label class="form-check-label" for="flexCheckDefault">
                                         Remember me
                                     </label>
                                 </div>
+                                <br />
                                 <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
                             </form>
                         </div>
