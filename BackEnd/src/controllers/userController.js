@@ -1,5 +1,6 @@
 const userModel = require('../models/userModel');
 const { validEmail, validPassword, validMobile } = require('../validations/userValidation');
+const jwt = require("jsonwebtoken");
 
 const createUser = async function(req,res){
     try{
@@ -22,11 +23,11 @@ const createUser = async function(req,res){
         }
         
         //unique validation
-        let uniqueEmail = await studentModel.findOne({email})
+        let uniqueEmail = await userModel.findOne({email})
         if (uniqueEmail) {
             return res.send({message : "Email already exists!"})
         }
-        let uniquePhone = await studentModel.findOne({mobile})
+        let uniquePhone = await userModel.findOne({mobile})
         if (uniquePhone) {
             return res.send({message : "Phone already exists!"})
         }
@@ -65,7 +66,7 @@ let loginUser = async (req,res)=>{
         if (!email || !password){
             return res.status(400).send({message : "Please provide all information !"})
         }
-        let matchUser = await studentModel.findOne({email,password})
+        let matchUser = await userModel.findOne({email,password})
         if (!matchUser) {
             return res.status(200).send({message:"User not Registered"})//200 is the error code for "Working".
         }
@@ -81,4 +82,4 @@ let loginUser = async (req,res)=>{
         return res.status(500).send({status:false, message:"Internal Server error!"})
     }
 }
-module.exports = { loginUser,createUser,deleteUser }
+module.exports = { createUser,deleteUser,loginUser }
