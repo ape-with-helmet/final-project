@@ -8,7 +8,7 @@ function Login() {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-12">
-                            <form>
+                            <form action='localhost:8080'>
                                 <br /><br /><br /><br /><br /><br />
                                 <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
                                 <div class="form-floating yaya">
