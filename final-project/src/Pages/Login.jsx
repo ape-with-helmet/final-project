@@ -18,7 +18,7 @@ export default function Login() {
                 autoClose: 5000,
                 hideProgressBar: false,
                 closeOnClick: true,
-                pauseOnHover: true,
+                pauseOnHover: false,
                 draggable: true,
                 progress: undefined,
                 theme: "dark",
@@ -28,13 +28,13 @@ export default function Login() {
                 email,
                 password
             });
-            axios.put("http://localhost:8080/currentUser",{
-                email,
-                password
-            })
+            // axios.put("http://localhost:8080/currentUser",{
+            //     email,
+            //     password
+            // })
         } catch (error) {
-            console.log(error)
-
+            console.error(error)
+            alert(error)
         }
     }
     return (

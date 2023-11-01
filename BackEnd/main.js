@@ -2,7 +2,7 @@ const express=require("express")
 const cors=require("cors")
 const { validEmail, validPassword, validMobile } = require('./src/validations/userValidation');
 const collection=require("./src/models/userModel")
-const cUser=require("./src/models/cUserModel")
+//const cUser=require("./src/models/cUserModel")
 const app=express()
 const fs=require('fs')
 app.use(express.json())
@@ -90,45 +90,50 @@ app.get("/getall",async(req,res)=>{
         console.log(error)
     }
 })
-app.post("/currentUser",async(req,res)=>{
+// app.post("/currentUser",async(req,res)=>{
+//     try {
+//         const user=req.body
+//         const {email,password}=user;
+//         const data={
+//             email:email,
+//             password:password
+//         }
+//         let uniqueEmail = await cUser.create(data)
+//         if (!uniqueEmail) {
+//             console.log('invalid credentials');
+//             // alert("Wrong username or password")
+//             return res.send({message : "Login error"})
+//         }
+//         console.log('Success login')
+//     } catch (e) {
+//         console.log(e)
+//     }
+// })
+app.post("/login",async(req,res)=>{
     try {
         const user=req.body
         const {email,password}=user;
-        const data={
-            email:email,
-            password:password
+        const loginTime = new Date().toISOString();
+        let matchStudent = await collection.findOne({email,password})
+        console.log(matchStudent)
+        if (!matchStudent) {
+            return res.status(500).send({message:"Student not Registered"})//200 is the error code for "Working".
         }
-        let uniqueEmail = await cUser.create(data)
-        if (!uniqueEmail) {
-            console.log('invalid credentials');
-            // alert("Wrong username or password")
-            return res.send({message : "Login error"})
-        }
-        console.log('Success login')
-    } catch (e) {
-        console.log(e)
-    }
-})
-app.get("/login",async(req,res)=>{
-    try {
-        const user=req.body
-        const {email,password}=user;
-        
-        const data={
-            email:email,
-            password:password
-        }
-        let uniqueEmail = await collection.findById({email,password})
-        if (!uniqueEmail) {
-            console.log('invalid credentials');
-            // alert("Wrong username or password")
-            return res.send({message : "Login error"})
-        }
-        console.log('Success login')
+        const logEntry = `${loginTime} - User: ${email}\n`;
+        fs.appendFile('log.txt', logEntry, (err) => {
+            if (err) {
+            console.error('Error writing to log file:', err);
+            res.status(500).send('Error logging in.');
+            } else {
+            console.log('Logged in:', email);
+            res.status(200).send('Logged in successfully.');
+            }
+        });
+        console.log('Success login');
     } catch (error) {
         console.log(error)
     }
-})
+});
 
 app.listen(8080,()=>{
     console.log("port connected")
