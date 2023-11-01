@@ -121,18 +121,21 @@ app.post("/contactus",async(req,res)=>{
         const contact = req.body;
         const { name, email, subject, message } = contact;
         if (!name || !email || !subject || !message) {
-          return res.send({ message: "Please provide all information !" });
+            res.status(500).send({ message: "Please provide all information !" });
+            return
         }
         let valEmail = validEmail(email);
         if (!valEmail) {
-          return res.status(500).send({ message: "please enter valid email: " });
+            return res.status(500).send({ message: "please enter valid email: " });
         }
         let createContact = await contactModel.create(contact);
-        return res.send({ message: createContact });
+        res.send({ message: createContact });
+        console.log(createContact)
+        return
       } catch (err) {
         console.log(err);
       }
-})
+});
 app.listen(8080,()=>{
     console.log("port connected")
 })
