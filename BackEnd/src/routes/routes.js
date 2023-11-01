@@ -16,6 +16,6 @@ router.get("/", (req, res) => {
 router.post("/user", createUser); //POST method for Create
 router.post("/delete", deleteUser);
 router.post("/login", loginUser);
-router.post("/contact", createContact);
+router.post("/contactus", createContact);
 
 module.exports = router;

@@ -3,9 +3,8 @@ mongoose.connect('mongodb+srv://ape:ape1234@cluster0.ah8pdbs.mongodb.net/xerxes'
 const contactSchema = new mongoose.Schema({
     name : {
         type : String,
-        required : true,
     },
-    email : {
+    gmail : {
         type : String,
         required : true,
     },
