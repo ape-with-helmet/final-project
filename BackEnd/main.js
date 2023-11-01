@@ -78,6 +78,17 @@ app.post("/delete",async(req,res)=>{
     }
 })
 
+app.get("/getall",async(req,res)=>{
+    try {
+        // const user=req.body
+        // const {email,password,/*fname,lname,*/mobile}=user;
+        let userDetails = await collection.find()
+        console.log(userDetails)
+    } catch (error) {
+        console.log(error)
+    }
+})
+
 app.post("/login",async(req,res)=>{
     try {
         const user=req.body

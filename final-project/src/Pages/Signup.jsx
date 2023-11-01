@@ -46,17 +46,14 @@ export default function Signup() {
                             <h1 className="h3 mb-3 fw-normal">Please sign up</h1>
                             <div className="form-floating yaya">
                             <input type="email" className="form-control yaya" id="floatingInput" placeholder="name@example.com" data-temp-mail-org="0" onChange={(e) => { setEmail(e.target.value) }} />
-
                             </div>
                             <br />
                             <div className="form-floating yaya">
                                 <input type="password" className="form-control yaya" id="floatingPassword" placeholder="Password" onChange={(e) => { setPassword(e.target.value) }} />
-
                             </div>
                             <br />
                             <div className="form-floating yaya">
                                 <input type="text" className="form-control yaya" id="floatingPassword" placeholder="Phone" onChange={(e) => { setMobile(e.target.value) }} />
-
                             </div>
                             <br />
                             <div className="form-check text-start my-3">
