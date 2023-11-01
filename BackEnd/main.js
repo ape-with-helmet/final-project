@@ -4,6 +4,7 @@ const { validEmail, validPassword, validMobile } = require('./src/validations/us
 const collection=require("./src/models/userModel")
 const cUser=require("./src/models/cUserModel")
 const app=express()
+const fs=require('fs')
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 app.use(cors())
