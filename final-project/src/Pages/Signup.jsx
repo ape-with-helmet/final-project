@@ -25,7 +25,7 @@ export default function Signup() {
                 pauseOnHover: true,
                 draggable: true,
                 progress: undefined,
-                theme: "light",
+                theme: "dark",
                 })
             await axios.post("http://localhost:8080/create", {
                 email,

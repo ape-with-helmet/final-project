@@ -21,7 +21,7 @@ export default function Login() {
                 pauseOnHover: true,
                 draggable: true,
                 progress: undefined,
-                theme: "light",
+                theme: "dark",
                 })
             // alert("Successfully sumbitted")
             await axios.post("http://localhost:8080/login",{
@@ -30,6 +30,7 @@ export default function Login() {
             })
         } catch (error) {
             console.log(error)
+
         }
     }
     return (
