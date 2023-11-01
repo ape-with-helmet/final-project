@@ -12,9 +12,11 @@ const createContact = async function (req, res) {
     if (!valEmail) {
       return res.status(500).send({ message: "please enter valid email: " });
     }
-    let createUs = await contactModel.create(contact);
-    return res.send({ message: createUs });
+    let createContact = await contactModel.create(contact);
+    return res.send({ message: createContact });
   } catch (err) {
     console.log(err);
   }
 };
+
+module.exports = { createContact };
