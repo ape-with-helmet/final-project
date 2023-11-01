@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './Signup.css'
 import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -25,7 +25,7 @@ export default function Signup() {
                 pauseOnHover: true,
                 draggable: true,
                 progress: undefined,
-                theme: "light",
+                theme: "dark",
                 })
             await axios.post("http://localhost:8080/create", {
                 email,
