@@ -1,7 +1,7 @@
 const express=require("express")
 const cors=require("cors")
-const { validEmail, validPassword, validMobile } = require('./BackEnd/src/validations/userValidation');
-const collection=require("./BackEnd/src/models/userModel")
+const { validEmail, validPassword, validMobile } = require('./src/validations/userValidation');
+const collection=require("./src/models/userModel")
 const app=express()
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
