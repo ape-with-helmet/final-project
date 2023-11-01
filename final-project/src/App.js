@@ -16,6 +16,7 @@ import P5 from './Pages/Productpages/P5'
 import PaymentForm from './Pages/PaymentForm'
 import PaymentPage from './Pages/PaymentPage'
 import Cart from './Pages/Cart'
+import PaymentSuccessful from './Pages/PaymentSuccessful'
 
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 
@@ -41,6 +42,7 @@ const App = () => {
         <Route element={<Login/>} path='/login'/>
         <Route element={<Signup/>} path='/signup'/>
         <Route element={<Aboutus/>} path='/about'/>
+        <Route element={<PaymentSuccessful/>} path='/os'/>
       </Routes>
       <Footer/>
       </BrowserRouter>
