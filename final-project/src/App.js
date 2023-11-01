@@ -3,7 +3,7 @@ import NavBar from './Components/NavBar'
 import Homepage from './Pages/Homepage'
 import ContactPage from './Pages/ContactPage'
 import P6 from './Pages/Productpages/P6'
-import SearchResult from './Pages/SearchResult'
+import Search from './Components/Search'
 import Footer from './Components/Footer'
 import Login from './Pages/Login'
 import Signup from './Pages/Signup'
@@ -36,7 +36,7 @@ const App = () => {
         <Route element={<Cart/>} path='/cart'/>
         <Route element={<PaymentForm/>} path='/PF'/>
         <Route element={<PaymentPage/>} path='/Pay'/>
-        <Route element={<SearchResult/>} path='/SR'/>
+        <Route element={<Search/>} path='/SR'/>
         <Route element={<ContactPage/>} path='/CP'/>
         <Route element={<Login/>} path='/login'/>
         <Route element={<Signup/>} path='/signup'/>
