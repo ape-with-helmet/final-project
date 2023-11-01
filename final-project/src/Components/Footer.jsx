@@ -4,14 +4,14 @@ import './Footer.css'
 const Footer = () => {
   return (
     <div id="ft">
-      <div class="container" >
-        <footer class="py-3 my-4">  
-          <ul class="nav justify-content-center border-bottom pb-3 mb-3">
-            <li class="nav-item"><a href='./' class="nav-link px-2 text-body-light tc">Home</a></li>
-            <li class="nav-item"><a href='./CP' class="nav-link px-2 text-body-light tc">Contact</a></li>
-            <li class="nav-item"><a href='./about' class="nav-link px-2 text-body-light tc">About</a></li>
+      <div className="container" >
+        <footer className="py-3 my-4">  
+          <ul className="nav justify-content-center border-bottom pb-3 mb-3">
+            <li className="nav-item"><a href='./' className="nav-link px-2 text-body-light tc">Home</a></li>
+            <li className="nav-item"><a href='./CP' className="nav-link px-2 text-body-light tc">Contact</a></li>
+            <li className="nav-item"><a href='./about' className="nav-link px-2 text-body-light tc">About</a></li>
           </ul>
-          <p class="text-center text-body-light tc">© 2023 Xerxes Ltd.</p>
+          <p className="text-center text-body-light tc">© 2023 Xerxes Ltd.</p>
         </footer>
       </div>
     </div>
