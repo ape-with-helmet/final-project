@@ -10,8 +10,6 @@
   width: 100%;
   margin-bottom: 8px;
 }
-
-
 .b2 {
   width: 100%;
 }
@@ -52,4 +50,10 @@
 .myClass ul > li.disabled > a {
   background-color: lightgray;
   color: darkgray;
+}
+.img-fluid{
+  width: 80%;
+  margin: auto;
+  margin-bottom: 10%;
+  display: block;
 }
