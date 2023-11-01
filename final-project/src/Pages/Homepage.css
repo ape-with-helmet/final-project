@@ -36,8 +36,12 @@
 .card:hover{
   transform: scale(1.01);
 }
+.pp2{
+  height: 100%;
+}
 .image{
   border: none;
+  height: 100%;
 }
 .pp {
   margin-top: 20px;
