@@ -16,7 +16,8 @@ import P5 from './Pages/Productpages/P5'
 import PaymentForm from './Pages/PaymentForm'
 import PaymentPage from './Pages/PaymentPage'
 import Cart from './Pages/Cart'
-
+import PaymentSuccessful from './Pages/PaymentSuccessful'
+import Profile from './Pages/Profile'
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
 
 const App = () => {
@@ -33,6 +34,7 @@ const App = () => {
         <Route element={<P4/>} path='/P4'/>
         <Route element={<P5/>} path='/P5'/>
         <Route element={<P6/>} path='/P6'/>
+        <Route element={<Profile/>} path='/profile'/>
         <Route element={<Cart/>} path='/cart'/>
         <Route element={<PaymentForm/>} path='/PF'/>
         <Route element={<PaymentPage/>} path='/Pay'/>
@@ -41,6 +43,7 @@ const App = () => {
         <Route element={<Login/>} path='/login'/>
         <Route element={<Signup/>} path='/signup'/>
         <Route element={<Aboutus/>} path='/about'/>
+        <Route element={<PaymentSuccessful/>} path='/os'/>
       </Routes>
       <Footer/>
       </BrowserRouter>
