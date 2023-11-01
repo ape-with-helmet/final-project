@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import './Login.css'
 import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Login() {
 
@@ -11,13 +13,24 @@ export default function Login() {
     let submit = async(e) => {
         e.preventDefault()
         try {
-            alert("Successfully sumbitted")
+            toast.success('Logged In Successfully',{
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                })
+            // alert("Successfully sumbitted")
             await axios.post("http://localhost:8080/login",{
                 email,
                 password
             })
         } catch (error) {
             console.log(error)
+
         }
     }
     return (
@@ -49,6 +62,7 @@ export default function Login() {
                         </div>
                     </div>
                 </div>
+                <ToastContainer />
         </>
     )
 }
