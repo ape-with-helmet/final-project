@@ -1,13 +1,29 @@
-import React from 'react'
+import React, { useState } from 'react';
 import './Cart.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'; 
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 
 function Cart() {
-  
+  const [quantity, setQuantity] = useState(1);
+  const pricePerItem = 7349;
+
+  const increaseQuantity = () => {
+    setQuantity(quantity + 1);
+  };
+
+  const decreaseQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
+    }
+  };
+
+  const totalPrice = quantity * pricePerItem;
+
+
   return (
     <>
-      <section className="vh-100" style={{backgroundcolor : "#fdccbc"}}>
+      <section className="vh-100" style={{ backgroundcolor: "#fdccbc" }}>
         <div className="container h-100">
           <div className="row d-flex justify-content-center align-items-center h-200">
             <div className="col">
@@ -19,54 +35,66 @@ function Cart() {
                   <div className="row align-items-center">
                     <div className="col-md-2">
                       <img src="https://bandidospitstop.com/cdn/shop/files/5_32f23a5e-241a-4a8a-972f-b7bd0c82a4f0.jpg?v=1697716480&width=1125"
-                        className="img-fluid" alt="Generic placeholder"/>
+                        className="img-fluid" alt="Generic placeholder" />
                     </div>
                     <div className="col-md-2 d-flex justify-content-center Namee">
                       <div>
                         <p className="small text-muted  ">Name</p>
-                        <p className="lead fw-normal  " style={{fontSize:"15px"}}>LCB TRIUMPH SPEED 400 VOYAGER BASHPLATE</p>
-                        
+                        <p className="lead fw-normal  " style={{ fontSize: "15px" }}>LCB TRIUMPH SPEED 400 VOYAGER BASHPLATE</p>
+
                       </div>
                     </div>
                     <div className="col-md-2 d-flex justify-content-center ModelNo">
                       <div>
                         <p className="small text-muted  ">Model No</p>
-                        <p className="lead fw-normal =" style={{ fontSize:"15px"}}>SKU: ENG12868</p>
-                        
+                        <p className="lead fw-normal =" style={{ fontSize: "15px" }}>SKU: ENG12868</p>
+
                       </div>
                     </div>
                     <div className="col-md-2 d-flex justify-content-center Quantityy">
                       <div>
-                        <p className="small text-muted ">Quantity</p>
-                        <div class="dropdown">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          Qty
-                        </button>
-                          <ul class="dropdown-menu">
-                            <li><button class="dropdown-item" type="button">1</button></li>
-                            <li><button class="dropdown-item" type="button">2</button></li>
-                            <li><button class="dropdown-item" type="button">3</button></li>
-                           
-                          </ul>
-                      </div>
-                       
+                        <p className="small text-muted">Quantity</p>
+                        <div className="input-group">
+                          <button
+                            type="button"
+                            className="btn btn-link px-40 "
+                            onClick={decreaseQuantity}
+                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash pp" viewBox="0 0 16 16">
+                              <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"></path>
+                            </svg>
+                          </button>
+                          <span
+                            className="fii "
+                            style={{ width: '3rem', textAlign: 'center' }}
+                          >{quantity}</span>
+                          <button
+                            type="button"
+                            className="btn btn-link px-40"
+                            onClick={increaseQuantity}
+                          >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus pp" viewBox="0 0 16 16">
+                              <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"></path>
+                            </svg>
+                          </button>
+                        </div>
 
-                          
-                        
+
                       </div>
                     </div>
+
                     <div className="col-md-2 d-flex justify-content-center Pricee">
                       <div>
                         <p className="small text-muted ">Price</p>
-                        <p className="lead fw-normal  ">₹7,349</p>
-                       
+                        <p className="lead fw-normal  ">₹{pricePerItem}</p>
+
                       </div>
                     </div>
                     <div className="col-md-2 d-flex justify-content-center Tootal">
                       <div>
                         <p className="small text-muted ">Total</p>
-                        <p className="lead fw-normal ">₹7,349</p>
-                       
+                        <p className="lead fw-normal ">₹{totalPrice}</p>
+
                       </div>
                     </div>
                   </div>
@@ -80,7 +108,7 @@ function Cart() {
                   <div className="float-end">
                     <p className="mb-0 me-5 d-flex align-items-center">
                       <span className="small text-muted me-2">Order total:</span> <span
-                        className="lead fw-normal">₹7,349</span>
+                        className="lead fw-normal">₹{totalPrice}</span>
                     </p>
                   </div>
 
@@ -88,7 +116,7 @@ function Cart() {
               </div>
 
               <div className="d-flex justify-content-end">
-              <a href='/'><button type="button" className="btn btn-outline-secondary btn-lg me-2">Continue shopping</button></a>
+                <a href='/'><button type="button" className="btn btn-outline-secondary btn-lg me-2">Continue shopping</button></a>
                 <a href='/Pay'><button type="button" className="btn btn-secondary btn-lg">Proceed to Buy</button></a>
               </div>
 

@@ -2,19 +2,49 @@
    
     padding-bottom: 72px;
     margin-bottom: 9px;
-}
-.Quantityy{
-    padding-bottom:45px;
-    margin-bottom: 9px;
-
-}
-.Pricee{
+  }
+  .Pricee{
     padding-bottom:55px;
     margin-bottom: 9px;
-
-}
-.Tootal{
+  
+  }
+  .Tootal{
     padding-bottom:55px;
     margin-bottom: 9px;
+  
+  }
+  .Quantityy{
+    padding-bottom:47px;
+    margin-bottom: 9px;
+    left: 20px;
+    
+  
+  }
+  
+  .input-group {
+    width: 120%;
+  }
+  /* Style for the minus button */
+  .input-group button {
+    position: absolute;
+    padding: auto;
+    transform: scale(1);
+    left:auto; /* Adjust the left position to separate the buttons */
+    background-color: rgba(129, 129, 129, 0.271);
+    text-decoration: none;
+  }
+  .input-group button:hover{
+    text-decoration: none;
+  }
+  
+  .fii{
+    color: black;
+    margin-top: 7%;
+    width: 6%;
+  }
 
-}
+  .pp{
+    margin: 0px;
+    align-items: center;
+    transform: scale(1.5);
+  }

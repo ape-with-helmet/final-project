@@ -2,6 +2,7 @@ const express=require("express")
 const cors=require("cors")
 const { validEmail, validPassword, validMobile } = require('./src/validations/userValidation');
 const collection=require("./src/models/userModel")
+const contactModel=require("./src/models/contactModel")
 //const cUser=require("./src/models/cUserModel")
 const app=express()
 const fs=require('fs')
@@ -90,25 +91,6 @@ app.get("/getall",async(req,res)=>{
         console.log(error)
     }
 })
-// app.post("/currentUser",async(req,res)=>{
-//     try {
-//         const user=req.body
-//         const {email,password}=user;
-//         const data={
-//             email:email,
-//             password:password
-//         }
-//         let uniqueEmail = await cUser.create(data)
-//         if (!uniqueEmail) {
-//             console.log('invalid credentials');
-//             // alert("Wrong username or password")
-//             return res.send({message : "Login error"})
-//         }
-//         console.log('Success login')
-//     } catch (e) {
-//         console.log(e)
-//     }
-// })
 app.post("/login",async(req,res)=>{
     try {
         const user=req.body
@@ -134,7 +116,23 @@ app.post("/login",async(req,res)=>{
         console.log(error)
     }
 });
-
+app.post("/contactus",async(req,res)=>{
+    try {
+        const contact = req.body;
+        const { name, email, subject, message } = contact;
+        if (!name || !email || !subject || !message) {
+          return res.send({ message: "Please provide all information !" });
+        }
+        let valEmail = validEmail(email);
+        if (!valEmail) {
+          return res.status(500).send({ message: "please enter valid email: " });
+        }
+        let createContact = await contactModel.create(contact);
+        return res.send({ message: createContact });
+      } catch (err) {
+        console.log(err);
+      }
+})
 app.listen(8080,()=>{
     console.log("port connected")
 })

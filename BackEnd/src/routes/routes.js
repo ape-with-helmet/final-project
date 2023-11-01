@@ -1,5 +1,5 @@
 const express = require("express");
-const router = express.Router();
+const app = express();
 
 const {
   createUser,
@@ -9,13 +9,13 @@ const {
 const { createContact } = require("../controllers/contactController");
 
 //router method
-router.get("/", (req, res) => {
-  res.send("Router method !!");
-});
-//route for create
-router.post("/user", createUser); //POST method for Create
-router.post("/delete", deleteUser);
-router.post("/login", loginUser);
-router.post("/contact", createContact);
 
-module.exports = router;
+// app.get("/",cors(),(req,res)=>{
+
+// })
+//route for create
+app.post("/user", createUser); //POST method for Create
+app.post("/delete", deleteUser);
+app.post("/login", loginUser);
+
+module.exports = app;
