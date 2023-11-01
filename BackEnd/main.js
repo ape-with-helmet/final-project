@@ -2,6 +2,7 @@ const express=require("express")
 const cors=require("cors")
 const { validEmail, validPassword, validMobile } = require('./src/validations/userValidation');
 const collection=require("./src/models/userModel")
+const cUser=require("./src/models/cUserModel")
 const app=express()
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
@@ -88,8 +89,26 @@ app.get("/getall",async(req,res)=>{
         console.log(error)
     }
 })
-
-app.post("/login",async(req,res)=>{
+app.post("/currentUser",async(req,res)=>{
+    try {
+        const user=req.body
+        const {email,password}=user;
+        const data={
+            email:email,
+            password:password
+        }
+        let uniqueEmail = await cUser.create(data)
+        if (!uniqueEmail) {
+            console.log('invalid credentials');
+            // alert("Wrong username or password")
+            return res.send({message : "Login error"})
+        }
+        console.log('Success login')
+    } catch (e) {
+        console.log(e)
+    }
+})
+app.get("/login",async(req,res)=>{
     try {
         const user=req.body
         const {email,password}=user;
@@ -98,7 +117,7 @@ app.post("/login",async(req,res)=>{
             email:email,
             password:password
         }
-        let uniqueEmail = await collection.findOne({email,password})
+        let uniqueEmail = await collection.findById({email,password})
         if (!uniqueEmail) {
             console.log('invalid credentials');
             // alert("Wrong username or password")

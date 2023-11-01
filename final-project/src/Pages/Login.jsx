@@ -27,6 +27,10 @@ export default function Login() {
             await axios.post("http://localhost:8080/login",{
                 email,
                 password
+            });
+            axios.put("http://localhost:8080/currentUser",{
+                email,
+                password
             })
         } catch (error) {
             console.log(error)
