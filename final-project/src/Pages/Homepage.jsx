@@ -31,7 +31,7 @@ function Homepage() {
   return (
     <>
       <div className='row' id='row'>
-        <div className='col-xl-4 col-lg-6 col-12'>
+        <div className='col-xl-4 col-lg-6 col-md-12 col-12'>
           <div className='container hamas'>
             <div className='brdr'>
               <Carousel fade>
@@ -114,7 +114,7 @@ function Homepage() {
       <br id='section-1'/>
       <div className="container">
         <div className="row">
-          <div className="col-lg-4 col-md-6 col-sm-12 pp">
+          <div className="col-lg-4 col-md-12 col-sm-12 pp">
             <Card className='card1'>
               <CardImg
                 alt="Card image cap"
@@ -138,7 +138,7 @@ function Homepage() {
               </CardBody>
             </Card>
           </div>
-          <div className="col-lg-4 col-md-6 col-sm-12 pp">
+          <div className="col-lg-4 col-md-12 col-sm-12 pp">
             <Card className='card1'>
               <CardImg
                 alt="Card image cap"
@@ -162,7 +162,7 @@ function Homepage() {
               </CardBody>
             </Card>
           </div>
-          <div className="col-lg-4 col-md-6 col-sm-12 pp">
+          <div className="col-lg-4 col-md-12 col-sm-12 pp">
             <Card className='card1'>
               <CardImg
                 alt="Card image cap"
@@ -186,7 +186,7 @@ function Homepage() {
               </CardBody>
             </Card>
           </div>
-          <div className="col-lg-4 col-md-6 col-sm-12 pp">
+          <div className="col-lg-4 col-md-12 col-sm-12 pp">
             <Card className='card1'>
               <CardImg
                 alt="Card image cap"
@@ -212,7 +212,7 @@ function Homepage() {
             </Card>
 
           </div>
-          <div className="col-lg-4 col-md-6 col-sm-12 pp">
+          <div className="col-lg-4 col-md-12 col-sm-12 pp">
             <Card className='card1'>
               <CardImg
                 alt="Card image cap"
@@ -238,7 +238,7 @@ function Homepage() {
             </Card>
 
           </div>
-          <div className="col-lg-4 col-md-6 col-sm-12 pp">
+          <div className="col-lg-4 col-md-12 col-sm-12 pp">
             <Card className='card1'>
               <CardImg
                 alt="Card image cap"
