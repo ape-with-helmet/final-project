@@ -30,7 +30,7 @@ function Homepage() {
 
   return (
     <>
-      <div className='row' id='row'>
+      <div className='row polsrow' id='row'>
         <div className='col-xl-4 col-lg-6 col-md-12 col-12'>
           <div className='container hamas'>
             <div className='brdr'>
