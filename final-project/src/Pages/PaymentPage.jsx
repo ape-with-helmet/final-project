@@ -1,6 +1,6 @@
 import React from 'react'
 import './PaymentPage.css'
-import pic1 from '/Users/Hp/OneDrive/Desktop/final-project/final-project/src/resources/svgs/icons-pay-edited.png'
+import pic1 from '../resources/svgs/icons-pay-edited.png'
 function PaymentPage() {
   return (
     <>
