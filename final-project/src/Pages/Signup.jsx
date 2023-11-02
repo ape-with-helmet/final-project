@@ -4,6 +4,7 @@ import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { resolveValue } from "react-hot-toast";
 
 
 export default function Signup() {
@@ -17,7 +18,14 @@ export default function Signup() {
     let submit = async (e) => {
         e.preventDefault()
         try {
-            toast.success('Registered Successfully',{
+            
+            const response = await axios.post("http://localhost:8080/create", {
+                email,
+                password,
+                mobile
+            })
+            console.log(response.data.message)
+            toast.success(response.data.message,{
                 position: "bottom-center",
                 autoClose: 5000,
                 hideProgressBar: false,
@@ -26,14 +34,19 @@ export default function Signup() {
                 draggable: true,
                 progress: undefined,
                 theme: "dark",
-                })
-            await axios.post("http://localhost:8080/create", {
-                email,
-                password,
-                mobile
-            })
+                });
         } catch (error) {
-            console.log(error)
+            console.log(error);
+            toast.error(error.response.data.message,{
+                position: "bottom-center",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                });;
         }
     }
     return (

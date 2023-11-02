@@ -26,36 +26,37 @@ app.post("/create", async (req, res) => {
         }
         if (!email || !password || !mobile) {
             console.log("Please provide all information !")
-            return res.send({ message: "Not enough info" })
+            return res.status(500).send({ message: "Not enough info" })
         }
         let valEmail = validEmail(email);
         if (!valEmail) {
             console.log("please enter valid email: ")
-            return res.send({ message: "invalid id" })
+            return res.status(500).send({ message: "invalid id" })
         }
         let valPass = validPassword(password);
         if (!valPass) {
             console.log("please enter valid password: ")
-            return res.send({ message: "invalid pass" })
+            return res.status(500).send({ message: "invalid pass" })
         }
         let valMob = validMobile(mobile);
         if (!valMob) {
             console.log("please enter valid mobile number: ")
-            return res.send({ message: "invalid phone" })
+            return res.status(500).send({ message: "invalid phone" })
         }
         //unique validation
         let uniqueEmail = await collection.findOne({ email })
         if (uniqueEmail) {
             console.log('mail exists')
-            return res.send({ message: "Email already exists!" })
+            return res.status(500).send({ message: "Email already exists!" })
         }
         let uniquePhone = await collection.findOne({ mobile })
         if (uniquePhone) {
             console.log('phone exists')
-            return res.send({ message: "Phone already exists!" })
+            return res.status(500).send({ message: "Phone already exists!" })
         }
         let createUs = await collection.create(data)
         console.log(createUs)
+        return res.status(200).send({ message: "Success" })
         // navigate('/login') work needed
     } catch (error) {
         console.log(error)
