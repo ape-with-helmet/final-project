@@ -27,7 +27,7 @@ function Homepage() {
               <Carousel fade>
                 <Carousel.Item>
                   <img style={{ maxHeight: "100vh" }}
-                    className="d-block w-100 pp2"
+                    className="d-block w-100 ll"
                     src="https://bandidospitstop.com/cdn/shop/files/6_233d4f18-8819-470c-ad18-358b61a4703d.webp?v=1697791784&width=1125"
                     alt="1"
                   />
@@ -105,7 +105,7 @@ function Homepage() {
       <div className="container">
         <div className="row">
           <div className="col-lg-4 col-md-6 col-sm-12 pp">
-            <Card className='card'>
+            <Card className='card1'>
               <CardImg
                 alt="Card image cap"
                 src="https://bandidospitstop.com/cdn/shop/files/6_233d4f18-8819-470c-ad18-358b61a4703d.webp?v=1697791784&width=1125"
@@ -121,7 +121,7 @@ function Homepage() {
                   tag="h6"
                 >
                   SKU: CRA12950
-                </CardSubtitle>
+                </CardSubtitle><br/>
                 <a href='./P1'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
                   Know More
                 </Button></a>
@@ -129,7 +129,7 @@ function Homepage() {
             </Card>
           </div>
           <div className="col-lg-4 col-md-6 col-sm-12 pp">
-            <Card>
+            <Card className='card1'>
               <CardImg
                 alt="Card image cap"
                 src="https://bandidospitstop.com/cdn/shop/files/7_78f9a05e-9faf-4bf6-9f0b-973ddafa2dbc.webp?v=1697715985&width=1125"
@@ -153,7 +153,7 @@ function Homepage() {
             </Card>
           </div>
           <div className="col-lg-4 col-md-6 col-sm-12 pp">
-            <Card>
+            <Card className='card1'>
               <CardImg
                 alt="Card image cap"
                 src="https://bandidospitstop.com/cdn/shop/files/5_32f23a5e-241a-4a8a-972f-b7bd0c82a4f0.jpg?v=1697716480&width=1125"
@@ -177,7 +177,7 @@ function Homepage() {
             </Card>
           </div>
           <div className="col-lg-4 col-md-6 col-sm-12 pp">
-            <Card>
+            <Card className='card1'>
               <CardImg
                 alt="Card image cap"
                 src="https://bandidospitstop.com/cdn/shop/files/JKT10865MOTOWOLFARMOURJACKETBLACK1031BM.webp?v=1697801445&width=1125"
@@ -203,7 +203,7 @@ function Homepage() {
 
           </div>
           <div className="col-lg-4 col-md-6 col-sm-12 pp">
-            <Card>
+            <Card className='card1'>
               <CardImg
                 alt="Card image cap"
                 src="https://bandidospitstop.com/cdn/shop/files/BAG10934MOTOWOLFBUMBERBAGBLACK0715.webp?v=1697797261&width=1125"
@@ -220,7 +220,7 @@ function Homepage() {
                 >
                   SKU: BAG10934
                 </CardSubtitle>
-                <br/><br/>
+                <br/>
                 <a href='/P5'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
                   Know More
                 </Button></a>
@@ -229,7 +229,7 @@ function Homepage() {
 
           </div>
           <div className="col-lg-4 col-md-6 col-sm-12 pp">
-            <Card>
+            <Card className='card1'>
               <CardImg
                 alt="Card image cap"
                 src="https://bandidospitstop.com/cdn/shop/files/CLO10939MOTOWOLFHEADCOVERBLACK1919M.webp?v=1697801259&width=1125"
