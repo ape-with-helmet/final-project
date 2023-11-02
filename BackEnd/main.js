@@ -106,7 +106,7 @@ app.post("/login", async (req, res) => {
         if (!matchStudent) {
             return res.status(500).send({ message: "User not Registered" })//200 is the error code for "Working".
         }
-        const logEntry = `${email}`;
+        const logEntry = `$Login:{loginTime} User:${email}\n`;
         fs.appendFile('log.txt', logEntry, (err) => {
             if (err) {
                 console.error('Error writing to log file:', err);
