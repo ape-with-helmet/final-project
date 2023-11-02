@@ -1,10 +1,14 @@
-import React, { useState } from "react";
+import React, { useState,useRef } from "react";
 import './Signup.css'
 import axios from 'axios'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import LoadingBar from 'react-top-loading-bar'
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 export default function Signup() {
     // const notify = () => toast("Wow so easy!");
@@ -13,6 +17,7 @@ export default function Signup() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [mobile, setMobile] = useState("");
+    const ref = useRef(null)
 
     let submit = async (e) => {
         e.preventDefault()
@@ -23,38 +28,24 @@ export default function Signup() {
                 password,
                 mobile
             })
-            console.log(response.data.message)
-            toast.success(response.data.message,{
-                position: "bottom-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
-                });
+            ref.current.continuousStart()
+            console.log(response.data);
+            toast.success(response.data.message);
+            sleep(2000).then(() => { ref.current.complete(); });
         } catch (error) {
             console.log(error);
-            toast.error(error.response.data.message,{
-                position: "bottom-right",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: false,
-                draggable: true,
-                progress: undefined,
-                theme: "dark",
-                });;
+            toast.error(error.response.data.message);
+            sleep(500).then(() => { ref.current.complete(); });
         }
     }
     return (
         <>
-            <div className="container">
+        <LoadingBar color='#f11946' ref={ref} />
+            <div className="container miracle">
                 <div className="row">
                     <div className="col-md-12">
                         <form action='POST' className="login-form">
-                            <h1 className="h3 mb-3 fw-normal">Please sign up</h1>
+                            <h1 className="h3 mb-3 fw-normal numeric-jargon">Please sign up</h1>
                             <div className="form-floating yaya">
                             <input type="email" className="form-control yaya" id="floatingInput" placeholder="name@example.com" data-temp-mail-org="0" onChange={(e) => { setEmail(e.target.value) }} />
                             </div>
@@ -80,7 +71,19 @@ export default function Signup() {
                     </div>
                 </div>
             </div>
-            <ToastContainer />
+            <ToastContainer
+                position="bottom-right"
+                autoClose={4000}
+                limit={4}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
         </>
     )
 }
