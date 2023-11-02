@@ -1,23 +1,27 @@
-.login-form{
+.login-form {
     width: 50%;
     margin-top: 4%;
     padding: 10px;
 }
-.yaya{
+
+.yaya {
     background-color: rgba(0, 0, 0, 0.497);
     border-radius: 10px;
     text-align: center;
     font-size: large;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-.container{
+
+.miracle {
     padding-top: 10px;
     padding-bottom: 10%;
 }
+
 .label-used-in-login {
     display: block;
     font-weight: bold;
 }
+
 .numeric-jargon {
     font-family: Arial, sans-serif;
     font-size: 36px;
@@ -26,5 +30,4 @@
     text-align: center;
     text-transform: uppercase;
     text-shadow: 2px 2px #ccc;
-  }
-  
+}

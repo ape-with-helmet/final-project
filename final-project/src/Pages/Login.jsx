@@ -46,7 +46,7 @@ export default function Login() {
     }
     return (
         <>
-            <div className="container">
+            <div className="container miracle">
                 <div className="row">
                     <div className="col-md-12">
                         <form action='POST' className="login-form">

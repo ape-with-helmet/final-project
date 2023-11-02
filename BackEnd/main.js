@@ -110,14 +110,14 @@ app.post("/login", async (req, res) => {
         fs.appendFile('log.txt', logEntry, (err) => {
             if (err) {
                 console.error('Error writing to log file:', err);
-                res.status(500).send({message: "Error logging in."});
+                res.status(500).send({ message: "Error logging in." });
             } else {
                 console.log('Logged in:', email);
                 console.log('Success login');
-                return res.status(200).send({message:"Login Successful"})
+                return res.status(200).send({ message: "Login Successful" })
             }
         });
-        
+
     } catch (error) {
         console.log(error)
     }
