@@ -27,7 +27,7 @@ function Homepage() {
               <Carousel fade>
                 <Carousel.Item>
                   <img style={{ maxHeight: "100vh" }}
-                    className="d-block w-100 pp2"
+                    className="d-block w-100 ll"
                     src="https://bandidospitstop.com/cdn/shop/files/6_233d4f18-8819-470c-ad18-358b61a4703d.webp?v=1697791784&width=1125"
                     alt="1"
                   />
@@ -121,7 +121,7 @@ function Homepage() {
                   tag="h6"
                 >
                   SKU: CRA12950
-                </CardSubtitle>
+                </CardSubtitle><br/>
                 <a href='./P1'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
                   Know More
                 </Button></a>
@@ -220,7 +220,7 @@ function Homepage() {
                 >
                   SKU: BAG10934
                 </CardSubtitle>
-                <br/><br/>
+                <br/>
                 <a href='/P5'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
                   Know More
                 </Button></a>
