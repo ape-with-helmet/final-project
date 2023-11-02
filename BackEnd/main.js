@@ -106,7 +106,7 @@ app.post("/login", async (req, res) => {
         if (!matchStudent) {
             return res.status(500).send({ message: "User not Registered" })//200 is the error code for "Working".
         }
-        const logEntry = `${loginTime} - User: ${email}\n`;
+        const logEntry = `${email}`;
         fs.appendFile('log.txt', logEntry, (err) => {
             if (err) {
                 console.error('Error writing to log file:', err);
@@ -122,6 +122,20 @@ app.post("/login", async (req, res) => {
         console.log(error)
     }
 });
+app.get("/validAuth",async (req,res)=>{
+    const data = fs.readFileSync('log.txt', 'utf8');
+    console.log(data);
+    return data
+})
+app.post("/logout",async (req,res)=>{
+    try {
+        fs.writeFileSync('log.txt','');
+        var data = fs.readFileSync('log.txt', 'utf8');
+        console.log(data);
+    } catch (error) {
+        console.log(error)
+    }
+})
 app.post("/contactus", async (req, res) => {
     try {
         const contact = req.body;

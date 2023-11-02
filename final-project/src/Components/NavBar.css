@@ -17,6 +17,17 @@
 .but{
     background-color: azure;
 }
+.listy{
+    text-align: right;
+    list-style-type: none;
+}
+.nav-alignment{
+    text-align: right;
+    color: black;
+}
+.bg-tertiary-navclass{
+    background-color: #757575;
+}
 .keys{
     margin-top: 1%;
     margin-left: 1%;
