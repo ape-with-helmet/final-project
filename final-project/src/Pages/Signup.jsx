@@ -17,8 +17,15 @@ export default function Signup() {
     let submit = async (e) => {
         e.preventDefault()
         try {
-            toast.success('Registered Successfully',{
-                position: "bottom-center",
+            
+            const response = await axios.post("http://localhost:8080/create", {
+                email,
+                password,
+                mobile
+            })
+            console.log(response.data.message)
+            toast.success(response.data.message,{
+                position: "bottom-right",
                 autoClose: 5000,
                 hideProgressBar: false,
                 closeOnClick: true,
@@ -26,14 +33,19 @@ export default function Signup() {
                 draggable: true,
                 progress: undefined,
                 theme: "dark",
-                })
-            await axios.post("http://localhost:8080/create", {
-                email,
-                password,
-                mobile
-            })
+                });
         } catch (error) {
-            console.log(error)
+            console.log(error);
+            toast.error(error.response.data.message,{
+                position: "bottom-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                });;
         }
     }
     return (
@@ -41,8 +53,7 @@ export default function Signup() {
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
-                        <form action='POST'>
-                            <br /><br /><br /><br /><br /><br />
+                        <form action='POST' className="login-form">
                             <h1 className="h3 mb-3 fw-normal">Please sign up</h1>
                             <div className="form-floating yaya">
                             <input type="email" className="form-control yaya" id="floatingInput" placeholder="name@example.com" data-temp-mail-org="0" onChange={(e) => { setEmail(e.target.value) }} />
@@ -58,7 +69,7 @@ export default function Signup() {
                             <br />
                             <div className="form-check text-start my-3">
                                 <input className="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault" />
-                                <label className="form-check-label" for="flexCheckDefault">
+                                <label className="form-check-label label-used-in-login" for="flexCheckDefault">
                                     Remember me
                                 </label>
                             </div>
