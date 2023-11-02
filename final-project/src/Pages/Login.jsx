@@ -15,28 +15,25 @@ export default function Login() {
         try {
 
             // alert("Successfully sumbitted")
-            await axios.post("http://localhost:8080/login", {
+            const response = await axios.post("http://localhost:8080/login", {
                 email,
                 password
-            });
-            toast.success('Logged In Successfully', {
-                position: "bottom-center",
+            })
+            console.log(response.data);
+            toast.success(response.data.message,{
+                position: "bottom-right",
                 autoClose: 5000,
                 hideProgressBar: false,
                 closeOnClick: true,
-                pauseOnHover: false,
+                pauseOnHover: true,
                 draggable: true,
                 progress: undefined,
                 theme: "dark",
-            })
-            // axios.put("http://localhost:8080/currentUser",{
-            //     email,
-            //     password
-            // })
+                });
         } catch (error) {
-            console.error(error)
-            toast.error('invalid email or password', {
-                position: "bottom-center",
+            console.log(error);
+            toast.error(error.response.data.message,{
+                position: "bottom-right",
                 autoClose: 5000,
                 hideProgressBar: false,
                 closeOnClick: true,
@@ -44,8 +41,7 @@ export default function Login() {
                 draggable: true,
                 progress: undefined,
                 theme: "dark",
-            })
-            // alert(error)
+                });;
         }
     }
     return (
@@ -53,9 +49,8 @@ export default function Login() {
             <div className="container">
                 <div className="row">
                     <div className="col-md-12">
-                        <form action='POST'>
-                            <br /><br /><br /><br /><br /><br />
-                            <h1 class="h3 mb-3 fw-normal">Please Log in</h1>
+                        <form action='POST' className="login-form">
+                            <h1 class="h3 mb-3 fw-normal numeric-jargon">Please Log in</h1>
                             <div class="form-floating yaya">
                                 <input type="email" class="form-control yaya" id="floatingInput" placeholder="name@example.com" data-temp-mail-org="0" onChange={(e) => { setEmail(e.target.value) }} />
 
@@ -68,7 +63,7 @@ export default function Login() {
                             <br />
                             <div class="form-check text-start my-3">
                                 <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault" />
-                                <label class="form-check-label" for="flexCheckDefault">
+                                <label class="form-check-label label-used-in-login" for="flexCheckDefault">
                                     Remember me
                                 </label>
                             </div>
