@@ -7,6 +7,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
+import Search from './Search';
 
 function NavScrollExample() {
   const navigate = useNavigate()
@@ -39,6 +40,7 @@ function NavScrollExample() {
               :
               <>
                 <Nav.Link><Link to={'/about'} className='Link'>About Us</Link></Nav.Link>
+                <Search />
                 <Link to={'/signup'} className='Link keys ms-auto'><Button variant="outline-light">Sign Up</Button></Link>
                 <Link to={'/login'} className='Link keys'><Button variant="light">Login</Button></Link>
               </>
