@@ -79,7 +79,7 @@ export default function Signup() {
                                 </label>
                             </div>
 
-                            <button className="btn btn-primary w-100 py-2" type="submit" onClick={submit}>Sign in</button>
+                            <button className="btn btn-primary w-100 py-2" type="submit" onClick={submit}>Sign Up</button>
                             <a href="" onClick={loginNav}><span>Already a user?</span></a><br />
                         </form>
                     </div>
