@@ -58,25 +58,25 @@ export default function Login() {
             <div className="container miracle">
                 <div className="row">
                     <div className="col-md-12">
-                        <form action='POST' className="login-form">
-                            <h1 class="h3 mb-3 fw-normal numeric-jargon">Please Log in</h1>
-                            <div class="form-floating yaya">
-                                <input type="email" class="form-control yaya" id="floatingInput" placeholder="name@example.com" data-temp-mail-org="0" onChange={(e) => { setEmail(e.target.value) }} />
+                        <form action='POST' className="col-12 col-md-6 kopiko2">
+                            <h3 className="numeric-jargon">Please Log in</h3>
+                            <div className="yaya">
+                                <input type="email" className="kopiko1" id="floatingInput" placeholder="name@example.com" data-temp-mail-org="0" onChange={(e) => { setEmail(e.target.value) }} />
 
                             </div>
                             <br />
-                            <div class="form-floating yaya">
-                                <input type="password" class="form-control yaya" id="floatingPassword" placeholder="Password" onChange={(e) => { setPassword(e.target.value) }} />
+                            <div className="yaya">
+                                <input type="password" className="kopiko1" id="floatingPassword" placeholder="Password" onChange={(e) => { setPassword(e.target.value) }} />
 
                             </div>
                             <br />
-                            <div class="form-check text-start my-3">
-                                <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault" />
-                                <label class="form-check-label label-used-in-login" for="flexCheckDefault">
+                            <div className="form-check text-start my-3">
+                                <input className="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault" />
+                                <label className="form-check-label label-used-in-login" for="flexCheckDefault">
                                     Remember me
                                 </label>
                             </div>
-                            <button class="btn btn-primary w-100 py-2" type="submit" onClick={submit}>Sign in</button>
+                            <button className="btn btn-primary w-100 py-2" type="submit" onClick={submit}>Sign in</button>
                             <a href=''onClick={loginNav}><span>New user?</span></a><br/>
                         </form>
                     </div>

@@ -25,6 +25,7 @@ function NavScrollExample() {
           <Navbar.Toggle aria-controls="navbarScroll" />
           <Navbar.Collapse id="navbarScroll">
             <Nav.Link><Link to={'/about'} className='Link'>About Us</Link></Nav.Link>
+            <Nav.Link><Link to={'/CP'} className='Link'>Contact Us</Link></Nav.Link>
             {auth ?
               <>
                 <Nav
@@ -32,10 +33,8 @@ function NavScrollExample() {
                   style={{ maxHeight: '100px' }}
                   navbarScroll
                 >
-
-                  <Nav.Link><Link to={'/CP'} className='Link'>Contact Us</Link></Nav.Link>
                 </Nav>
-                  <input className="form-control me-5 col-12 col-md-4 col-xl-4" type="search" placeholder="Search" aria-label="Search" />
+                <input className="form-control me-5 col-12 col-md-4 col-xl-4" type="search" placeholder="Search" aria-label="Search" />
                 <Button variant="light" onClick={submit} className='Link keys'>Logout</Button>
               </>
               :
