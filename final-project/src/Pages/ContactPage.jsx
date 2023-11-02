@@ -4,15 +4,11 @@ import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-function al() {
-	alert('Thank you for the feedback');
-}
-export default function ContactPage () {
+export default function ContactPage() {
 	const [name, setName] = useState("");
 	const [subject, setSubject] = useState("");
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
-	const er = '';
 
 	let submit = async (e) => {
 		e.preventDefault()
@@ -125,9 +121,9 @@ export default function ContactPage () {
 					</div>
 				</div>
 			</section>
-			<ToastContainer/>
+			<ToastContainer />
 		</>
-		
+
 	)
 }
 
