@@ -1,8 +1,6 @@
-form{
-    width: 400px;
-    margin: auto;
+.login-form{
     width: 50%;
-    margin: auto;
+    margin-top: 4%;
     padding: 10px;
 }
 .yaya{
@@ -16,12 +14,11 @@ form{
     padding-top: 10px;
     padding-bottom: 10%;
 }
-label {
+.label-used-in-login {
     display: block;
     font-weight: bold;
-  }
-  
-  h1 {
+}
+.numeric-jargon {
     font-family: Arial, sans-serif;
     font-size: 36px;
     font-weight: bold;

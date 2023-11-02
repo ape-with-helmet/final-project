@@ -1,6 +1,10 @@
-form{
+.login-form{
     width: 50%;
     margin: auto;
+}
+.label-used-in-login {
+    display: block;
+    font-weight: bold;
 }
 .tt{
     background-color: rgba(0, 0, 0, 0.497);

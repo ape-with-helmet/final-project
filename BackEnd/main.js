@@ -96,23 +96,28 @@ app.post("/login", async (req, res) => {
     try {
         const user = req.body
         const { email, password } = user;
+        if (!email || !password) {
+            console.log("Please provide all information !")
+            return res.status(500).send({ message: "Not enough info" })
+        }
         const loginTime = new Date().toISOString();
         let matchStudent = await collection.findOne({ email, password })
         console.log(matchStudent)
         if (!matchStudent) {
-            return res.status(500).send({ message: "Student not Registered" })//200 is the error code for "Working".
+            return res.status(500).send({ message: "User not Registered" })//200 is the error code for "Working".
         }
         const logEntry = `${loginTime} - User: ${email}\n`;
         fs.appendFile('log.txt', logEntry, (err) => {
             if (err) {
                 console.error('Error writing to log file:', err);
-                res.status(500).send('Error logging in.');
+                res.status(500).send({message: "Error logging in."});
             } else {
                 console.log('Logged in:', email);
-                res.status(200).send('Logged in successfully.');
+                console.log('Success login');
+                return res.status(200).send({message:"Login Successful"})
             }
         });
-        console.log('Success login');
+        
     } catch (error) {
         console.log(error)
     }
