@@ -43,7 +43,7 @@ const App = () => {
         <Route element={<Login/>} path='/login'/>
         <Route element={<Signup/>} path='/signup'/>
         <Route element={<Aboutus/>} path='/about'/>
-        <Route element={<PaymentSuccessful/>} path='/os'/>
+        <Route element={<PaymentSuccessful/>} path='/ps'/>
       </Routes>
       <Footer/>
       </BrowserRouter>
