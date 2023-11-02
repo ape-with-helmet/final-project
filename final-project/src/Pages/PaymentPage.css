@@ -7,7 +7,13 @@
 * {
   box-sizing: border-box;
 }
-
+.icon-cards{
+  width: 50%;
+}
+.jajajaja{
+  margin: 0%;
+  overflow: hidden;
+}
 .rwp {
   display: -ms-flexbox;
   display: flex;

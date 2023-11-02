@@ -1,17 +1,17 @@
 import React from 'react'
 import './PaymentPage.css'
-
+import pic1 from '/Users/Hp/OneDrive/Desktop/final-project/final-project/src/resources/svgs/icons-pay-edited.png'
 function PaymentPage() {
   return (
     <>
-      <h2>Payment Form</h2>
+      <br/><br/>
       <div className="row rwp">
         <div className="col-75 clp7">
           <div className="container conp">
             <form action="/action_page.php">
 
               <div className="row rwp">
-                <div className="col-50 clp5">
+                <div className="col-6 clp5">
                   <h3>Billing Address</h3>
                   <label className="lb" for="fname"><i className="fa fa-user"></i> Full Name</label>
                   <input className="in" type="text" id="fname" name="firstname" placeholder="abc" />
@@ -23,25 +23,22 @@ function PaymentPage() {
                   <input className="in" type="text" id="city" name="city" placeholder="City" />
 
                   <div className="row rwp">
-                    <div className="col-50 clp5">
+                    <div className="col-6 clp5">
                       <label className="lb" for="state">State</label>
                       <input className="in" type="text" id="state" name="state" placeholder="State" />
                     </div>
-                    <div className="col-50 clp5">
+                    <div className="col-6 clp5">
                       <label className="lb" for="zip">Zip</label>
                       <input className="in" type="text" id="zip" name="zip" placeholder="10001" />
                     </div>
                   </div>
                 </div>
 
-                <div className="col-50 clp5">
+                <div className="col-6 clp5">
                   <h3>Payment</h3>
                   <label className="lb" for="fname">Accepted Cards</label>
-                  <div className="icon-container">
-                    <i className="fa fa-cc-visa" style={{ color: "navy" }}></i>
-                    <i className="fa fa-cc-amex" style={{ color: "blue" }}></i>
-                    <i className="fa fa-cc-mastercard" style={{ color: "red" }}></i>
-                    <i className="fa fa-cc-discover" style={{ color: "orange" }}></i>
+                  <div className="icon-container jajajaja">
+                    <span><img src={pic1} alt='credit card' className='icon-cards'/></span>
                   </div>
                   <label className="lb" for="cname">Name on Card</label>
                   <input className="in" type="text" id="cname" name="cardname" placeholder="abc xyz" />
@@ -50,11 +47,11 @@ function PaymentPage() {
                   <label className="lb" for="expmonth">Exp Month</label>
                   <input className="in" type="text" id="expmonth" name="expmonth" placeholder="Month" />
                   <div className="row rwp">
-                    <div className="col-50 clp5">
+                    <div className="col-6 clp5">
                       <label className="lb" for="expyear">Exp Year</label>
                       <input className="in" type="text" id="expyear" name="expyear" placeholder="Year" />
                     </div>
-                    <div className="col-50 clp5">
+                    <div className="col-6 clp5">
                       <label className="lb" for="cvv">CVV</label>
                       <input className="in" type="text" id="cvv" name="cvv" placeholder="XXX" />
                     </div>
