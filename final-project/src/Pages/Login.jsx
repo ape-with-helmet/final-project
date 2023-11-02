@@ -22,7 +22,7 @@ export default function Login() {
         if(authority){
             navigate('/');
         }
-    },[]) 
+    }) 
     function loginNav (){
         navigate('/signup')
     }

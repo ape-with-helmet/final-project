@@ -1,10 +1,29 @@
-import React from 'react'
+import React, { useRef } from "react";
 import './PaymentPage.css'
-import pic1 from '/Users/Hp/OneDrive/Desktop/final-project/final-project/src/resources/svgs/icons-pay-edited.png'
+import pic1 from '../resources/svgs/icons-pay-edited.png'
+import { useNavigate } from "react-router-dom";
+import LoadingBar from 'react-top-loading-bar'
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 function PaymentPage() {
+
+  const ref = useRef(null)
+  const navigate = useNavigate()
+  const paySuccess = () => {
+    ref.current.continuousStart()
+    sleep(2000).then(() => { ref.current.complete(); });
+    setTimeout(() => {
+      navigate('/ps');
+    }, 3000);
+  }
+
   return (
     <>
-      <br/><br/>
+    <LoadingBar color='#f11946' ref={ref} />
+      <br /><br />
       <div className="row rwp">
         <div className="col-75 clp7">
           <div className="container conp">
@@ -38,7 +57,7 @@ function PaymentPage() {
                   <h3>Payment</h3>
                   <label className="lb" for="fname">Accepted Cards</label>
                   <div className="icon-container jajajaja">
-                    <span><img src={pic1} alt='credit card' className='icon-cards'/></span>
+                    <span><img src={pic1} alt='credit card' className='icon-cards' /></span>
                   </div>
                   <label className="lb" for="cname">Name on Card</label>
                   <input className="in" type="text" id="cname" name="cardname" placeholder="abc xyz" />
@@ -60,9 +79,9 @@ function PaymentPage() {
 
               </div>
               <label className="lb">
-                <input className="in" type="checkbox" checked="checked" name="sameadr"/> Shipping address same as billing
+                <input className="in" type="checkbox" checked="checked" name="sameadr" /> Shipping address same as billing
               </label>
-              <button className="in btnp" xtype="submit">Continue the Payment</button>
+              <button className="in btnp" type="button" onClick={paySuccess}>Continue the Payment</button>
             </form>
           </div>
         </div>

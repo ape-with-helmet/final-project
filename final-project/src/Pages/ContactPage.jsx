@@ -1,14 +1,23 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import './ContactPage.css'
 import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { useLocation } from "react-router";
 
-export default function ContactPage() {
+function ContactPage() {
+	const { pathname } = useLocation();
+
+	useEffect(() => {
+		window.scroll(0,0);
+	}, [pathname]);
+
+
 	const [name, setName] = useState("");
 	const [subject, setSubject] = useState("");
 	const [email, setEmail] = useState("");
 	const [message, setMessage] = useState("");
+
 
 	let submit = async (e) => {
 		e.preventDefault()
@@ -127,4 +136,4 @@ export default function ContactPage() {
 	)
 }
 
-
+export default ContactPage;
