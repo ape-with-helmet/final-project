@@ -1,6 +1,7 @@
-import React, { useState,useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import './Signup.css'
 import axios from 'axios'
+import { useNavigate } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -11,43 +12,56 @@ function sleep(ms) {
 }
 
 export default function Signup() {
-    // const notify = () => toast("Wow so easy!");
-
-
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [mobile, setMobile] = useState("");
-    const ref = useRef(null)
+    const navigate = useNavigate()
 
+    useEffect(() => {
+        const authority = localStorage.getItem('loginData');
+        if (authority) {
+            navigate('/');
+        }
+    }, [])
+
+    const ref = useRef(null)
+    function loginNav() {
+        navigate('/login')
+    }
     let submit = async (e) => {
         e.preventDefault()
         try {
-            
+
             const response = await axios.post("http://localhost:8080/create", {
                 email,
                 password,
                 mobile
             })
             ref.current.continuousStart()
+            localStorage.setItem("loginData", email);
             console.log(response.data);
             toast.success(response.data.message);
             sleep(2000).then(() => { ref.current.complete(); });
+            setTimeout(() => {
+                navigate('/');
+            }, 3000);
         } catch (error) {
             console.log(error);
+            ref.current.continuousStart()
             toast.error(error.response.data.message);
             sleep(500).then(() => { ref.current.complete(); });
         }
     }
     return (
         <>
-        <LoadingBar color='#f11946' ref={ref} />
+            <LoadingBar color='#f11946' ref={ref} />
             <div className="container miracle">
                 <div className="row">
                     <div className="col-md-12">
                         <form action='POST' className="login-form">
                             <h1 className="h3 mb-3 fw-normal numeric-jargon">Please sign up</h1>
                             <div className="form-floating yaya">
-                            <input type="email" className="form-control yaya" id="floatingInput" placeholder="name@example.com" data-temp-mail-org="0" onChange={(e) => { setEmail(e.target.value) }} />
+                                <input type="email" className="form-control yaya" id="floatingInput" placeholder="name@example.com" data-temp-mail-org="0" onChange={(e) => { setEmail(e.target.value) }} />
                             </div>
                             <br />
                             <div className="form-floating yaya">
@@ -64,9 +78,9 @@ export default function Signup() {
                                     Remember me
                                 </label>
                             </div>
-                        
+
                             <button className="btn btn-primary w-100 py-2" type="submit" onClick={submit}>Sign in</button>
-                            {/* <Toaster/> */}
+                            <a href="" onClick={loginNav}><span>Already a user?</span></a><br />
                         </form>
                     </div>
                 </div>

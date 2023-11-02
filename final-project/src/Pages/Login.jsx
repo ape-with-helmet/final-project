@@ -1,6 +1,7 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import './Login.css'
 import axios from 'axios'
+import { useNavigate } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { ToastContainer, toast } from 'react-toastify';
 import LoadingBar from 'react-top-loading-bar'
@@ -15,7 +16,16 @@ export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const ref = useRef(null)
-
+    const navigate = useNavigate()
+    useEffect(()=>{
+        const authority = localStorage.getItem('loginData');
+        if(authority){
+            navigate('/');
+        }
+    },[]) 
+    function loginNav (){
+        navigate('/signup')
+    }
     let submit = async (e) => {
         e.preventDefault()
         try {
@@ -27,12 +37,17 @@ export default function Login() {
             })
 
             ref.current.continuousStart()
+            localStorage.setItem("loginData",email);
             console.log(response.data);
             toast.success(response.data.message);
             sleep(2000).then(() => { ref.current.complete(); });
+            setTimeout(() => {
+                navigate('/');
+              }, 3000);
 
         } catch (error) {
             console.log(error);
+            ref.current.continuousStart()
             toast.error(error.response.data.message);
             sleep(500).then(() => { ref.current.complete(); });
         }
@@ -62,13 +77,14 @@ export default function Login() {
                                 </label>
                             </div>
                             <button class="btn btn-primary w-100 py-2" type="submit" onClick={submit}>Sign in</button>
+                            <a href=''onClick={loginNav}><span>New user?</span></a><br/>
                         </form>
                     </div>
                 </div>
             </div>
             <ToastContainer
                 position="bottom-right"
-                autoClose={4000}
+                autoClose={1500}
                 limit={4}
                 hideProgressBar={false}
                 newestOnTop={false}
