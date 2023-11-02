@@ -6,10 +6,20 @@ import CardImg from 'react-bootstrap/CardImg'
 import CardBody from 'react-bootstrap/CardBody'
 import CardTitle from 'react-bootstrap/CardTitle'
 import CardSubtitle from 'react-bootstrap/CardSubtitle'
+import React,{useEffect} from 'react';
 import './Homepage.css'
 import { Link } from 'react-router-dom';
+import { useLocation } from "react-router";
 
 function Homepage() {
+
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+
   const handleClickScroll = () => {
     const element = document.getElementById('section-1');
     if (element) {
