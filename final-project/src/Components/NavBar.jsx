@@ -19,7 +19,7 @@ function NavScrollExample() {
   }
   return (
     <>
-      <Navbar expand="md" className="bg-body-tertiary py-0" fixed='top' bg="dark" data-bs-theme="dark">
+      <Navbar expand="lg" className="bg-body-tertiary py-0" fixed='top' bg="dark" data-bs-theme="dark">
         <Container fluid>
           <Navbar.Brand><Link to={'/'} id='ok'>Xerxes Ltd.</Link></Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />

@@ -76,7 +76,7 @@ export default function Login() {
                                     Remember me
                                 </label>
                             </div>
-                            <button className="btn btn-primary w-100 py-2" type="submit" onClick={submit}>Sign in</button>
+                            <button className="btn btn-primary w-100 py-2" type="submit" onClick={submit}>Log in</button>
                             <a href=''onClick={loginNav}><span>New user?</span></a><br/>
                         </form>
                     </div>
