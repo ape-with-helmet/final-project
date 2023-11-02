@@ -15,6 +15,7 @@
 }
 .card-aauu{
   margin: 10%;
+  padding: 5%;
   border: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.5);
 
@@ -26,9 +27,9 @@
   margin-left: 3%;
 }
 
-.card{
-  width: 100%;
+.card1{
   border-radius: 20px;
+  padding: 0%;
   overflow: hidden;
   border: 1px solid rgba(0, 0, 0, 0.93);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.5);
@@ -36,16 +37,13 @@
 .card:hover{
   transform: scale(1.01);
 }
-.pp2{
-  height: 100%;
-}
+
 .image{
   border: none;
-  height: 100%;
+  height: auto;
 }
 .pp {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 4%;
 }
 Button:hover{
   transform: scale(1.05);
