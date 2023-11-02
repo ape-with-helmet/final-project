@@ -17,7 +17,8 @@
   width: 100%;
 }
 
-/* .clp2 {
+
+.clp2 {
   -ms-flex: 25%;
   flex: 25%;
 }
@@ -31,13 +32,13 @@
 .clp7 {
   -ms-flex: 75%;
   flex: 75%;
-} */
+}
 
-/* .clp2,
+.clp2,
 .clp5,
 .clp7 {
   padding: 0 16px;
-} */
+}
 
 .conp{
   background-color: #f2f2f2;
