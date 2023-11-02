@@ -19,7 +19,7 @@ import PaymentPage from './Pages/PaymentPage'
 import Cart from './Pages/Cart'
 import PaymentSuccessful from './Pages/PaymentSuccessful'
 import Profile from './Pages/Profile'
-import { BrowserRouter, Routes, Route, Outlet } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, /*Outlet*/ } from 'react-router-dom'
 
 const App = () => {
   return (
