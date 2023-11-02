@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import './PaymentPage.css'
-import pic1 from '../resources/svgs/icons-pay-edited.png'
+import pic1 from './payment-images/god.png'
 import { useNavigate } from "react-router-dom";
 import LoadingBar from 'react-top-loading-bar'
 
