@@ -9,7 +9,7 @@ const ProductPage = () => {
         <>
             <body>
                 <div className="container">
-                    <div className="row">
+                    <div className="row rwpp">
                         <div className="col-lg-6 col-sm-12" id='photo'>
                         <img src="https://bandidospitstop.com/cdn/shop/files/6_233d4f18-8819-470c-ad18-358b61a4703d.webp?v=1697791784&width=1125" class="img-fluid" alt="I"/>
                         </div>

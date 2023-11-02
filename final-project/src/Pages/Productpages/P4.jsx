@@ -12,7 +12,7 @@ const ProductPage = () => {
         <>
             <body>
                 <div className="container">
-                    <div className="row">
+                    <div className="row rwpp">
                         <div className="col-lg-6 col-sm-12" id='photo'>
                         <img src="https://bandidospitstop.com/cdn/shop/files/JKT10865MOTOWOLFARMOURJACKETBLACK1031BM.webp?v=1697801445&width=1125" class="img-fluid" alt="I"/>
                         </div>

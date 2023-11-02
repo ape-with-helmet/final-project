@@ -1,5 +1,5 @@
 import React from 'react';
-import './ProductPage.css';
+import './ProductPage.css'; 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
@@ -12,7 +12,7 @@ const ProductPage = () => {
         <>
             <body>
                 <div className="container">
-                    <div className="row">
+                    <div className="row rwpp">
                         <div className="col-lg-6 col-sm-12" id='photo'>
                         <img src="https://bandidospitstop.com/cdn/shop/files/7_78f9a05e-9faf-4bf6-9f0b-973ddafa2dbc.webp?v=1697715985&width=1125" class="img-fluid" alt="I"/>
                         </div>
