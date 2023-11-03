@@ -94,9 +94,11 @@ app.get("/getall", async (req, res) => {
 })
 app.get("/getallcart", async (req, res) => {
     try {
-        let userDetails = await cartModel.find({})
-        console.log(userDetails);
-        res.send({ data: userDetails });
+        const itm = req.body
+        const { product, amount, id } = itm;
+        let userDetails = await cartModel.find({},{amount:1,product:0,id:0})
+        console.log("cart data",userDetails);
+        return res.status(200).send({ message: "Login Successful",data: userDetails.amount })
     } catch (error) {
         console.log(error)
     }

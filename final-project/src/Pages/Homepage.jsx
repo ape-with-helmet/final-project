@@ -264,7 +264,7 @@ function Homepage() {
                   tag="h6"
                 >
                   SKU: SAD12872
-                </CardSubtitle><br /><br />
+                </CardSubtitle><br />
                 <a href='./P2'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
                   Know More
                 </Button></a>
@@ -288,7 +288,7 @@ function Homepage() {
                   tag="h6"
                 >
                   SKU: ENG12868
-                </CardSubtitle><br /><br />
+                </CardSubtitle><br />
                 <a href='/P3'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
                   Know More
                 </Button></a>
@@ -339,7 +339,7 @@ function Homepage() {
                 >
                   SKU: BAG10934
                 </CardSubtitle>
-                <br /><br />
+                <br />
                 <a href='/P5'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
                   Know More
                 </Button></a>
