@@ -11,13 +11,13 @@
   border: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.5);
 }
-.lodulalit:hover{
+.lodulalit:hover {
   color: rgb(179, 48, 255);
   text-shadow: 10px;
 }
 .polsrow {
   margin-top: 1%;
-  display: block;
+  display: flex;
   flex-direction: row;
 }
 
@@ -28,7 +28,6 @@
 .hamas {
   transform: scale(90%);
   margin-top: 5%;
-
 }
 
 .card-aauu {
@@ -103,7 +102,7 @@
   text-decoration: none;
   margin-top: 3%;
 }
-.dropdown-row{
+.dropdown-row {
   margin-top: 8px;
 }
 .liner {
@@ -147,11 +146,13 @@
   color: black;
 }
 
-.search-over{
+.search-over {
   margin-top: 4%;
+  width: 60%;
 }
 
-.product-button{
+.product-button {
+  margin-top: 13px;
   border: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.5);
   background-color: rgb(179, 48, 255);
@@ -159,4 +160,22 @@
   width: 30%;
   height: 40px;
   border-radius: 5px;
+}
+
+.card-header {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 1%;
+  border: 1px solid rgb(231, 231, 231);
+  background-color: rgb(231, 231, 231);
+}
+
+.card-body {
+  padding: 1%;
+  font-size: 17px;
+  line-height: 30px;
+}
+
+.card-txt{
+  text-decoration: none;
 }

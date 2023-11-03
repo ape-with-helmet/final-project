@@ -5,7 +5,13 @@
 }
 .kink{
     text-decoration: none;
-    color: white;
+    color: rgb(179, 48, 255);
+    /* margin-left: 1%; */
+    border: none;
+    width: 100%;
+}
+.kink:hover{
+    color: rgb(179, 48, 255);
 }
 .dropdown{
     display: flex;
@@ -14,6 +20,15 @@
 }
 .dropdown:empty{
     border: none;
+}
+.bi-cart{
+    color: white;
+    scale: 2;
+    margin-top: 0%;
+    margin-bottom: 30%;
+}
+.bi-cart:hover{
+    color: rgb(179, 48, 255);
 }
 .floater{
     margin-top: 20%;
@@ -26,8 +41,14 @@
     background-color: azure;
 }
 .listy{
-    text-align: right;
-    list-style-type: none;
+    padding-right: 1%;
+    color: white;
+    background-color: rgb(255, 255, 255, 0);
+    border: none;
+}
+.listy:hover{
+    background-color: rgb(255, 255, 255, 0);
+    color: rgb(179, 48, 255);
 }
 .nav-alignment{
     text-align: right;
@@ -40,7 +61,5 @@
     width: 50%;
 }
 .keys{
-    margin-top: 1%;
-    margin-left: 1%;
-    padding: auto;
+    margin: 1%;
 }
