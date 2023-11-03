@@ -6,22 +6,29 @@
   border-radius: 10px;
   box-shadow: 1px 1px 10px 1px black;
 }
+
 .brdr {
   border: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.5);
 }
-.polsrow{
+
+.polsrow {
   margin-top: 1%;
+  display: flex;
+  flex-direction: row;
 }
-.rounder{
+
+.rounder {
   border-radius: 100px;
 }
+
 .hamas {
   transform: scale(90%);
   margin-top: 5%;
-  
+
 }
-.card-aauu{
+
+.card-aauu {
   margin: 10%;
   padding: 5%;
   margin-top: 20%;
@@ -29,14 +36,16 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
 }
-.tet{
+
+.tet {
   color: white;
 }
-.idk{
+
+.idk {
   margin-left: 3%;
 }
 
-.card1{
+.card1 {
   border-radius: 20px;
   padding: 0%;
   height: auto;
@@ -44,61 +53,85 @@
   border: 1px solid rgba(0, 0, 0, 0.93);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.5);
 }
-.card:hover{
+
+.card:hover {
   transform: scale(1.01);
 }
-.search-body{
+
+.search-body {
   padding: 0%;
 }
-.clearbutton-home{
+
+.clearbutton-home {
   width: 10%;
-   border: none;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.5); */ 
+  border: none;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.5); */
   background-color: gray;
   color: white;
   padding-right: 0px;
 }
-.insideCross{
+
+.insideCross {
   margin-left: auto;
   margin-right: 100px;
 }
-.submit-home{
+
+.submit-home {
   width: 100%;
-   border: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.5); 
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.5);
   background-color: rgb(179, 48, 255);
   color: white;
   font-family: monospace;
-  font-weight:bolder;
+  font-weight: bolder;
 }
-.search-inner{
+
+.search-inner {
   margin: none;
   overflow: hidden;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.5); 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.5);
 }
-.dropdown{
+
+.dropdown {
   color: black;
   text-decoration: underline;
 }
-.searchbar-home{
+
+.liner {
+  position: relative;
+  top: 20px;
+  border: none;
+  height: 2px;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  background: black;
+  margin-bottom: 80px;
+}
+
+.searchbar-home {
   width: 90%;
   border: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.5);
 }
-.image{
+
+.image {
   border: none;
   height: auto;
 }
+
 .pp {
   margin-bottom: 4%;
 }
-.Button:hover{
+
+.Button:hover {
   transform: scale(1.05);
   opacity: 0.7;
   color: black;
 }
-.crosser:hover{
+
+.crosser:hover {
   transform: scale(1.05);
   opacity: 0.7;
   color: black;

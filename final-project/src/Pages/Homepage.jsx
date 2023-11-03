@@ -61,7 +61,7 @@ function Homepage() {
     <>
       <div className='row polsrow' id='row'>
         <div className='col-xl-4 col-lg-6 col-12'>
-          <div className="card-aauu">
+          <div className="card-aauu leftist">
             <h5 className="card-header rounder">Search our vast collection</h5>
             <div className="card-body rounder">
               <div className='search-body'>
@@ -160,7 +160,7 @@ function Homepage() {
           </div>
         </div>
         <div className='col-xl-4 col-lg-6 col-12'>
-          <div className='card-aauu'>
+          <div className='card-aauu rightist'>
             <h5 className='card-header'>About us</h5>
             <div className='card-body'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptate aliquam quasi, illum soluta, voluptatibus enim ad corrupti optio illo recusandae tempore, quisquam est cupiditate laboriosam? Ea placeat perferendis ab corrupti natus quae nihil temporibus sunt eum amet modi soluta quasi tenetur maiores inventore odit cupiditate nobis, atque unde eligendi.
             </div>
@@ -169,7 +169,8 @@ function Homepage() {
         </div>
 
       </div>
-      <br id='section-1' />
+      <hr className='liner'id='section-1' />
+      <br />
       <div className="container">
         <div className="row">
           <div className="col-lg-4 col-md-12 col-sm-12 pp">
