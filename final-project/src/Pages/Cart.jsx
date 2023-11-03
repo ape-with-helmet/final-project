@@ -7,6 +7,16 @@ import axios from "axios";
 
 function Cart() {
   const [quantity, setQuantity] = useState(1);
+  const [query, setQuery] = useState("");
+
+  const keys = ["name","sku"]
+
+  const search = (data) => {
+    return data.filter(
+      (item) =>
+        keys.some((key)=>item[key].toLowerCase().includes(query))
+    );
+  };
   const [data, setData] = useState([]);
   const pricePerItem = 7349;
 
