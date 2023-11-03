@@ -7,11 +7,9 @@ const PaymentSuccessful = () => {
   const ref = useRef(null)
   const navigate = useNavigate()
   useEffect(() => {
-    ref.current.continuousStart()
     setTimeout(() => {
-      ref.current.complete()
       navigate('/');
-    }, 10000);
+    }, 3000);
 });
 
   return (

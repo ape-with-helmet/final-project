@@ -23,7 +23,7 @@ function Cart() {
 
   return (
     <>
-      <section className="vh-100" style={{ backgroundcolor: "#fdccbc" }}>
+      <section className="vh-100 martin1" style={{ backgroundcolor: "#fdccbc" }}>
         <div className="container h-100">
           <div className="row d-flex justify-content-center align-items-center h-200">
             <div className="col">

@@ -58,18 +58,18 @@ export default function Signup() {
             <div className="container miracle">
                 <div className="row">
                     <div className="col-md-12">
-                        <form action='POST' className="login-form">
-                            <h1 className="h3 mb-3 fw-normal numeric-jargon">Please sign up</h1>
-                            <div className="form-floating yaya">
-                                <input type="email" className="form-control yaya" id="floatingInput" placeholder="name@example.com" data-temp-mail-org="0" onChange={(e) => { setEmail(e.target.value) }} />
+                        <form action='POST' className="col-12 col-md-6 kopiko2">
+                        <h3 className="numeric-jargon">Please Log in</h3>
+                            <div className="yaya">
+                                <input type="email" className="kopiko1" id="floatingInput" placeholder="name@example.com" data-temp-mail-org="0" onChange={(e) => { setEmail(e.target.value) }} />
                             </div>
                             <br />
-                            <div className="form-floating yaya">
-                                <input type="password" className="form-control yaya" id="floatingPassword" placeholder="Password" onChange={(e) => { setPassword(e.target.value) }} />
+                            <div className="yaya">
+                                <input type="password" className="kopiko1" id="floatingPassword" placeholder="Password" onChange={(e) => { setPassword(e.target.value) }} />
                             </div>
                             <br />
-                            <div className="form-floating yaya">
-                                <input type="text" className="form-control yaya" id="floatingPassword" placeholder="Phone" onChange={(e) => { setMobile(e.target.value) }} />
+                            <div className="yaya">
+                                <input type="text" className="kopiko1" id="floatingPassword" placeholder="Phone" onChange={(e) => { setMobile(e.target.value) }} />
                             </div>
                             <br />
                             <div className="form-check text-start my-3">
@@ -79,7 +79,7 @@ export default function Signup() {
                                 </label>
                             </div>
 
-                            <button className="btn btn-primary w-100 py-2" type="submit" onClick={submit}>Sign in</button>
+                            <button className="btn btn-primary w-100 py-2" type="submit" onClick={submit}>Sign Up</button>
                             <a href="" onClick={loginNav}><span>Already a user?</span></a><br />
                         </form>
                     </div>

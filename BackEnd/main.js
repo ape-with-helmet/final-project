@@ -31,28 +31,28 @@ app.post("/create", async (req, res) => {
         let valEmail = validEmail(email);
         if (!valEmail) {
             console.log("please enter valid email: ")
-            return res.status(500).send({ message: "invalid id" })
+            return res.status(500).send({ message: "Invalid Email" })
         }
         let valPass = validPassword(password);
         if (!valPass) {
             console.log("please enter valid password: ")
-            return res.status(500).send({ message: "invalid pass" })
+            return res.status(500).send({ message: "Invalid Password" })
         }
         let valMob = validMobile(mobile);
         if (!valMob) {
-            console.log("please enter valid mobile number: ")
-            return res.status(500).send({ message: "invalid phone" })
+            console.log("Please enter valid Mobile Number: ")
+            return res.status(500).send({ message: "Invalid Phone" })
         }
         //unique validation
         let uniqueEmail = await collection.findOne({ email })
         if (uniqueEmail) {
-            console.log('mail exists')
+            console.log('Email exists')
             return res.status(500).send({ message: "Email already exists!" })
         }
         let uniquePhone = await collection.findOne({ mobile })
         if (uniquePhone) {
-            console.log('phone exists')
-            return res.status(500).send({ message: "Phone already exists!" })
+            console.log('Phone Number exists')
+            return res.status(500).send({ message: "Phone Number already exists!" })
         }
         let createUs = await collection.create(data)
         console.log(createUs)
@@ -106,7 +106,7 @@ app.post("/login", async (req, res) => {
         if (!matchStudent) {
             return res.status(500).send({ message: "User not Registered" })//200 is the error code for "Working".
         }
-        const logEntry = `${email}`;
+        const logEntry = `Login:${loginTime} User:${email}\n`;
         fs.appendFile('log.txt', logEntry, (err) => {
             if (err) {
                 console.error('Error writing to log file:', err);

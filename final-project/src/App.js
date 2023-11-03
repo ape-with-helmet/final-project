@@ -29,24 +29,25 @@ const App = () => {
         <br /><br />
         <Routes>
           <Route element={<PrivateComponents />}>
-            <Route element={<P1 />} path='/P1' />
-            <Route element={<P2 />} path='/P2' />
-            <Route element={<P3 />} path='/P3' />
-            <Route element={<P4 />} path='/P4' />
-            <Route element={<P5 />} path='/P5' />
-            <Route element={<P6 />} path='/P6' />
+            
             <Route element={<Profile />} path='/profile' />
             <Route element={<Cart />} path='/cart' />
             <Route element={<PaymentForm />} path='/PF' />
             <Route element={<PaymentPage />} path='/Pay' />
             <Route element={<Search />} path='/SR' />
-            <Route element={<ContactPage />} path='/CP' />
             <Route element={<PaymentSuccessful />} path='/ps' />
           </Route>
+          <Route element={<ContactPage />} path='/CP' />
           <Route element={<Homepage />} path='/' />
           <Route element={<Login />} path='/login' />
           <Route element={<Signup />} path='/signup' />
           <Route element={<Aboutus />} path='/about' />
+          <Route element={<P1 />} path='/P1' />
+            <Route element={<P2 />} path='/P2' />
+            <Route element={<P3 />} path='/P3' />
+            <Route element={<P4 />} path='/P4' />
+            <Route element={<P5 />} path='/P5' />
+            <Route element={<P6 />} path='/P6' />
         </Routes>
         <Footer />
       </BrowserRouter>
