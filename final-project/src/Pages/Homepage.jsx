@@ -59,6 +59,7 @@ function Homepage() {
 
   return (
     <>
+
       <div className='row polsrow' id='row'>
 
         {/* <div className='col-xl-4 col-lg-6 col-12'>
@@ -93,7 +94,7 @@ function Homepage() {
             </div>
           </div>
         </div> */}
-        
+
         <div className='col-xl-4 col-lg-6 col-md-12 col-12'>
           <div className='container hamas'>
             <div className='brdr'>
@@ -162,7 +163,7 @@ function Homepage() {
             </div>
           </div>
         </div>
-        
+
         <div className='col-lg-8 col-12 search-over' >
           <div className="card-aauu leftist">
             <div className="card-body rounder">
@@ -196,8 +197,11 @@ function Homepage() {
           </div>
 
           <div className='card-aauu rightist'>
-            <h5 className='card-header'>About us</h5>
-            <div className='card-body'>At Xerxes India, our mission is clear: To empower Motorcyclists by providing them with the right tools and accessories they need to ride with confidence, safety, and enjoyment. We believe that every Motorcyclist, from the casual rider to the competitive racer, deserves the best gear to support their passion.
+            <div className="card-header">
+              <h5>About us</h5>
+            </div>
+            <div className='card-body'>
+              At Xerxes India, our mission is clear: To empower Motorcyclists by providing them with the right tools and accessories they need to ride with confidence, safety, and enjoyment. We believe that every Motorcyclist, from the casual rider to the competitive racer, deserves the best gear to support their passion.
             </div>
             <button onClick={handleClickScroll} className='product-button'>View Products</button>
           </div>
@@ -214,6 +218,7 @@ function Homepage() {
         </div> */}
 
       </div>
+
       <hr className='liner' id='section-1' />
       <br />
       <div className="container">
