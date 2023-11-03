@@ -65,7 +65,7 @@ function ContactPage() {
 								<div class="row no-gutters">
 									<div class="col-md-6">
 										<div class="contact-wrap w-100 p-lg-5 p-4">
-											<h3 class="mb-4">Send us a message</h3>
+											<h3 class="mb-4">Send us a message </h3>
 											<form method="POST" id="contactForm" name="contactForm" class="contactForm">
 												<div class="row">
 													<div class="col-md-12">
@@ -98,7 +98,7 @@ function ContactPage() {
 										</div>
 									</div>
 									<div class="col-md-6 d-flex align-items-stretch">
-										<div class="info-wrap w-100 p-lg-5 p-4 img">
+										<div class="info-wrap w-100 p-lg-5 p-4 ">
 											<h3>Contact us</h3>
 											<p class="mb-4">We're open for any suggestion or just to have a chat</p>
 											<div class="dbox w-100 d-flex align-items-start">
