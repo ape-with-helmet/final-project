@@ -15,9 +15,8 @@ function Cart() {
     .then(users => setData1(users.data))
     .catch(err => console.log(err))
   },[]);
+  const price=7980;
   
-
-
   return (
     <>
       <section className="vh-100 martin1" style={{ backgroundcolor: "#fdccbc" }}>
@@ -117,7 +116,7 @@ function Cart() {
                   <div className="float-end">
                     <p className="mb-0 me-5 d-flex align-items-center">
                       <span className="small text-muted me-2">Order total:</span> <span
-                        className="lead fw-normal">₹0</span>
+                        className="lead fw-normal">₹{price}</span>
                     </p>
                   </div>
 
