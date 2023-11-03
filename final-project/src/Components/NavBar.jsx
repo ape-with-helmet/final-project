@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
+import Search from './Search';
 
 function NavScrollExample() {
   const navigate = useNavigate()
@@ -35,6 +36,11 @@ function NavScrollExample() {
               </>
               :
               <>
+<<<<<<< HEAD
+                <Nav.Link><Link to={'/about'} className='Link'>About Us</Link></Nav.Link>
+                <Search />
+=======
+>>>>>>> 2f6213b7abe2af71f37000b5a27df8cde5938c70
                 <Link to={'/signup'} className='Link keys ms-auto'><Button variant="outline-light">Sign Up</Button></Link>
                 <Link to={'/login'} className='Link keys'><Button variant="light">Login</Button></Link>
               </>
