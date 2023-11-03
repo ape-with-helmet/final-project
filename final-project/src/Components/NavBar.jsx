@@ -1,16 +1,41 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './NavBar.css'
 //import axios from 'axios'
 import { Link, useNavigate } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+import Table from './Searchtable';
 import Nav from 'react-bootstrap/Nav';
+//import axios from 'axios'
 
 function NavScrollExample() {
+
+  const [query, setQuery] = useState("");
+  const [data, setData] = useState([]);
+  const keys = ["name","sku"];
+
+  const search = (data) => {
+    return data.filter(
+      (item) =>
+        keys.some((key)=>item[key].toLowerCase().includes(query))
+    );
+  };
+
+  console.log(query);
   const navigate = useNavigate()
   const auth = localStorage.getItem('loginData');
+
+  useEffect(() => {
+    fetch("http://localhost:8080/getall", {
+      method: "GET"
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        setData(res.data)
+      })
+    console.log(data)
+  }, [])
 
   let submit = async (e) => {
     e.preventDefault()
@@ -34,7 +59,7 @@ function NavScrollExample() {
                   navbarScroll
                 >
                 </Nav>
-                <input className="form-control me-5 col-12 col-md-4 col-xl-4" type="search" placeholder="Search" aria-label="Search" />
+                <input className="form-control me-5 col-12 col-md-4 col-xl-4" type="search" placeholder="Search" aria-label="Search" onChange={(e) => setQuery(e.target.value)} />
                 <Button variant="light" onClick={submit} className='Link keys'>Logout</Button>
               </>
               :
@@ -46,6 +71,7 @@ function NavScrollExample() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      <Table data={search(data)}/>
     </>
   );
 }

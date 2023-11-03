@@ -3,7 +3,7 @@ const cors = require("cors")
 const { validEmail, validPassword, validMobile } = require('./src/validations/userValidation');
 const collection = require("./src/models/userModel")
 const contactModel = require("./src/models/contactModel")
-//const cUser=require("./src/models/cUserModel")
+const pData = require("./src/models/productModel")
 const app = express()
 const fs = require('fs')
 app.use(express.json())
@@ -84,10 +84,9 @@ app.post("/delete", async (req, res) => {
 
 app.get("/getall", async (req, res) => {
     try {
-        // const user=req.body
-        // const {email,password,/*fname,lname,*/mobile}=user;
-        let userDetails = await collection.find()
-        console.log(userDetails)
+        let userDetails = await pData.find({})
+        console.log(userDetails);
+        res.send({ data: userDetails });
     } catch (error) {
         console.log(error)
     }
@@ -122,14 +121,14 @@ app.post("/login", async (req, res) => {
         console.log(error)
     }
 });
-app.get("/validAuth",async (req,res)=>{
+app.get("/validAuth", async (req, res) => {
     const data = fs.readFileSync('log.txt', 'utf8');
     console.log(data);
     return data
 })
-app.post("/logout",async (req,res)=>{
+app.post("/logout", async (req, res) => {
     try {
-        fs.writeFileSync('log.txt','');
+        fs.writeFileSync('log.txt', '');
         var data = fs.readFileSync('log.txt', 'utf8');
         console.log(data);
     } catch (error) {
