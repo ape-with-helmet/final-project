@@ -42,7 +42,9 @@
 .card:hover{
   transform: scale(1.01);
 }
-
+.dropdown{
+  
+}
 .image{
   border: none;
   height: auto;

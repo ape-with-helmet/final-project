@@ -6,27 +6,57 @@ import CardImg from 'react-bootstrap/CardImg'
 import CardBody from 'react-bootstrap/CardBody'
 import CardTitle from 'react-bootstrap/CardTitle'
 import CardSubtitle from 'react-bootstrap/CardSubtitle'
-import React,{useEffect} from 'react';
+import React, { useEffect, useState } from 'react';
 import './Homepage.css'
 import { Link } from 'react-router-dom';
 import { useLocation } from "react-router";
 
 function Homepage() {
 
+  // const [query, setQuery] = useState("");
+  const [data, setData] = useState([]);
+  const [value, setValue] = useState('');
+  const onChange = (e) => {
+    setValue(e.target.value)
+  }
+  const onSearch = (searchTerm) => {
+    setValue(searchTerm)
+    //fetch search result
+    console.log(searchTerm)
+  }
+  // const keys = ["name","sku"];
+
+  // const search = (data) => {
+  //   return data.filter(
+  //     (item) =>
+  //       keys.some((key)=>item[key].toLowerCase().includes(query))
+  //   );
+  // };
   const { pathname } = useLocation();
+
+  useEffect(() => {
+    fetch("http://localhost:8080/getall", {
+      method: "GET"
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        setData(res.data)
+      })
+    console.log(data)
+  }, [])
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
 
-  const handleClickScroll = () => {
-    const element = document.getElementById('section-1');
-    if (element) {
-      // 👇 Will scroll smoothly to the top of the next section
-      element.scrollIntoView({behavior: 'smooth'});
-    }
-  };
+  // const handleClickScroll = () => {
+  //   const element = document.getElementById('section-1');
+  //   if (element) {
+  //     // 👇 Will scroll smoothly to the top of the next section
+  //     element.scrollIntoView({ behavior: 'smooth' });
+  //   }
+  // };
 
   return (
     <>
@@ -101,17 +131,31 @@ function Homepage() {
         </div>
         <div className='col-xl-8 col-lg-6 col-12'>
           <div className="card-aauu">
-            <h5 className="card-header">About Us</h5>
+            <h5 className="card-header">Search our vast collection</h5>
             <div className="card-body">
-              <div className="card-title h5">Xerxes Ltd.</div>
-              <p className="card-text">At Xerxes India, our mission is clear: To empower Motorcyclists by providing them with the right tools and accessories they need to ride with confidence, safety, and enjoyment. We believe that every Motorcyclist, from the casual rider to the competitive racer, deserves the best gear to support their passion.</p>
-              <button type="button" className="btn btn-secondary btn-lg" onClick={handleClickScroll}>View Products</button>
-              <Link to={'/about'} className='idk'><Button variant="secondary">About us</Button></Link>
+              <div className='search-body'>
+                <div className='search-inner'>
+                  <input type='text' value={value} onChange={onChange} />
+                  <button onClick={() => onSearch(value)}>Search</button>
+                </div>
+                <div className='dropdown'>
+                  {data.filter(item => {
+                    const searchTerm = value.toLowerCase();
+                    const name = item.name.toLowerCase();
+                    return searchTerm&&name.includes(searchTerm)&&name !== searchTerm
+                  }).slice(0,3)
+                  .map((item)=><div className='dropdown-row' onClick={()=>onSearch(item.name)}
+                    key={item.id}
+                  >
+                    {item.name}
+                  </div>)}
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <br id='section-1'/>
+      <br id='section-1' />
       <div className="container">
         <div className="row">
           <div className="col-lg-4 col-md-12 col-sm-12 pp">
@@ -131,7 +175,7 @@ function Homepage() {
                   tag="h6"
                 >
                   SKU: CRA12950
-                </CardSubtitle><br/>
+                </CardSubtitle><br />
                 <a href='./P1'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
                   Know More
                 </Button></a>
@@ -155,7 +199,7 @@ function Homepage() {
                   tag="h6"
                 >
                   SKU: SAD12872
-                </CardSubtitle><br/><br/>
+                </CardSubtitle><br /><br />
                 <a href='./P2'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
                   Know More
                 </Button></a>
@@ -179,7 +223,7 @@ function Homepage() {
                   tag="h6"
                 >
                   SKU: ENG12868
-                </CardSubtitle><br/><br/>
+                </CardSubtitle><br /><br />
                 <a href='/P3'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
                   Know More
                 </Button></a>
@@ -204,7 +248,7 @@ function Homepage() {
                 >
                   SKU: JKT10865
                 </CardSubtitle>
-                <br/>
+                <br />
                 <a href='/P4'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
                   Know More
                 </Button></a>
@@ -230,7 +274,7 @@ function Homepage() {
                 >
                   SKU: BAG10934
                 </CardSubtitle>
-                <br/><br/>
+                <br /><br />
                 <a href='/P5'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
                   Know More
                 </Button></a>
@@ -256,7 +300,7 @@ function Homepage() {
                 >
                   SKU: CLO10939
                 </CardSubtitle>
-                <br/>
+                <br />
                 <a href='/P6'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
                   Know More
                 </Button></a>
