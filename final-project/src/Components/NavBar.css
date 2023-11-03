@@ -7,6 +7,14 @@
     text-decoration: none;
     color: white;
 }
+.dropdown{
+    display: flex;
+    flex-direction: column;
+    border: #757575;
+}
+.dropdown:empty{
+    border: none;
+}
 .floater{
     margin-top: 20%;
     padding-bottom: 0px;

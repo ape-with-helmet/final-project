@@ -29,7 +29,6 @@ const App = () => {
         <br /><br />
         <Routes>
           <Route element={<PrivateComponents />}>
-            
             <Route element={<Profile />} path='/profile' />
             <Route element={<Cart />} path='/cart' />
             <Route element={<PaymentForm />} path='/PF' />

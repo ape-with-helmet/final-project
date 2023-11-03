@@ -1,18 +1,15 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './NavBar.css'
-//import axios from 'axios'
 import { Link, useNavigate } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Search from './Search';
 
 function NavScrollExample() {
   const navigate = useNavigate()
   const auth = localStorage.getItem('loginData');
-
   let submit = async (e) => {
     e.preventDefault()
     navigate('/login');
@@ -35,7 +32,6 @@ function NavScrollExample() {
                   navbarScroll
                 >
                 </Nav>
-                <input className="form-control me-5 col-12 col-md-4 col-xl-4" type="search" placeholder="Search" aria-label="Search" />
                 <Button variant="light" onClick={submit} className='Link keys'>Logout</Button>
               </>
               :
