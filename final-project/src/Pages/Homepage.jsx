@@ -28,7 +28,7 @@ function Homepage() {
   }
 
   const forSearch = (searchId) => {
-    navigate(`/P${searchId}`);
+    navigate(`/${searchId}`);
   }
 
   const { pathname } = useLocation();
