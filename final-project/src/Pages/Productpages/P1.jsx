@@ -21,9 +21,12 @@ const ProductPage = () => {
             })
             //const p2op = axios.get("http://localhost:8080/getallcart");
             //console.log(p2op)
-            console.log(response.data);
-            setNumber(response.data);
-            console.log(number,"Checking the final nunmber!!")
+            //console.log(response.data);
+            const new_val = response.data;
+            const gege = response.data.number;
+            console.log("Chcking lol",gege)
+            // setNumber(new_val.number);
+            // console.log(number,"Checking the final nunmber!!")
         } catch (error) {
             console.log(error);
         }
