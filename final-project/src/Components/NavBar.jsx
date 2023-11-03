@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
-import Search from './Search';
+//import Search from './Search';
 
 function NavScrollExample() {
   const navigate = useNavigate()
