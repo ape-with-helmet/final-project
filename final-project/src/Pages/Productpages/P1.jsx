@@ -1,10 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './ProductPage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Table from 'react-bootstrap/Table'
+import axios from 'axios'
+
 const ProductPage = () => {
+    const product = 'LCB TRIUMPH SPEED 400 THANOS CRASH GUARD WITH SLIDER';
+    const [number,setNumber] = useState(0);
+    const id = 1;
+    
+    const addCart = async(e) =>{
+        e.preventDefault();
+        try {
+            const response = await axios.post("http://localhost:8080/addItem", {
+                product,
+                number,
+                id
+            })
+            //const p2op = axios.get("http://localhost:8080/getallcart");
+            //console.log(p2op)
+            console.log(response.data);
+            setNumber(response.data);
+            console.log(number,"Checking the final nunmber!!")
+        } catch (error) {
+            console.log(error);
+        }
+    }
+    
+
     return (
         <>
             <body>
@@ -23,7 +48,7 @@ const ProductPage = () => {
                             </p>
                             <br />
                             <div className="btnc">
-                                <a href='/cart'><button type="button" class="btn btn-outline-secondary b1">Add to Cart</button></a>
+                                <a href='/cart'><button type="button" class="btn btn-outline-secondary b1" onClick={addCart}>Add to Cart</button></a>
                                 <br />
                                 <a href='/Pay'><button type="button" class="btn btn-secondary b1 b2">Buy it Now</button></a>
                             </div>

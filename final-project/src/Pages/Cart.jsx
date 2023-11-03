@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
 import './Cart.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import React, { useEffect, useState } from 'react';
+import axios from "axios";
 
 
 function Cart() {
   const [quantity, setQuantity] = useState(1);
+  const [data, setData] = useState([]);
   const pricePerItem = 7349;
 
   const increaseQuantity = () => {
@@ -19,6 +21,20 @@ function Cart() {
   };
 
   const totalPrice = quantity * pricePerItem;
+
+
+
+  useEffect(() => {
+    fetch("http://localhost:8080/getallcart", {
+      method: "GET"
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        setData(res.data)
+      })
+    console.log(data)
+  },[])
+  
 
 
   return (
@@ -60,7 +76,7 @@ function Cart() {
                             className="btn btn-link px-40 "
                             onClick={decreaseQuantity}
                           >
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dash pop" viewBox="0 0 16 16">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-dash pop" viewBox="0 0 16 16">
                               <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"></path>
                             </svg>
                           </button>
