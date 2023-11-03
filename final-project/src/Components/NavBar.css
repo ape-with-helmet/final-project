@@ -15,6 +15,10 @@
 .dropdown:empty{
     border: none;
 }
+.bi-cart{
+    color: rgb(179, 48, 255);
+    scale: 2;
+}
 .floater{
     margin-top: 20%;
     padding-bottom: 0px;
