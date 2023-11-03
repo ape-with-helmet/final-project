@@ -15,13 +15,7 @@ const userSchema = new mongoose.Schema({
     mobile: {
         type: String,
         required: true,
-    },
-    cart: [
-        {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "Cart",
-        }
-    ]
+    }
 }, { timestamps: true }
 )
 

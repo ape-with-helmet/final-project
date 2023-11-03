@@ -2,22 +2,18 @@ import './Cart.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import React, { useEffect, useState } from 'react';
+import Table from '../Components/Searchtable'
 import axios from "axios";
 
 
 function Cart() {
   const [quantity, setQuantity] = useState(1);
-  const [query, setQuery] = useState("");
+  const [data1, setData1] = useState([]);
+  //const [query, setQuery] = useState("");
 
-  const keys = ["name","sku"]
-
-  const search = (data) => {
-    return data.filter(
-      (item) =>
-        keys.some((key)=>item[key].toLowerCase().includes(query))
-    );
-  };
-  const [data, setData] = useState([]);
+  const keys = ["product","amount"]
+  
+  //const [data, setData] = useState([]);
   const pricePerItem = 7349;
 
   const increaseQuantity = () => {
@@ -32,18 +28,16 @@ function Cart() {
 
   const totalPrice = quantity * pricePerItem;
 
-
-
   useEffect(() => {
     fetch("http://localhost:8080/getallcart", {
       method: "GET"
     })
       .then((res) => res.json())
       .then((res) => {
-        setData(res.data)
+        setData1(res.data)
       })
-    console.log(data)
-  },[])
+    console.log("This is incominh data from getallcart",data1)
+  },[]);
   
 
 
@@ -59,8 +53,8 @@ function Cart() {
                 <div className="card-body p-5">
 
                   <div className="row align-items-center">
-                    
-                    <div className="col-md-2 d-flex justify-content-center Namee">
+                  <Table data={data1} />
+                    {/* <div className="col-md-2 d-flex justify-content-center Namee">
                       <div>
                         <p className="small text-muted  ">Name</p>
                         <p className="lead fw-normal  " style={{ fontSize: "15px" }}>LCB TRIUMPH SPEED 400 VOYAGER BASHPLATE</p>
@@ -117,7 +111,7 @@ function Cart() {
                         <p className="lead fw-normal ">₹{totalPrice}</p>
 
                       </div>
-                    </div>
+  </div>*/}
                   </div>
 
                 </div>
@@ -139,7 +133,7 @@ function Cart() {
               <div className="d-flex justify-content-end">
                 <a href='/'><button type="button" className="btn btn-outline-secondary btn-lg me-2">Continue shopping</button></a>
                 <a href='/Pay'><button type="button" className="btn btn-secondary btn-lg">Proceed to Buy</button></a>
-              </div>
+              </div> 
 
             </div>
           </div>
