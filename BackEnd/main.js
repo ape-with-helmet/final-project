@@ -3,6 +3,7 @@ const cors = require("cors")
 const { validEmail, validPassword, validMobile } = require('./src/validations/userValidation');
 const collection = require("./src/models/userModel")
 const contactModel = require("./src/models/contactModel")
+const cartModel = require("./src/models/cartModel")
 const pData = require("./src/models/productModel")
 const app = express()
 const fs = require('fs')
@@ -91,6 +92,15 @@ app.get("/getall", async (req, res) => {
         console.log(error)
     }
 })
+app.get("/getallcart", async (req, res) => {
+    try {
+        let userDetails = await cartModel.find({})
+        console.log(userDetails);
+        res.send({ data: userDetails });
+    } catch (error) {
+        console.log(error)
+    }
+})
 app.post("/login", async (req, res) => {
     try {
         const user = req.body
@@ -164,6 +174,39 @@ app.post("/contactus", async (req, res) => {
 
     } catch (err) {
         console.log(err);
+    }
+});
+app.post("/addItem", async (req, res) => {
+    try {
+        const itm = req.body
+        const { product, amount, id } = itm;
+        //console.log(itm)
+        let checkItem = await cartModel.findOne({ id });
+        console.log("checkitem value: ", checkItem.id);
+        try {
+            if (checkItem !== null) {
+                console.log("MEOW");
+                const new_amount = { amount: checkItem.amount + 1 };
+                let updated_value = await cartModel.updateOne({ id }, new_amount);
+                let laVal = await cartModel.findOne({ id });
+                return res.status(200).send({ message: "Success", data: laVal })
+            } else {
+                const new_amount=0;
+                const data = {
+                    product: product,
+                    amount: new_amount,
+                    id: id
+                }
+                let new_val = await cartModel.create(data);
+                console.log("else enter\n\n");
+                return res.status(200)
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    catch (error) {
+        return res.status(404).send({ message: "fail" })
     }
 });
 app.listen(8080, () => {
