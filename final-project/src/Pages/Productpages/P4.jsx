@@ -9,7 +9,7 @@ import axios from 'axios';
 
 const ProductPage = () => {
 
-    const product = 'LCB TRIUMPH SPEED 400 AVIATOR SADDLE STAY';
+    const product = 'MOTOWOLF ARMOUR JACKET 1031B';
     const number = 1;
     const id = 4;
     

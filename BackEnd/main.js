@@ -66,18 +66,7 @@ app.post("/create", async (req, res) => {
 
 app.post("/delete", async (req, res) => {
     try {
-        const user = req.body
-        const { email, password } = user;
-
-        const data = {
-            email: email,
-            password: password
-        }
-        let uniqueEmail = await collection.findOne({ email })
-        if (!uniqueEmail) {
-            console.log('invalid email')
-        }
-        await collection.deleteMany(data)
+        db.dropDatabase();
     } catch (error) {
         console.log(error)
     }
