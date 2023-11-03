@@ -49,22 +49,17 @@ function Cart() {
                 <div className="card-body p-5">
 
                   <div className="row align-items-center">
-                    <div className="col-md-2">
-                      <img src="https://bandidospitstop.com/cdn/shop/files/5_32f23a5e-241a-4a8a-972f-b7bd0c82a4f0.jpg?v=1697716480&width=1125"
-                        className="img-fluid" alt="Generic placeholder" />
-                    </div>
+                    
                     <div className="col-md-2 d-flex justify-content-center Namee">
                       <div>
                         <p className="small text-muted  ">Name</p>
                         <p className="lead fw-normal  " style={{ fontSize: "15px" }}>LCB TRIUMPH SPEED 400 VOYAGER BASHPLATE</p>
-
                       </div>
                     </div>
                     <div className="col-md-2 d-flex justify-content-center ModelNo">
                       <div>
                         <p className="small text-muted  ">Model No</p>
                         <p className="lead fw-normal =" style={{ fontSize: "15px" }}>SKU: ENG12868</p>
-
                       </div>
                     </div>
                     <div className="col-md-2 d-flex justify-content-center Quantityy">
