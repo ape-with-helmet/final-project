@@ -9,34 +9,11 @@ import axios from "axios";
 function Cart() {
   const [quantity, setQuantity] = useState(1);
   const [data1, setData1] = useState([]);
-  //const [query, setQuery] = useState("");
-
-  const keys = ["product","amount"]
-  
-  //const [data, setData] = useState([]);
-  const pricePerItem = 7349;
-
-  const increaseQuantity = () => {
-    setQuantity(quantity + 1);
-  };
-
-  const decreaseQuantity = () => {
-    if (quantity > 1) {
-      setQuantity(quantity - 1);
-    }
-  };
-
-  const totalPrice = quantity * pricePerItem;
 
   useEffect(() => {
-    fetch("http://localhost:8080/getallcart", {
-      method: "GET"
-    })
-      .then((res) => res.json())
-      .then((res) => {
-        setData1(res.data)
-      })
-    console.log("This is incominh data from getallcart",data1)
+    axios.get("http://localhost:8080/getallcart")
+    .then(users => setData1(users.data))
+    .catch(err => console.log(err))
   },[]);
   
 
@@ -47,13 +24,30 @@ function Cart() {
         <div className="container h-100">
           <div className="row d-flex justify-content-center align-items-center h-200">
             <div className="col">
-              <p><span className="h2">Shopping Cart </span><span className="h4">(1 item in your cart)</span></p>
+              <p><span className="h2">Shopping Cart </span></p>
 
               <div className="card mb-4">
                 <div className="card-body p-5">
 
                   <div className="row align-items-center">
-                  <Table data={data1} />
+                    <table>
+                      <thead>
+                        <tr>
+                          <th>Product</th>
+                          <th>Amount</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {
+                          data1.map(prod => {
+                            return(<tr key={prod.id}>
+                              <td>{prod.product}</td>
+                              <td>{prod.amount}</td>
+                            </tr>)
+                          })
+                        }
+                      </tbody>
+                    </table>
                     {/* <div className="col-md-2 d-flex justify-content-center Namee">
                       <div>
                         <p className="small text-muted  ">Name</p>
@@ -123,7 +117,7 @@ function Cart() {
                   <div className="float-end">
                     <p className="mb-0 me-5 d-flex align-items-center">
                       <span className="small text-muted me-2">Order total:</span> <span
-                        className="lead fw-normal">₹{totalPrice}</span>
+                        className="lead fw-normal">₹0</span>
                     </p>
                   </div>
 

@@ -11,7 +11,7 @@ const ProductPage = () => {
 
     const product = 'LCB TRIUMPH SPEED 400 AVIATOR SADDLE STAY';
     const number = 1;
-    const id = 2;
+    const id = 4;
     
     const addCart = async(e) =>{
         e.preventDefault();

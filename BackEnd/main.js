@@ -93,13 +93,9 @@ app.get("/getall", async (req, res) => {
     }
 })
 app.get("/getallcart", async (req, res) => {
-    try {
-        let pop = await cartModel.find({})
-        console.log(pop);
-        res.send({ data: pop });
-    } catch (error) {
-        console.log(error)
-    }
+    cartModel.find()
+    .then(users => res.json(users))
+    .catch(err => res.json(err))
 })
 app.post("/login", async (req, res) => {
     try {
