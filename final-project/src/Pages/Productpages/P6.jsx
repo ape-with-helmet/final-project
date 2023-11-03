@@ -4,10 +4,27 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Table from 'react-bootstrap/Table'
-
+import axios from 'axios';
 
 
 const ProductPage = () => {
+
+    const product = 'LCB TRIUMPH SPEED 400 AVIATOR SADDLE STAY';
+    const number = 1;
+    const id = 2;
+    
+    const addCart = async(e) =>{
+        e.preventDefault();
+        try {
+            await axios.post("http://localhost:8080/addItem", {
+                product,
+                number,
+                id
+            })
+        } catch (error) {
+            console.log(error);
+        }
+    }
     return (
         <>
             <body>
@@ -28,7 +45,7 @@ const ProductPage = () => {
                             </p>
                             <br />
                             <div className="btnc">
-                                <a href='/cart'><button type="button" class="btn btn-outline-secondary b1">Add to Cart</button></a>
+                                <a href='/cart'><button type="button" class="btn btn-outline-secondary b1" onClick={addCart}>Add to Cart</button></a>
                                 <br />
                                 <a href='/Pay'><button type="button" class="btn btn-secondary b1 b2">Buy it Now</button></a>
                             </div>

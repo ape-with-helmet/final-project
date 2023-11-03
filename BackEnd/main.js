@@ -197,6 +197,7 @@ app.post("/addItem", async (req, res) => {
             }
             console.log("2")
             await cartModel.create(data);
+            console.log("3")
             return res.status(200)
         }
     }
