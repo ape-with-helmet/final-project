@@ -224,154 +224,147 @@ function Homepage() {
       <div className="container">
         <div className="row">
           <div className="col-lg-4 col-md-12 col-sm-12 pp">
-            <Card className='card1'>
-              <CardImg
-                alt="Card image cap"
-                src="https://bandidospitstop.com/cdn/shop/files/6_233d4f18-8819-470c-ad18-358b61a4703d.webp?v=1697791784&width=1125"
-                top
-                className='image'
-              />
-              <CardBody>
-                <CardTitle tag="h5">
-                  LCB TRIUMPH SPEED 400 THANOS CRASH GUARD WITH SLIDER
-                </CardTitle>
-                <CardSubtitle
-                  className="mb-2 text-muted"
-                  tag="h6"
-                >
-                  SKU: CRA12950
-                </CardSubtitle><br />
-                <a href='./P1'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
-                  Know More
-                </Button></a>
-              </CardBody>
-            </Card>
+            <a href='./P1' className="card-txt">
+              <Card className='card1'>
+                <CardImg
+                  alt="Card image cap"
+                  src="https://bandidospitstop.com/cdn/shop/files/6_233d4f18-8819-470c-ad18-358b61a4703d.webp?v=1697791784&width=1125"
+                  top
+                  className='image'
+                />
+                <CardBody>
+                  <CardTitle tag="h5">
+                    LCB TRIUMPH SPEED 400 THANOS CRASH GUARD WITH SLIDER
+                  </CardTitle>
+                  <CardSubtitle
+                    className="mb-2 text-muted"
+                    tag="h6"
+                  >
+                    SKU: CRA12950
+                  </CardSubtitle>
+                  <br />
+                </CardBody>
+              </Card>
+            </a>
           </div>
           <div className="col-lg-4 col-md-12 col-sm-12 pp">
-            <Card className='card1'>
-              <CardImg
-                alt="Card image cap"
-                src="https://bandidospitstop.com/cdn/shop/files/7_78f9a05e-9faf-4bf6-9f0b-973ddafa2dbc.webp?v=1697715985&width=1125"
-                top
-                className='image'
-              />
-              <CardBody>
-                <CardTitle tag="h5">
-                  LCB TRIUMPH SPEED 400 AVIATOR SADDLE STAY
-                </CardTitle>
-                <CardSubtitle
-                  className="mb-2 text-muted"
-                  tag="h6"
-                >
-                  SKU: SAD12872
-                </CardSubtitle><br />
-                <a href='./P2'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
-                  Know More
-                </Button></a>
-              </CardBody>
-            </Card>
+            <a href='./P2' className="card-txt">
+              <Card className='card1'>
+                <CardImg
+                  alt="Card image cap"
+                  src="https://bandidospitstop.com/cdn/shop/files/7_78f9a05e-9faf-4bf6-9f0b-973ddafa2dbc.webp?v=1697715985&width=1125"
+                  top
+                  className='image'
+                />
+                <CardBody>
+                  <CardTitle tag="h5">
+                    LCB TRIUMPH SPEED 400 AVIATOR SADDLE STAY
+                  </CardTitle>
+                  <CardSubtitle
+                    className="mb-2 text-muted"
+                    tag="h6"
+                  >
+                    SKU: SAD12872
+                  </CardSubtitle><br />
+                </CardBody>
+              </Card>
+            </a>
           </div>
           <div className="col-lg-4 col-md-12 col-sm-12 pp">
-            <Card className='card1'>
-              <CardImg
-                alt="Card image cap"
-                src="https://bandidospitstop.com/cdn/shop/files/5_32f23a5e-241a-4a8a-972f-b7bd0c82a4f0.jpg?v=1697716480&width=1125"
-                top
-                className='image'
-              />
-              <CardBody>
-                <CardTitle tag="h5">
-                  LCB TRIUMPH SPEED 400 VOYAGER BASHPLATE
-                </CardTitle>
-                <CardSubtitle
-                  className="mb-2 text-muted"
-                  tag="h6"
-                >
-                  SKU: ENG12868
-                </CardSubtitle><br />
-                <a href='/P3'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
-                  Know More
-                </Button></a>
-              </CardBody>
-            </Card>
-          </div>
-          <div className="col-lg-4 col-md-12 col-sm-12 pp">
-            <Card className='card1'>
-              <CardImg
-                alt="Card image cap"
-                src="https://bandidospitstop.com/cdn/shop/files/JKT10865MOTOWOLFARMOURJACKETBLACK1031BM.webp?v=1697801445&width=1125"
-                top
-                className='image'
-              />
-              <CardBody>
-                <CardTitle tag="h5">
-                  MOTOWOLF ARMOUR JACKET 1031B
-                </CardTitle>
-                <CardSubtitle
-                  className="mb-2 text-muted"
-                  tag="h6"
-                >
-                  SKU: JKT10865
-                </CardSubtitle>
-                <br />
-                <a href='/P4'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
-                  Know More
-                </Button></a>
-              </CardBody>
-            </Card>
+            <a href='/P3' className="card-txt">
+              <Card className='card1'>
+                <CardImg
+                  alt="Card image cap"
+                  src="https://bandidospitstop.com/cdn/shop/files/5_32f23a5e-241a-4a8a-972f-b7bd0c82a4f0.jpg?v=1697716480&width=1125"
+                  top
+                  className='image'
+                />
+                <CardBody>
+                  <CardTitle tag="h5">
+                    LCB TRIUMPH SPEED 400 VOYAGER BASHPLATE
+                  </CardTitle>
+                  <CardSubtitle
+                    className="mb-2 text-muted"
+                    tag="h6"
+                  >
+                    SKU: ENG12868
+                  </CardSubtitle><br />
 
+                </CardBody>
+              </Card>
+            </a>
           </div>
           <div className="col-lg-4 col-md-12 col-sm-12 pp">
-            <Card className='card1'>
-              <CardImg
-                alt="Card image cap"
-                src="https://bandidospitstop.com/cdn/shop/files/BAG10934MOTOWOLFBUMBERBAGBLACK0715.webp?v=1697797261&width=1125"
-                top
-                className='image'
-              />
-              <CardBody>
-                <CardTitle tag="h5">
-                  MOTOWOLF BUMPER BAG 0715
-                </CardTitle>
-                <CardSubtitle
-                  className="mb-2 text-muted"
-                  tag="h6"
-                >
-                  SKU: BAG10934
-                </CardSubtitle>
-                <br />
-                <a href='/P5'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
-                  Know More
-                </Button></a>
-              </CardBody>
-            </Card>
-
+            <a href='/P4' className="card-txt"> 
+              <Card className='card1'>
+                <CardImg
+                  alt="Card image cap"
+                  src="https://bandidospitstop.com/cdn/shop/files/JKT10865MOTOWOLFARMOURJACKETBLACK1031BM.webp?v=1697801445&width=1125"
+                  top
+                  className='image'
+                />
+                <CardBody>
+                  <CardTitle tag="h5">
+                    MOTOWOLF ARMOUR JACKET 1031B
+                  </CardTitle>
+                  <CardSubtitle
+                    className="mb-2 text-muted"
+                    tag="h6"
+                  >
+                    SKU: JKT10865
+                  </CardSubtitle>
+                  <br />
+                </CardBody>
+              </Card>
+            </a>
           </div>
           <div className="col-lg-4 col-md-12 col-sm-12 pp">
-            <Card className='card1'>
-              <CardImg
-                alt="Card image cap"
-                src="https://bandidospitstop.com/cdn/shop/files/CLO10939MOTOWOLFHEADCOVERBLACK1919M.webp?v=1697801259&width=1125"
-                top
-                className='image'
-              />
-              <CardBody>
-                <CardTitle tag="h5">
-                  MOTOWOLF HEAD COVER BLACK 1919
-                </CardTitle>
-                <CardSubtitle
-                  className="mb-2 text-muted"
-                  tag="h6"
-                >
-                  SKU: CLO10939
-                </CardSubtitle>
-                <br />
-                <a href='/P6'><Button type="button" className="btn btn-secondary btn-lg" variant='secondary'>
-                  Know More
-                </Button></a>
-              </CardBody>
-            </Card>
-
+            <a href='/P5' className="card-txt">
+              <Card className='card1'>
+                <CardImg
+                  alt="Card image cap"
+                  src="https://bandidospitstop.com/cdn/shop/files/BAG10934MOTOWOLFBUMBERBAGBLACK0715.webp?v=1697797261&width=1125"
+                  top
+                  className='image'
+                />
+                <CardBody>
+                  <CardTitle tag="h5">
+                    MOTOWOLF BUMPER BAG 0715
+                  </CardTitle>
+                  <CardSubtitle
+                    className="mb-2 text-muted"
+                    tag="h6"
+                  >
+                    SKU: BAG10934
+                  </CardSubtitle>
+                  <br />
+                </CardBody>
+              </Card>
+            </a>
+          </div>
+          <div className="col-lg-4 col-md-12 col-sm-12 pp">
+            <a href='/P6' className="card-txt">
+              <Card className='card1'>
+                <CardImg
+                  alt="Card image cap"
+                  src="https://bandidospitstop.com/cdn/shop/files/CLO10939MOTOWOLFHEADCOVERBLACK1919M.webp?v=1697801259&width=1125"
+                  top
+                  className='image'
+                />
+                <CardBody>
+                  <CardTitle  tag="h5">
+                    MOTOWOLF HEAD COVER BLACK 1919
+                  </CardTitle>
+                  <CardSubtitle
+                    className="mb-2 text-muted"
+                    tag="h6"
+                  >
+                    SKU: CLO10939
+                  </CardSubtitle>
+                  <br />
+                </CardBody>
+              </Card>
+            </a>
           </div>
         </div>
       </div>
