@@ -62,7 +62,7 @@ function ContactPage() {
 					<div class="row justify-content-center">
 						<div class="col-md-10">
 							<div class="wrapper">
-								<div class="row no-gutters">
+								<div class="row1 no-gutters">
 									<div class="col-md-6">
 										<div class="contact-wrap w-100 p-lg-5 p-4">
 											<h3 class="mb-4">Send us a message </h3>
