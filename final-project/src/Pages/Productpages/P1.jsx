@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ProductPage.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Tab from 'react-bootstrap/Tab';
@@ -8,22 +8,17 @@ import axios from 'axios'
 
 const ProductPage = () => {
     const product = 'LCB TRIUMPH SPEED 400 THANOS CRASH GUARD WITH SLIDER';
-    const [number,setNumber] = useState(0);
+    const number = 1;
     const id = 1;
     
     const addCart = async(e) =>{
         e.preventDefault();
         try {
-            const response = await axios.post("http://localhost:8080/addItem", {
+            await axios.post("http://localhost:8080/addItem", {
                 product,
                 number,
                 id
             })
-            //const p2op = axios.get("http://localhost:8080/getallcart");
-            //console.log(p2op)
-            console.log(response.data);
-            setNumber(response.data);
-            console.log(number,"Checking the final nunmber!!")
         } catch (error) {
             console.log(error);
         }

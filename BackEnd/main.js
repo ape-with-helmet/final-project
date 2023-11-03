@@ -180,29 +180,25 @@ app.post("/addItem", async (req, res) => {
     try {
         const itm = req.body
         const { product, amount, id } = itm;
-        //console.log(itm)
         let checkItem = await cartModel.findOne({ id });
-        console.log("checkitem value: ", checkItem.id);
-        try {
-            if (checkItem !== null) {
-                console.log("MEOW");
-                const new_amount = { amount: checkItem.amount + 1 };
-                let updated_value = await cartModel.updateOne({ id }, new_amount);
-                let laVal = await cartModel.findOne({ id });
-                return res.status(200).send({ message: "Success", data: laVal })
-            } else {
-                const new_amount=0;
-                const data = {
-                    product: product,
-                    amount: new_amount,
-                    id: id
-                }
-                let new_val = await cartModel.create(data);
-                console.log("else enter\n\n");
-                return res.status(200)
+        if (checkItem) {
+            console.log("MEOW");
+            const new_amount = { amount: checkItem.amount + 1 };
+            let updated_value = await cartModel.updateOne({ id }, new_amount);
+            let laVal = await cartModel.findOne({ id });
+            return res.status(200).send({ data: laVal })
+        } else {
+            console.log("1")
+            const new_amount = 1;
+            const data = {
+                product: product,
+                amount: new_amount,
+                id: id
             }
-        } catch (error) {
-            console.log(error)
+            console.log("2")
+            await cartModel.create(data);
+            console.log("3")
+            return res.status(200)
         }
     }
     catch (error) {

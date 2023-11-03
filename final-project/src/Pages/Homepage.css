@@ -11,10 +11,13 @@
   border: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.5);
 }
-
+.lodulalit:hover{
+  color: rgb(179, 48, 255);
+  text-shadow: 10px;
+}
 .polsrow {
   margin-top: 1%;
-  display: flex;
+  display: block;
   flex-direction: row;
 }
 
@@ -29,9 +32,10 @@
 }
 
 .card-aauu {
-  margin: 10%;
+  margin: 2%;
+  margin-top: -10%;
   padding: 5%;
-  margin-top: 20%;
+  margin-top: 0%;
   border: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
@@ -63,10 +67,11 @@
 }
 
 .clearbutton-home {
-  width: 10%;
+  width: 20%;
+  height: 50px;
   border: none;
   /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.5); */
-  background-color: gray;
+  background-color: rgb(179, 48, 255);
   color: white;
   padding-right: 0px;
 }
@@ -95,9 +100,12 @@
 
 .dropdown {
   color: black;
-  text-decoration: underline;
+  text-decoration: none;
+  margin-top: 3%;
 }
-
+.dropdown-row{
+  margin-top: 8px;
+}
 .liner {
   position: relative;
   top: 20px;
@@ -111,9 +119,11 @@
 }
 
 .searchbar-home {
-  width: 90%;
+  width: 80%;
+  height: 50px;
   border: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 
 .image {
@@ -132,21 +142,21 @@
 }
 
 .crosser:hover {
-  transform: scale(1.05);
+  transform: scale(1);
   opacity: 0.7;
   color: black;
 }
+
+.search-over{
+  margin-top: 4%;
+}
+
 .product-button{
-  width: 100%;
-   border: none;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.5); 
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.5);
   background-color: rgb(179, 48, 255);
   color: white;
-  font-family: monospace;
-  font-weight:bolder;
-}
-.product-button:hover{
-  transform: scale(1.05);
-  opacity: 0.7;
-  color: black;
+  width: 30%;
+  height: 40px;
+  border-radius: 5px;
 }

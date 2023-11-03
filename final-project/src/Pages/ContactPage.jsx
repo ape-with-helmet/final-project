@@ -91,7 +91,6 @@ function ContactPage() {
 													<div class="col-md-12">
 														<div class="form-group">
 															<button class="btn btn-primary" type="submit" onClick={submit}>Send Message</button>
-															<div class="submitting"></div>
 														</div>
 													</div>
 												</div>

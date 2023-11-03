@@ -42,7 +42,7 @@ function Homepage() {
         setData(res.data)
       })
     console.log(data)
-  },[])
+  }, [])
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -60,18 +60,20 @@ function Homepage() {
   return (
     <>
       <div className='row polsrow' id='row'>
-        <div className='col-xl-4 col-lg-6 col-12'>
+
+        {/* <div className='col-xl-4 col-lg-6 col-12'>
           <div className="card-aauu leftist">
-            <h5 className="card-header rounder">Search our vast collection</h5>
             <div className="card-body rounder">
               <div className='search-body'>
                 <div className='search-inner'>
-                  <input type='text' value={value} onChange={onChange} className='searchbar-home' />
-                  <button onClick={() => onSearch('')} className='clearbutton-home crosser'><svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="currentColor" class="insideCross" viewBox="0 0 16 16">
-                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-                  </svg></button>
-                  <button onClick={() => forSearch(submit)} className='submit-home Button'>Search</button>
+                  <input type='text' value={value} onChange={onChange} placeholder='Search our vast collection' className='searchbar-home' />
+                  <button onClick={() => forSearch(submit)} className='clearbutton-home crosser'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                  </button>
                 </div>
+
                 <div className='dropdown'>
                   {data.filter(item => {
                     const searchTerm = value.toLowerCase();
@@ -90,7 +92,8 @@ function Homepage() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
+        
         <div className='col-xl-4 col-lg-6 col-md-12 col-12'>
           <div className='container hamas'>
             <div className='brdr'>
@@ -159,17 +162,59 @@ function Homepage() {
             </div>
           </div>
         </div>
-        <div className='col-xl-4 col-lg-6 col-12'>
+        
+        <div className='col-lg-8 col-12 search-over' >
+          <div className="card-aauu leftist">
+            <div className="card-body rounder">
+              <div className='search-body'>
+                <div className='search-inner'>
+                  <input type='text' value={value} onChange={onChange} placeholder='Search our vast collection' className='searchbar-home' />
+                  <button onClick={() => forSearch(submit)} className='clearbutton-home crosser'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                  </button>
+                </div>
+
+                <div className='dropdown'>
+                  {data.filter(item => {
+                    const searchTerm = value.toLowerCase();
+                    const name = item.name.toLowerCase();
+                    return searchTerm && name.includes(searchTerm) && name !== searchTerm
+                  }).slice(0, 5)
+                    .map((item) => <div className='dropdown-row' onClick={() => {
+                      onSearch(item.name)
+                      setSubmit(item.id)
+                    }}
+                      key={item.id}
+                    >
+                      <li className='lodulalit'>{item.name}</li>
+                    </div>)}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className='card-aauu rightist'>
+            <h5 className='card-header'>About us</h5>
+            <div className='card-body'>At Xerxes India, our mission is clear: To empower Motorcyclists by providing them with the right tools and accessories they need to ride with confidence, safety, and enjoyment. We believe that every Motorcyclist, from the casual rider to the competitive racer, deserves the best gear to support their passion.
+            </div>
+            <button onClick={handleClickScroll} className='product-button'>View Products</button>
+          </div>
+
+        </div>
+
+        {/* <div className='col-xl-4 col-lg-6 col-12'>
           <div className='card-aauu rightist'>
             <h5 className='card-header'>About us</h5>
             <div className='card-body'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptate aliquam quasi, illum soluta, voluptatibus enim ad corrupti optio illo recusandae tempore, quisquam est cupiditate laboriosam? Ea placeat perferendis ab corrupti natus quae nihil temporibus sunt eum amet modi soluta quasi tenetur maiores inventore odit cupiditate nobis, atque unde eligendi.
             </div>
             <button onClick={handleClickScroll} className='product-button'>View Products</button>
           </div>
-        </div>
+        </div> */}
 
       </div>
-      <hr className='liner'id='section-1' />
+      <hr className='liner' id='section-1' />
       <br />
       <div className="container">
         <div className="row">
