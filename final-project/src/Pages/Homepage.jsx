@@ -50,17 +50,45 @@ function Homepage() {
   }, [pathname]);
 
 
-  // const handleClickScroll = () => {
-  //   const element = document.getElementById('section-1');
-  //   if (element) {
-  //     // 👇 Will scroll smoothly to the top of the next section
-  //     element.scrollIntoView({ behavior: 'smooth' });
-  //   }
-  // };
+  const handleClickScroll = () => {
+    const element = document.getElementById('section-1');
+    if (element) {
+      // 👇 Will scroll smoothly to the top of the next section
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <>
       <div className='row polsrow' id='row'>
+        <div className='col-xl-4 col-lg-6 col-12'>
+          <div className="card-aauu">
+            <h5 className="card-header rounder">Search our vast collection</h5>
+            <div className="card-body rounder">
+              <div className='search-body'>
+                <div className='search-inner'>
+                  <input type='text' value={value} onChange={onChange} className='searchbar-home' />
+                  <button onClick={() => onSearch('')} className='clearbutton-home crosser'><svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="currentColor" class="insideCross" viewBox="0 0 16 16">
+                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                  </svg></button>
+                  <button onClick={() => onSearch(value)} className='submit-home Button'>Search</button>
+                </div>
+                <div className='dropdown'>
+                  {data.filter(item => {
+                    const searchTerm = value.toLowerCase();
+                    const name = item.name.toLowerCase();
+                    return searchTerm && name.includes(searchTerm) && name !== searchTerm
+                  }).slice(0, 3)
+                    .map((item) => <div className='dropdown-row' onClick={() => onSearch(item.name)}
+                      key={item.id}
+                    >
+                      {item.name}
+                    </div>)}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className='col-xl-4 col-lg-6 col-md-12 col-12'>
           <div className='container hamas'>
             <div className='brdr'>
@@ -129,31 +157,15 @@ function Homepage() {
             </div>
           </div>
         </div>
-        <div className='col-xl-8 col-lg-6 col-12'>
-          <div className="card-aauu">
-            <h5 className="card-header">Search our vast collection</h5>
-            <div className="card-body">
-              <div className='search-body'>
-                <div className='search-inner'>
-                  <input type='text' value={value} onChange={onChange} />
-                  <button onClick={() => onSearch(value)}>Search</button>
-                </div>
-                <div className='dropdown'>
-                  {data.filter(item => {
-                    const searchTerm = value.toLowerCase();
-                    const name = item.name.toLowerCase();
-                    return searchTerm&&name.includes(searchTerm)&&name !== searchTerm
-                  }).slice(0,3)
-                  .map((item)=><div className='dropdown-row' onClick={()=>onSearch(item.name)}
-                    key={item.id}
-                  >
-                    {item.name}
-                  </div>)}
-                </div>
-              </div>
+        <div className='col-xl-4 col-lg-6 col-12'>
+          <div className='card-aauu'>
+            <h5 className='card-header'>About us</h5>
+            <div className='card-body'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptate aliquam quasi, illum soluta, voluptatibus enim ad corrupti optio illo recusandae tempore, quisquam est cupiditate laboriosam? Ea placeat perferendis ab corrupti natus quae nihil temporibus sunt eum amet modi soluta quasi tenetur maiores inventore odit cupiditate nobis, atque unde eligendi.
             </div>
+            <button onClick={handleClickScroll} className='product-button'>View Products</button>
           </div>
         </div>
+
       </div>
       <br id='section-1' />
       <div className="container">
