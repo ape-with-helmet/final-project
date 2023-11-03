@@ -17,12 +17,14 @@
   border-radius: 100px;
 }
 .hamas {
-  transform: scale(80%);
-  margin-top: 4%;
+  transform: scale(90%);
+  margin-top: 5%;
+  
 }
 .card-aauu{
   margin: 10%;
   padding: 5%;
+  margin-top: 20%;
   border: none;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
@@ -54,7 +56,7 @@
   /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5), 0 8px 16px rgba(0, 0, 0, 0.5); */ 
   background-color: gray;
   color: white;
-  padding-right: ;
+  padding-right: 0px;
 }
 .insideCross{
   margin-left: auto;

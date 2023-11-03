@@ -6,16 +6,18 @@ import CardImg from 'react-bootstrap/CardImg'
 import CardBody from 'react-bootstrap/CardBody'
 import CardTitle from 'react-bootstrap/CardTitle'
 import CardSubtitle from 'react-bootstrap/CardSubtitle'
+import { useNavigate } from "react-router-dom";
 import React, { useEffect, useState } from 'react';
 import './Homepage.css'
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 import { useLocation } from "react-router";
 
 function Homepage() {
-
-  // const [query, setQuery] = useState("");
   const [data, setData] = useState([]);
+  const [submit, setSubmit] = useState('');
   const [value, setValue] = useState('');
+  const navigate = useNavigate()
+
   const onChange = (e) => {
     setValue(e.target.value)
   }
@@ -24,14 +26,11 @@ function Homepage() {
     //fetch search result
     console.log(searchTerm)
   }
-  // const keys = ["name","sku"];
 
-  // const search = (data) => {
-  //   return data.filter(
-  //     (item) =>
-  //       keys.some((key)=>item[key].toLowerCase().includes(query))
-  //   );
-  // };
+  const forSearch = (searchId) => {
+    navigate(`/P${searchId}`);
+  }
+
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -43,7 +42,7 @@ function Homepage() {
         setData(res.data)
       })
     console.log(data)
-  }, [])
+  },[])
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -71,15 +70,18 @@ function Homepage() {
                   <button onClick={() => onSearch('')} className='clearbutton-home crosser'><svg xmlns="http://www.w3.org/2000/svg" width="25" height="30" fill="currentColor" class="insideCross" viewBox="0 0 16 16">
                     <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
                   </svg></button>
-                  <button onClick={() => onSearch(value)} className='submit-home Button'>Search</button>
+                  <button onClick={() => forSearch(submit)} className='submit-home Button'>Search</button>
                 </div>
                 <div className='dropdown'>
                   {data.filter(item => {
                     const searchTerm = value.toLowerCase();
                     const name = item.name.toLowerCase();
                     return searchTerm && name.includes(searchTerm) && name !== searchTerm
-                  }).slice(0, 3)
-                    .map((item) => <div className='dropdown-row' onClick={() => onSearch(item.name)}
+                  }).slice(0, 5)
+                    .map((item) => <div className='dropdown-row' onClick={() => {
+                      onSearch(item.name)
+                      setSubmit(item.id)
+                    }}
                       key={item.id}
                     >
                       {item.name}
