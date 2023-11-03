@@ -188,7 +188,7 @@ function Homepage() {
                     }}
                       key={item.id}
                     >
-                      <li>{item.name}</li>
+                      <li className='lodulalit'>{item.name}</li>
                     </div>)}
                 </div>
               </div>
