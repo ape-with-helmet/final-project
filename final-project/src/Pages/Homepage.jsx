@@ -62,7 +62,7 @@ function Homepage() {
 
       <div className='row polsrow' id='row'>
 
-        <div className='col-xl-4 col-lg-6 col-md-12 col-12'>
+        <div className='col-xl-4 col-lg-4 col-md-12 col-12'>
           <div className='container hamas'>
             <div className='brdr'>
               <Carousel fade>
@@ -131,7 +131,7 @@ function Homepage() {
           </div>
         </div>
 
-        <div className='col-lg-8 col-12 search-over' >
+        <div className='col-lg-8 col-lg-8 col-md-12 col-12 search-over' >
           <div className="card-aauu leftist">
             <div className="card-body rounder">
               <div className='search-body'>
