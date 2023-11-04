@@ -4,6 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Tab from 'react-bootstrap/Tab';
 import Tabs from 'react-bootstrap/Tabs';
 import Table from 'react-bootstrap/Table'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 
 
@@ -20,8 +22,10 @@ const ProductPage = () => {
                 number,
                 id
             })
+            toast.success("Item Added to cart!");
         } catch (error) {
             console.log(error);
+            toast.error("Failed to add!")
         }
     }
     return (
@@ -175,6 +179,19 @@ const ProductPage = () => {
                     </div>
                 </div>
             </body>
+            <ToastContainer
+                position="bottom-right"
+                autoClose={4000}
+                limit={4}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="light"
+            />
         </>
     );
 };
