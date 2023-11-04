@@ -10,6 +10,14 @@
     border: none;
     width: 100%;
 }
+.username1{
+    font-family: monospace;
+    margin-right: 10%;
+    margin-top: 0.5%;
+}
+.username1:hover{
+    color: rgb(179, 48, 255);
+}
 .kink:hover{
     color: rgb(179, 48, 255);
 }

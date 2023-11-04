@@ -62,39 +62,6 @@ function Homepage() {
 
       <div className='row polsrow' id='row'>
 
-        {/* <div className='col-xl-4 col-lg-6 col-12'>
-          <div className="card-aauu leftist">
-            <div className="card-body rounder">
-              <div className='search-body'>
-                <div className='search-inner'>
-                  <input type='text' value={value} onChange={onChange} placeholder='Search our vast collection' className='searchbar-home' />
-                  <button onClick={() => forSearch(submit)} className='clearbutton-home crosser'>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                      <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                    </svg>
-                  </button>
-                </div>
-
-                <div className='dropdown'>
-                  {data.filter(item => {
-                    const searchTerm = value.toLowerCase();
-                    const name = item.name.toLowerCase();
-                    return searchTerm && name.includes(searchTerm) && name !== searchTerm
-                  }).slice(0, 5)
-                    .map((item) => <div className='dropdown-row' onClick={() => {
-                      onSearch(item.name)
-                      setSubmit(item.id)
-                    }}
-                      key={item.id}
-                    >
-                      {item.name}
-                    </div>)}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
-
         <div className='col-xl-4 col-lg-6 col-md-12 col-12'>
           <div className='container hamas'>
             <div className='brdr'>
@@ -207,16 +174,6 @@ function Homepage() {
           </div>
 
         </div>
-
-        {/* <div className='col-xl-4 col-lg-6 col-12'>
-          <div className='card-aauu rightist'>
-            <h5 className='card-header'>About us</h5>
-            <div className='card-body'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti voluptate aliquam quasi, illum soluta, voluptatibus enim ad corrupti optio illo recusandae tempore, quisquam est cupiditate laboriosam? Ea placeat perferendis ab corrupti natus quae nihil temporibus sunt eum amet modi soluta quasi tenetur maiores inventore odit cupiditate nobis, atque unde eligendi.
-            </div>
-            <button onClick={handleClickScroll} className='product-button'>View Products</button>
-          </div>
-        </div> */}
-
       </div>
 
       <hr className='liner' id='section-1' />
@@ -232,7 +189,7 @@ function Homepage() {
                   top
                   className='image'
                 />
-                <CardBody>
+                <CardBody className='name789'>
                   <CardTitle tag="h5">
                     LCB TRIUMPH SPEED 400 THANOS CRASH GUARD WITH SLIDER
                   </CardTitle>
@@ -242,7 +199,6 @@ function Homepage() {
                   >
                     SKU: CRA12950
                   </CardSubtitle>
-                  <br />
                 </CardBody>
               </Card>
             </a>
@@ -256,7 +212,7 @@ function Homepage() {
                   top
                   className='image'
                 />
-                <CardBody>
+                <CardBody className='name789'>
                   <CardTitle tag="h5">
                     LCB TRIUMPH SPEED 400 AVIATOR SADDLE STAY
                   </CardTitle>
@@ -265,7 +221,7 @@ function Homepage() {
                     tag="h6"
                   >
                     SKU: SAD12872
-                  </CardSubtitle><br />
+                  </CardSubtitle>
                 </CardBody>
               </Card>
             </a>
@@ -279,7 +235,7 @@ function Homepage() {
                   top
                   className='image'
                 />
-                <CardBody>
+                <CardBody className='name789'>
                   <CardTitle tag="h5">
                     LCB TRIUMPH SPEED 400 VOYAGER BASHPLATE
                   </CardTitle>
@@ -288,14 +244,13 @@ function Homepage() {
                     tag="h6"
                   >
                     SKU: ENG12868
-                  </CardSubtitle><br />
-
+                  </CardSubtitle>
                 </CardBody>
               </Card>
             </a>
           </div>
           <div className="col-lg-4 col-md-12 col-sm-12 pp">
-            <a href='/P4' className="card-txt"> 
+            <a href='/P4' className="card-txt">
               <Card className='card1'>
                 <CardImg
                   alt="Card image cap"
@@ -303,7 +258,7 @@ function Homepage() {
                   top
                   className='image'
                 />
-                <CardBody>
+                <CardBody className='name789'>
                   <CardTitle tag="h5">
                     MOTOWOLF ARMOUR JACKET 1031B
                   </CardTitle>
@@ -313,7 +268,6 @@ function Homepage() {
                   >
                     SKU: JKT10865
                   </CardSubtitle>
-                  <br />
                 </CardBody>
               </Card>
             </a>
@@ -327,7 +281,7 @@ function Homepage() {
                   top
                   className='image'
                 />
-                <CardBody>
+                <CardBody className='name789'>
                   <CardTitle tag="h5">
                     MOTOWOLF BUMPER BAG 0715
                   </CardTitle>
@@ -337,7 +291,6 @@ function Homepage() {
                   >
                     SKU: BAG10934
                   </CardSubtitle>
-                  <br />
                 </CardBody>
               </Card>
             </a>
@@ -351,9 +304,9 @@ function Homepage() {
                   top
                   className='image'
                 />
-                <CardBody>
-                  <CardTitle  tag="h5">
-                    MOTOWOLF HEAD COVER BLACK 1919
+                <CardBody className='name789'>
+                  <CardTitle tag="h5">
+                    MOTOWOLF BALACLAVA BLACK 1919
                   </CardTitle>
                   <CardSubtitle
                     className="mb-2 text-muted"
@@ -361,7 +314,6 @@ function Homepage() {
                   >
                     SKU: CLO10939
                   </CardSubtitle>
-                  <br />
                 </CardBody>
               </Card>
             </a>

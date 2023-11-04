@@ -15,6 +15,9 @@
   color: rgb(179, 48, 255);
   text-shadow: 10px;
 }
+.name789{
+  margin: 5%;
+}
 .polsrow {
   margin-top: 1%;
   display: flex;
@@ -128,6 +131,7 @@
 .image {
   border: none;
   height: auto;
+  border-radius: 0%;
 }
 
 .pp {

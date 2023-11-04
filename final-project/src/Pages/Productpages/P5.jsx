@@ -8,9 +8,9 @@ import axios from 'axios';
 
 
 const ProductPage = () => {
-    const product = 'LCB TRIUMPH SPEED 400 AVIATOR SADDLE STAY';
+    const product = 'MOTOWOLF BUMPER BAG 0715';
     const number = 1;
-    const id = 2;
+    const id = 5;
     
     const addCart = async(e) =>{
         e.preventDefault();
