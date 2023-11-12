@@ -6,14 +6,15 @@ const contactModel = require("./src/models/contactModel")
 const cartModel = require("./src/models/cartModel")
 const pData = require("./src/models/productModel")
 const app = express()
-const fs = require('fs')
+const fs = require('fs');
+const { send } = require("process");
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(cors())
 
 app.get("/", cors(), (req, res) => {
 
-})
+});
 
 app.post("/create", async (req, res) => {
     try {
@@ -62,27 +63,45 @@ app.post("/create", async (req, res) => {
     } catch (error) {
         console.log(error)
     }
-})
+});
 
 app.post("/delete", async (req, res) => {
     try {
         const user = req.body
-        const { email, password } = user;
+        const { email } = user;
 
         const data = {
-            email: email,
-            password: password
+            email: email
         }
         let uniqueEmail = await collection.findOne({ email })
+        console.log(user)
         if (!uniqueEmail) {
             console.log('invalid email')
+            return res.status(500).send({ message: "Weird error" })
         }
         await collection.deleteMany(data)
+        return res.status(200).send({ message: "Deleted successfully" })
+    } catch (error) {
+        console.log(error)
+        return res.status(500).send({ message: "Catxh error" })
+    }
+});
+
+app.post("/userFind",async (req,res) => {
+    try {
+        const user = req.body
+        const {email} = user;
+        const data = {
+            email: email
+        }
+        console.log(user)
+        let userdata = await collection.findOne({email:email})
+        console.log(userdata)
+        return res.status(200).send({message: "ID retrieved", mobile : userdata.mobile, email:userdata.email, password:userdata.password})
     } catch (error) {
         console.log(error)
     }
 })
-
 app.get("/getall", async (req, res) => {
     try {
         let userDetails = await pData.find({})
@@ -91,12 +110,13 @@ app.get("/getall", async (req, res) => {
     } catch (error) {
         console.log(error)
     }
-})
+});
 app.get("/getallcart", async (req, res) => {
     cartModel.find()
     .then(users => res.json(users))
     .catch(err => res.json(err))
-})
+});
+
 app.post("/login", async (req, res) => {
     try {
         const user = req.body
@@ -131,7 +151,7 @@ app.get("/validAuth", async (req, res) => {
     const data = fs.readFileSync('log.txt', 'utf8');
     console.log(data);
     return data
-})
+});
 app.post("/logout", async (req, res) => {
     try {
         fs.writeFileSync('log.txt', '');
@@ -140,7 +160,7 @@ app.post("/logout", async (req, res) => {
     } catch (error) {
         console.log(error)
     }
-})
+});
 app.post("/contactus", async (req, res) => {
     try {
         const contact = req.body;

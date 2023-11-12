@@ -16,6 +16,7 @@ import P4 from './Pages/Productpages/P4'
 import P5 from './Pages/Productpages/P5'
 import PaymentForm from './Pages/PaymentForm'
 import PaymentPage from './Pages/PaymentPage'
+import ProfilePage from './Pages/ProfilePage'
 import Cart from './Pages/Cart'
 import PaymentSuccessful from './Pages/PaymentSuccessful'
 import Profile from './Pages/Profile'
@@ -34,6 +35,7 @@ const App = () => {
             <Route element={<PaymentForm />} path='/PF' />
             <Route element={<PaymentPage />} path='/Pay' />
             <Route element={<Search />} path='/SR' />
+            <Route element={<ProfilePage />} path='/pro'/>
             <Route element={<PaymentSuccessful />} path='/ps' />
           </Route>
           <Route element={<ContactPage />} path='/CP' />

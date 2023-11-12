@@ -12,11 +12,15 @@
 }
 .username1{
     font-family: monospace;
-    margin-right: 10%;
+    margin-left: 30%;
+    width: 50%;
     margin-top: 0.5%;
+    text-decoration: none;
+    color: grey;
 }
 .username1:hover{
     color: rgb(179, 48, 255);
+    text-decoration: none;
 }
 .kink:hover{
     color: rgb(179, 48, 255);

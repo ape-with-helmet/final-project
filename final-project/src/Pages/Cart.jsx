@@ -2,12 +2,12 @@ import './Cart.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import React, { useEffect, useState } from 'react';
-import Table from '../Components/Searchtable'
+//import Table from '../Components/Searchtable'
 import axios from "axios";
 
 
 function Cart() {
-  const [quantity, setQuantity] = useState(1);
+  //const [quantity, setQuantity] = useState(1);
   const [data1, setData1] = useState([]);
 
   useEffect(() => {
