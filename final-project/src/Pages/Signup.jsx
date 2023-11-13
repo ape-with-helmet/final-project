@@ -15,8 +15,9 @@ export default function Signup() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [mobile, setMobile] = useState("");
+    const [username, setUsername] = useState('');
     const navigate = useNavigate()
-
+    const [admin, setAdmin] = useState(false);
     useEffect(() => {
         const authority = localStorage.getItem('loginData');
         if (authority) {
@@ -31,11 +32,18 @@ export default function Signup() {
     let submit = async (e) => {
         e.preventDefault()
         try {
-
+            if (admin) {
+                setAdmin(false)
+            }
+            else{
+                setAdmin(true)
+            }
             const response = await axios.post("http://localhost:8080/create", {
                 email,
                 password,
-                mobile
+                mobile,
+                username,
+                admin
             })
             ref.current.continuousStart()
             localStorage.setItem("loginData", email);
@@ -43,7 +51,7 @@ export default function Signup() {
             toast.success(response.data.message);
             sleep(2000).then(() => { ref.current.complete(); });
             setTimeout(() => {
-                navigate('/');
+                window.open("http://localhost:3000/","_self");
             }, 3000);
         } catch (error) {
             console.log(error);
@@ -59,7 +67,7 @@ export default function Signup() {
                 <div className="row">
                     <div className="col-md-12">
                         <form action='POST' className="col-12 col-md-6 kopiko2">
-                        <h3 className="numeric-jargon">Please Log in</h3>
+                            <h3 className="numeric-jargon">Please Log in</h3>
                             <div className="yaya">
                                 <input type="email" className="kopiko1" id="floatingInput" placeholder="name@example.com" data-temp-mail-org="0" onChange={(e) => { setEmail(e.target.value) }} />
                             </div>
@@ -72,15 +80,19 @@ export default function Signup() {
                                 <input type="text" className="kopiko1" id="floatingPassword" placeholder="Phone" onChange={(e) => { setMobile(e.target.value) }} />
                             </div>
                             <br />
+                            <div className="yaya">
+                                <input type="text" className="kopiko1" id="floatingInput" placeholder="Username" data-temp-mail-org="0" onChange={(e) => { setUsername(e.target.value) }} />
+                            </div>
+                            <br />
                             <div className="form-check text-start my-3">
-                                <input className="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault" />
+                                <input className="form-check-input" type="checkbox" id="checkAdmin" onChange={(e) => { setAdmin(e.target.checked); console.log(admin)}}/>
                                 <label className="form-check-label label-used-in-login" for="flexCheckDefault">
-                                    Remember me
+                                    A Seller?
                                 </label>
                             </div>
 
                             <button className="btn btn-primary w-100 py-2" type="submit" onClick={submit}>Sign Up</button>
-                            <a href="" onClick={loginNav}><span>Already a user?</span></a><br />
+                            <a onClick={loginNav}><span>Already a user?</span></a><br />
                         </form>
                     </div>
                 </div>

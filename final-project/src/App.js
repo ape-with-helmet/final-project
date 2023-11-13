@@ -20,6 +20,8 @@ import ProfilePage from './Pages/ProfilePage'
 import Cart from './Pages/Cart'
 import PaymentSuccessful from './Pages/PaymentSuccessful'
 import Profile from './Pages/Profile'
+import AdminComponents from './Components/AdminComponents'
+import AddProduct from './Pages/AddProduct'
 import { BrowserRouter, Routes, Route, /*Outlet*/ } from 'react-router-dom'
 
 const App = () => {
@@ -29,6 +31,9 @@ const App = () => {
         <NavBar />
         <br /><br />
         <Routes>
+          <Route element={<AdminComponents/>}>
+            <Route element={<AddProduct/>} path='/addProd'/>
+          </Route>
           <Route element={<PrivateComponents />}>
             <Route element={<Profile />} path='/profile' />
             <Route element={<Cart />} path='/cart' />

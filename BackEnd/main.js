@@ -19,14 +19,16 @@ app.get("/", cors(), (req, res) => {
 app.post("/create", async (req, res) => {
     try {
         const user = req.body
-        const { email, password, mobile } = user;
+        const { email, password, mobile, username, admin } = user;
 
         const data = {
             email: email,
             password: password,
-            mobile: mobile
+            mobile: mobile,
+            username: username,
+            admin: admin
         }
-        if (!email || !password || !mobile) {
+        if (!email || !password || !mobile || !username) {
             console.log("Please provide all information !")
             return res.status(500).send({ message: "Not enough info" })
         }
@@ -87,17 +89,17 @@ app.post("/delete", async (req, res) => {
     }
 });
 
-app.post("/userFind",async (req,res) => {
+app.post("/userFind", async (req, res) => {
     try {
         const user = req.body
-        const {email} = user;
+        const { email } = user;
         const data = {
             email: email
         }
-        console.log("backtrackiung",email)
-        let userdata = await collection.findOne({email})
-        console.log("CHeckuinbg",userdata)
-        return res.status(200).send({message: "ID retrieved", mobile : userdata.mobile, email:userdata.email, password:userdata.password})
+        console.log("backtrackiung", email)
+        let userdata = await collection.findOne({ email })
+        console.log("CHeckuinbg", userdata)
+        return res.status(200).send({ message: "ID retrieved", mobile: userdata.mobile, email: userdata.email, password: userdata.password, username: userdata.username, admin: userdata.admin })
     } catch (error) {
         console.log(error)
     }
@@ -113,8 +115,8 @@ app.get("/getall", async (req, res) => {
 });
 app.get("/getallcart", async (req, res) => {
     cartModel.find()
-    .then(users => res.json(users))
-    .catch(err => res.json(err))
+        .then(users => res.json(users))
+        .catch(err => res.json(err))
 });
 
 app.post("/login", async (req, res) => {

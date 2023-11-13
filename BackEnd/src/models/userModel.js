@@ -15,6 +15,12 @@ const userSchema = new mongoose.Schema({
     mobile: {
         type: String,
         required: true,
+    },
+    username:{
+        type: String,
+    },
+    admin:{
+        type: Boolean,
     }
 }, { timestamps: true }
 )

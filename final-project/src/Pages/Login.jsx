@@ -42,7 +42,7 @@ export default function Login() {
             toast.success(response.data.message);
             sleep(2000).then(() => { ref.current.complete(); });
             setTimeout(() => {
-                navigate('/');
+                window.open("http://localhost:3000/","_self")
               }, 3000);
 
         } catch (error) {

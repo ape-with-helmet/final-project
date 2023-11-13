@@ -12,8 +12,8 @@
 }
 .username1{
     font-family: monospace;
-    margin-left: 20%;
-    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
     text-decoration: none;
     color: grey;
 }
