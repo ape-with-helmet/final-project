@@ -15,6 +15,10 @@ const userSchema = new mongoose.Schema({
     sku: {
         type: String,
         required: true,
+    },
+    price: {
+        type: Number,
+        required: true,
     }
 }, { timestamps: true }
 )

@@ -22,7 +22,7 @@ import PaymentSuccessful from './Pages/PaymentSuccessful'
 import Profile from './Pages/Profile'
 import AdminComponents from './Components/AdminComponents'
 import AddProduct from './Pages/AddProduct'
-import { BrowserRouter, Routes, Route, /*Outlet*/ } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 const App = () => {
   return (

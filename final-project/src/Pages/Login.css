@@ -29,8 +29,16 @@
 .miracle {
     margin-top: 1%;
     padding-top: 10px;
+    margin-bottom: -5em;
 }
-
+.yaya1>label{
+    position: absolute;
+    left: 30%;
+    top: 37.5%;
+}
+.yaya>label:hover{
+    top: 20%;
+}
 .label-used-in-login {
     display: block;
     font-weight: bold;

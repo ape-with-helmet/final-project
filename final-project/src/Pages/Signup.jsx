@@ -84,8 +84,8 @@ export default function Signup() {
                                 <input type="text" className="kopiko1" id="floatingInput" placeholder="Username" data-temp-mail-org="0" onChange={(e) => { setUsername(e.target.value) }} />
                             </div>
                             <br />
-                            <div className="form-check text-start my-3">
-                                <input className="form-check-input" type="checkbox" id="checkAdmin" onChange={(e) => { setAdmin(e.target.checked); console.log(admin)}}/>
+                            <div className="form-check form-switch">
+                                <input className="form-check-input" type="checkbox" id="flexSwitchCheckChecked" onChange={(e) => { setAdmin(e.target.checked); console.log(admin)}}/>
                                 <label className="form-check-label label-used-in-login" for="flexCheckDefault">
                                     A Seller?
                                 </label>
