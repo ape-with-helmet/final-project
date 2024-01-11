@@ -38,11 +38,14 @@ function ProfilePage() {
     }
     function CheckAdmin() {
         if (admin) {
-            return <button type="button" className="btn btn-danger btn-lg px-4 me-md-2" >Add Products</button>;
+            return <button type="button" className="btn btn-danger btn-lg px-4 me-md-2" onClick={movetoproducts}>Add Products</button>;
         }
         else {
             return <button type="button" className="btn btn-danger btn-lg px-4 me-md-2" onClick={delUser}>Delete Account</button>;
         }
+    }
+    function movetoproducts(){
+        navigate('/addProd')
     }
     let adminadd = async (e) => {
         navigate('/login');

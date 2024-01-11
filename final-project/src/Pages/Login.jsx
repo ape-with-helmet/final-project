@@ -68,7 +68,7 @@ export default function Login() {
                             <div className="yaya">
                                 <input type="password" className="kopiko1" id="floatingPassword" placeholder="Password" onChange={(e) => { setPassword(e.target.value) }} />
 
-                            </div>
+                            </div> 
                             <br />
                             <div className="form-check text-start my-3">
                                 <input className="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault" />

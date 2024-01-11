@@ -93,12 +93,14 @@ app.post("/userFind", async (req, res) => {
     try {
         const user = req.body
         const { email } = user;
+        
         const data = {
             email: email
         }
-        console.log("backtrackiung", email)
+        //console.log("backtrackiung", email)
         let userdata = await collection.findOne({ email })
-        console.log("CHeckuinbg", userdata)
+        console.log(userdata.admin)
+        //console.log("CHeckuinbg", userdata)
         return res.status(200).send({ message: "ID retrieved", mobile: userdata.mobile, email: userdata.email, password: userdata.password, username: userdata.username, admin: userdata.admin })
     } catch (error) {
         console.log(error)
