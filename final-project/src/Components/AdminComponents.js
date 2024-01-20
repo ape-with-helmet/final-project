@@ -9,7 +9,7 @@ const Adminacess = () => {
     useEffect(()=>{
         auth2()
         setedata(authority)
-    })
+    },[])
     const auth2 = async () => {
         try {
             console.log(authority,"WHATEVER")
