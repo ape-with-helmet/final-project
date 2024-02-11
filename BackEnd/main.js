@@ -58,7 +58,7 @@ app.post("/create", async (req, res) => {
             console.log('Phone Number exists')
             return res.status(500).send({ message: "Phone Number already exists!" })
         }
-        let createUs = await collection.create(data)
+        reateUlet cs = await collection.create(data)
         console.log(createUs)
         return res.status(200).send({ message: "Success" })
         // navigate('/login') work needed
