@@ -2,12 +2,12 @@
 # TCE Internship Final Project
 
 ## About
-This repository contains the final project developed during the Technical Career Education (TCE) internship program. It involves a [description of your project] using a full-stack development approach with a focus on JavaScript, CSS, and HTML.
+This repository contains an e-commerce website developed during the Technical Career Education (TCE) internship program. The website allows users to browse, search, and purchase vehicle parts, offering a smooth and interactive shopping experience. It utilizes a full-stack development approach with React.js for the frontend, Node.js and Express for the backend, and a database for storing product and order details. The platform also includes features such as user authentication, a shopping cart, and secure checkout functionality.
 
 ## Features
-- Frontend: React.js (or specify the frontend framework used)
+- Frontend: React.js
 - Backend: Node.js and Express
-- Database: [Specify DB used]
+- Database: MongoDB
 
 ## Installation
 1. Clone the repository:
@@ -26,5 +26,3 @@ This repository contains the final project developed during the Technical Career
    ```
 2. Access the app on `http://localhost:3000`.
 
-## License
-[Specify license if applicable]
